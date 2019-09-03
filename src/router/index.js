@@ -7,7 +7,7 @@ let routeslist = []
     // 模块路由添到路由列表
 routeslist.push(index)
 export default new Router({
-    mode: 'history',
+    mode: 'hash',
     routes: routeslist,
     scrollBehavior(to, from, savedPosition) {
         Boolean(document.querySelectorAll(".el-scrollbar__wrap")[0]) ? (document.querySelectorAll(".el-scrollbar__wrap")[0].scrollTop = 0) : ''
