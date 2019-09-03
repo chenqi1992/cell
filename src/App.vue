@@ -14,7 +14,7 @@ export default {
 </script>
 
 <style lang="scss">
-	@import "@/common/scss/element-variables.scss";
+	// @import "@/common/scss/element-variables.scss";
   	#app {
     	min-width: 1280px;
         height: 100%;
