@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import index from './cellIndex'
-
+import cellImhome from './cellImhome'
 Vue.use(Router)
 let routeslist = []
     // 模块路由添到路由列表
-routeslist.push(index)
+routeslist.push(index, cellImhome)
 export default new Router({
     mode: 'hash',
     routes: routeslist,

@@ -1,0 +1,156 @@
+input,
+textarea {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+span,
+strong,
+b,
+i,
+a,
+img,
+li,
+var,
+del,
+ins,
+{
+    display: block;
+    font-weight: normal;
+    font-style: normal;
+}
+
+a,
+input,
+textarea,
+tr {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+* {
+    margin: 0;
+    // padding: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-text-size-adjust: none;
+}
+
+@function rem ($px) {
+    @return $px / 25+rem;
+}
+
+@mixin wh($len) {
+    width: rem($len);
+    height: rem($len);
+}
+
+@mixin bd($color, $width: 1px) {
+    border: $width solid $color;
+}
+
+@mixin bgz ($size1, $size2) {
+    -webkit-background-size: rem($size1) rem($size2);
+    -moz-background-size: rem($size1) rem($size2);
+    -ms-background-size: rem($size1) rem($size2);
+    -o-background-size: rem($size1) rem($size2);
+    background-size: rem($size1) rem($size2);
+}
+
+@mixin lh ($height) {
+    height: rem($height);
+    line-height: rem($height);
+}
+
+@mixin lhc ($height) {
+    height: rem($height);
+    line-height: rem($height);
+    text-align: center;
+}
+
+@mixin lhcf($height, $color, $fz) {
+    height: rem($height);
+    line-height: rem($height);
+    color: $color;
+    font-size: rem($fz);
+}
+
+@mixin lhcfc($height, $color, $fz) {
+    height: rem($height);
+    line-height: rem($height);
+    color: $color;
+    font-size: rem($fz);
+    text-align: center;
+}
+
+@mixin sc($size, $color) {
+    font-size: rem($size);
+    color: $color;
+}
+
+@mixin em ($line) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: rem($line);
+    -webkit-box-orient: vertical;
+}
+
+@mixin op ($opacity) {
+    opacity: $opacity * 0.01;
+    filter: alpha(opacity=$opacity);
+}
+
+@mixin bra ($radius: 50%) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin bs1 ($shadow) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    -ms-box-shadow: $shadow;
+    -o-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+@mixin bs2 ($s1, $s2) {
+    -webkit-box-shadow: $s1, $s2;
+    -moz-box-shadow: $s1, $s2;
+    -ms-box-shadow: $s1, $s2;
+    -o-box-shadow: $s1, $s2;
+    box-shadow: $s1, $s2;
+}
+
+@mixin ove () {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: keep-all;
+}
+
+.mt-border {
+    .mint-cell {
+        .mint-cell-wrapper {
+            .mint-cell-value {
+                color: #b5b5b5;
+            }
+        }
+    }
+}
+
+// .mint-cell-wrapper .mint-cell-allow-right::after {  
+//     border: solid 1px #c8c8cd;
+//     width: 8px;
+//     height: 8px;
+//     border-bottom-width: 0;
+//     border-left-width: 0;
+//     content: " ";
+//     top: 50%;
+//     right: 20px;
+//     position: absolute;
+//     -webkit-transform: translateY(-50%) rotate(45deg);
+//     transform: translateY(-50%) rotate(45deg);
+// }
