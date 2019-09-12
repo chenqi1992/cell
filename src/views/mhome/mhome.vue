@@ -2,7 +2,7 @@
     <div class="mhome">
         <div class="bg-content" ref="top1">
             <img class="bg" src="../../assets/m/banner_1.png" alt="">
-            <div class="logo"><img src="../../assets/m/logo.png" alt=""></div>
+            <div class="logo"><img src="../../assets/logo_1.png" alt=""></div>
             <div class="menu">
                 <van-popup
                 v-model="show"
@@ -227,8 +227,8 @@ export default {
                 z-index: 11;
                 img {
                     display: block;
-                    width: rem(76);
-                    height: rem(28);
+                    width: rem(128);
+                    height: rem(26);
                 }
             }
             .menu {
@@ -364,7 +364,7 @@ export default {
                         display: flex;
                         justify-content: space-between;
                         margin: 0 auto;
-                        padding: rem(110) 0 rem(80);
+                        padding: rem(180) 0 rem(80);
                         .wallet-left {
                             display: flex;
                             align-items: center;
@@ -430,7 +430,7 @@ export default {
                         .item {
                             position: relative;
                             box-sizing: border-box;
-                            padding: 0 rem(20) rem(20);
+                            padding: rem(20) rem(20);
                             background-color: #f4f4f4;
                             h2 {
                                 line-height: rem(52);
@@ -447,7 +447,7 @@ export default {
                             position: absolute;
                             display: block;
                             left: 5%;
-                            top: rem(110);
+                            top: rem(150);
                             width: 90%;
                             height: 0;
                             border-top: 1px solid #ededed;

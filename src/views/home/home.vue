@@ -213,8 +213,8 @@ export default {
                 .logo {
                     img {
                         display: block;
-                        width: 90px;
-                        height: 30px;
+                        width: 128px;
+                        height: 26px;
                     }
                 }
                 .nav {
