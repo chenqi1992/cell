@@ -252,6 +252,7 @@ export default {
                         display: block;
                         padding: rem(30) rem(160) rem(30) rem(40);
                         cursor: pointer;
+                        font-size: rem(28);
                     }
                 }
             }
@@ -307,7 +308,7 @@ export default {
                 }
                 .info {
                     box-sizing: border-box;
-                    padding: 0 rem(20) rem(20);
+                    padding: 0 rem(90) rem(20);
                     font-size: rem(24);
                     line-height: rem(40);
                     color: #999;
@@ -316,20 +317,20 @@ export default {
             .pro-type {
                 background-color: #f7f7f8;
                 h1 {
-                    font-size: 16px;
+                    font-size: rem(30);
                     text-align: center;
-                    padding: 40px 0;
+                    padding: rem(80) 0;
                 }
                 .type {
                     display: flex;
                     flex-wrap: wrap;
-                    padding: 0 2%;
+                    padding: 2%;
                     .type-item {
                         width: 47%;
                         margin: rem(10) 1.4%;
                         background-color: #ffffff;
                         .title {
-                            line-height: rem(50);
+                            line-height: rem(80);
                             text-align: center;
                             background-color: #e6e6e6;
                         }
@@ -343,8 +344,8 @@ export default {
                             display: block;
                             width: 90%;
                             margin: 0 auto;
-                            padding: rem(10) 0;
-                            line-height: rem(32);
+                            padding: rem(30) 0;
+                            line-height: rem(40);
                             border-top: 1px solid #e5e5e5;
                         }
                     }
@@ -507,7 +508,8 @@ export default {
                             padding: rem(24) 0;
                             color: #333;
                             span:nth-child(1) {
-                                font-size: rem(16);
+                                font-weight: bold;
+                                font-size: rem(30);
                                 margin-right: rem(5);
                             }
                         }
