@@ -165,10 +165,10 @@ export default {
             show: false,
             teams: [
                 {img: require('../../assets/peo_1.png'), name: 'Michael Lukianoff', title: '基金会董事长', info: '留美硕士，多年从事与金融行业及商业领域相关工作，对风险控制、战略分析、项目执行有着丰富的实践经验，近些年开展对区块链领域方面的研究，将多年累积的市场经验结合区块链应用，打造现代化全新商业联盟。'},
-                {img: require('../../assets/peo_1.png'), name: 'Trond Hov', title: '基金会理事', info: '毕业于英国剑桥大学，具有在信息技术和服务行业相关工作经验，有较强的开拓创新精神，对市场风险、资金管理有深入的理解和实践经验，目前Wilson主要负责基金会的资产管理运作。'},
-                {img: require('../../assets/peo_1.png'), name: 'Geona Lee', title: '基金会秘书长', info: '拥有数十年的大数据从业经验，日常致力于对处理大量结构性数据与非结构性数据的数据系统进行架构设计，通过数据分析对项目数据库方面工作做出指导性意见。'},
-                {img: require('../../assets/peo_1.png'), name: 'Kevin Chen', title: '开发工程师', info: '毕业于美国南加州大学，拥有数十年硅谷工作经验，对区块链的底层技术有深入的研究，研发分散化数字货币机制，对区块链与加密货币网络的发展做出了巨大贡献，同时深刻理解区块链共识算法，如常见的   PoW、PoS以及DPoS，目前担任Cellnetwork首席开发技术工程师，负责Cellnetwork共享链中主要的底层框架建设及钱包的开发维护。'},
-                {img: require('../../assets/peo_1.png'), name: 'Aaron Charles', title: '开发工程师', info: '毕业于美国斯坦福大学，曾任职Facebook、Google等国际知名企业开发技术岗位，对计算机编程语言专业掌握度极高，个人拥有多年区块链技术经验，熟悉solidity智能合约开发，对区块链加密算法、共识机制、虚机、存储有深入理解，目前负责Cellnetwork中加密算法的设计、安全测试及区块链游览器的搭建和维护。'}
+                {img: require('../../assets/peo_2.png'), name: 'Trond Hov', title: '基金会理事', info: '毕业于英国剑桥大学，具有在信息技术和服务行业相关工作经验，有较强的开拓创新精神，对市场风险、资金管理有深入的理解和实践经验，目前Wilson主要负责基金会的资产管理运作。'},
+                {img: require('../../assets/peo_3.png'), name: 'Geona Lee', title: '基金会秘书长', info: '拥有数十年的大数据从业经验，日常致力于对处理大量结构性数据与非结构性数据的数据系统进行架构设计，通过数据分析对项目数据库方面工作做出指导性意见。'},
+                {img: require('../../assets/peo_4.png'), name: 'Kevin Chen', title: '开发工程师', info: '毕业于美国南加州大学，拥有数十年硅谷工作经验，对区块链的底层技术有深入的研究，研发分散化数字货币机制，对区块链与加密货币网络的发展做出了巨大贡献，同时深刻理解区块链共识算法，如常见的   PoW、PoS以及DPoS，目前担任Cellnetwork首席开发技术工程师，负责Cellnetwork共享链中主要的底层框架建设及钱包的开发维护。'},
+                {img: require('../../assets/peo_5.png'), name: 'Aaron Charles', title: '开发工程师', info: '毕业于美国斯坦福大学，曾任职Facebook、Google等国际知名企业开发技术岗位，对计算机编程语言专业掌握度极高，个人拥有多年区块链技术经验，熟悉solidity智能合约开发，对区块链加密算法、共识机制、虚机、存储有深入理解，目前负责Cellnetwork中加密算法的设计、安全测试及区块链游览器的搭建和维护。'}
             ]
         }
     },
