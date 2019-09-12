@@ -7,7 +7,7 @@ let routeslist = []
     // 模块路由添到路由列表
 routeslist.push({
         path: '/',
-        redirect: '/home',
+        redirect: '/mhome',
     },
     index, cellImhome)
 export default new Router({
