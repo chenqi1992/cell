@@ -340,10 +340,12 @@ export default {
                 .wallet-img {
                     height: 370px;
                     .wallet-img-outer {
+                        box-sizing: border-box;
                         display: flex;
                         justify-content: space-between;
                         width: 800px;
                         height: 100%;
+                        padding-top: 65px;
                         margin: 0 auto;
                         .wallet-left {
                             display: flex;
@@ -358,7 +360,7 @@ export default {
                         .wallet-right {
                             box-sizing: border-box;
                             width: 60%;
-                            padding-top: 30px;
+                            // padding-top: 30px;
                             h1 {
                                 font-size: 16px;
                                 padding: 40px 0;
@@ -477,8 +479,8 @@ export default {
                     }
                     .team-info {
                         box-sizing: border-box;
-                        padding: 0 30px;
-                        width: 74%;
+                        padding: 0 30px 30px;
+                        width: 100%;
                         background-color: #f0f1f2;
                         .info-title {
                             padding: 24px 0;
