@@ -286,7 +286,7 @@ export default {
                 }
             }
             .pro-type {
-                height: 400px;
+                padding-bottom: 40px;
                 background-color: #f7f7f8;
                 h1 {
                     font-size: 16px;
@@ -469,7 +469,7 @@ export default {
                     img {
                         display: block;
                         width: 26%;
-                        height: 130px;
+                        height: 100%;
                     }
                     .team-info {
                         box-sizing: border-box;
