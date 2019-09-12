@@ -351,7 +351,7 @@ export default {
                                 text-align: center;
                             }
                             img {
-								margin-right: rem(5);
+								margin-right: rem(20);
                                 display: block;
                                 width: rem(50);
                                 height: rem(50);
@@ -382,7 +382,7 @@ export default {
                         display: flex;
                         justify-content: space-between;
                         margin: 0 auto;
-                        padding: rem(220) 0 rem(80);
+                        padding: rem(360) 0 rem(80);
                         .wallet-left {
                             display: flex;
                             align-items: center;
