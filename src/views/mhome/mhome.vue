@@ -33,18 +33,24 @@
                 <h1>全新STAKING POS共识机制</h1>
                 <div class="type">
                     <div class="type-item">
-                        <div class="title">具有STAKING（质押）特色的PoS共识机制</div>
-                        <img src="../../assets/m/1.png" alt="">
+                        <div class="type-item--header">
+                            <div class="title">具有STAKING（质押）特色的PoS共识机制</div>
+                            <img src="../../assets/m/1.png" alt="">
+                        </div>
                         <span>相较于以往POS共识机制，Cellnetwork结合智能合约采用了更为新颖的STAKING（质押）模式，用户不仅仅是传统的持币就能产生收益，而是需要通过STAKING(质押)动作将其代币质押到Cellnetwork项目中节点指定的地址上获取收益。</span>
                     </div>
                     <div class="type-item">
-                        <div class="title">节点设置优势</div>
-                        <img src="../../assets/m/2.png" alt="">
+                        <div class="type-item--header">
+                            <div class="title">节点设置优势</div>
+                            <img src="../../assets/m/2.png" alt="">
+                        </div>
                         <span>Cellnetwork还将为节点提供底层服务器搭建及维护的服务，节点将省去大量的服务器维护和技术支持方面的工作，这样做的目的是可以让区块链爱好者更低门槛、更加便捷的成为Cellnetwork项目中的一份子。</span>
                     </div>
                     <div class="type-item">
-                        <div class="title">节点投票机制</div>
-                        <img src="../../assets/m/3.png" alt="">
+                        <div class="type-item--header">
+                            <div class="title">节点投票机制</div>
+                            <img src="../../assets/m/3.png" alt="">
+                        </div>
                         <span>Cellnetwork出于为建设更好更优质的社区的考虑，将推出节点投票机制，由节点提出并对事件投票做出决策，用户也可以通过质押自己的通证给相应的节点用以支持节点，Cellnetwork中还省去了以往繁琐的投票流程，可以快速且公平确认最终的投票结果，从而更好的进行社区治理。在安全性方面，每个事件的发起都需要通过质押一定数额的通证作为保障，解决了以往POS共识项目中投票权分配不公平且造成出现一定的作恶节点危害社区的问题。</span>
                     </div>
                 </div>
@@ -106,7 +112,7 @@
             <h1>我们的团队</h1>
             <div class="item-outer">
                 <div class="item-inner" v-for="(item, index) in teams" :key="index">
-                    <img :src="item.img" alt="">
+                    <!-- <img :src="item.img" alt=""> -->
                     <div class="team-info">
                         <div class="info-title">
                             <span>{{item.name}}</span>
@@ -326,19 +332,25 @@ export default {
                     flex-wrap: wrap;
                     padding: 2%;
                     .type-item {
-                        width: 47%;
                         margin: rem(10) 1.4%;
                         background-color: #ffffff;
-                        .title {
-                            line-height: rem(80);
-                            text-align: center;
+                        .type-item--header {
+                            box-sizing: border-box;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
                             background-color: #e6e6e6;
-                        }
-                        img {
-                            display: block;
-                            width: rem(50);
-                            height: rem(50);
-                            margin: rem(40) auto;
+                            height: rem(80);
+                            padding: rem(30);
+                            .title {
+                                line-height: rem(60);
+                                text-align: center;
+                            }
+                            img {
+                                display: block;
+                                width: rem(50);
+                                height: rem(50);
+                            }
                         }
                         span {
                             display: block;
@@ -365,7 +377,7 @@ export default {
                         display: flex;
                         justify-content: space-between;
                         margin: 0 auto;
-                        padding: rem(180) 0 rem(80);
+                        padding: rem(220) 0 rem(80);
                         .wallet-left {
                             display: flex;
                             align-items: center;
@@ -484,12 +496,15 @@ export default {
                 font-size: rem(30);
             }
             .item-outer {
-                display: flex;
-                flex-wrap: wrap;
-                padding: 0 2% 4%;
+                // display: flex;
+                // flex-wrap: wrap;
+                padding: 0 3% 5%;
+                // column-width: 360px;
+                column-count: 2;
+                // column-gap: 1rem;
                 .item-inner {
-                    width: 47%;
-                    margin: 0 1.4%;
+                    // width: 47%;
+                    // margin: 0 1.4%;
                     margin-bottom: 10px;
                     img {
                         display: block;
@@ -498,7 +513,7 @@ export default {
                     }
                     .team-info {
                         box-sizing: border-box;
-                        padding: 0 rem(10) rem(20);
+                        padding: 0 rem(10) rem(0);
                         width: 100%;
                         background-color: #f0f1f2;
                         .info-title {
@@ -513,10 +528,10 @@ export default {
                                 margin-right: rem(5);
                             }
                         }
+                        p {
+                            line-height: rem(40);
+                        }
                     }
-                }
-                .item-inner:nth-child(2n) {
-                    margin-bottom: rem(30);
                 }
             }
         }
