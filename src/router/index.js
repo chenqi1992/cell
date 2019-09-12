@@ -5,7 +5,11 @@ import cellImhome from './cellImhome'
 Vue.use(Router)
 let routeslist = []
     // 模块路由添到路由列表
-routeslist.push(index, cellImhome)
+routeslist.push({
+        path: '/',
+        redirect: '/mhome',
+    },
+    index, cellImhome)
 export default new Router({
     mode: 'hash',
     routes: routeslist,
