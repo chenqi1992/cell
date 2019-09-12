@@ -23,22 +23,22 @@
                 <div class="info">区块链基础服务持续更新中，快速迭代，随意组合，总能满足你的业务需求</div>
             </div>
             <div class="pro-type">
-                <h1>质押与节点的功能</h1>
+                <h1>全新STAKING POS共识机制</h1>
                 <div class="type">
 					<div class="type-item">
-					    <div class="title">具有STAKING（质押）特色的PoS共识机制</div>
+					    <div class="title">STAKING特色的POS共识机制</div>
 					    <img src="../../assets/6.png" alt="">
-					    <span>相较于以往POS共识机制，Cellnetwork结合智能合约采用了更为新颖的STAKING（质押）模式，用户不仅仅是传统的持币就能产生收益，而是需要通过STAKING(质押)动作将其代币质押到Cellnetwork项目中节点指定的地址上获取收益。</span>
+					    <span>相较于以往POS共识机制，Cellnetwork结合智能合约采用了更为新颖的STAKING（质押）模式，用户不是传统的简单持币就能产生收益，而是需要通过STAKING(质押)动作将其代币质押到Cellnetwork项目中的节点上获取收益。</span>
 					</div>
                     <div class="type-item">
-                        <div class="title">节点设置优势</div>
+                        <div class="title">节点设置机制</div>
                         <img src="../../assets/5.png" alt="">
-                        <span>Cellnetwork将为节点提供底层服务器搭建及维护的服务，节点将省去大量的服务器维护和技术支持方面的工作，这样做的目的是可以让区块链爱好者更低门槛、更加便捷的成为Cellnetwork项目中的一份子。</span>
+                        <span>Cellnetwork还将为节点提供底层服务器搭建及维护的服务，节点将省去大量的服务器维护和技术支持方面的工作，这样做的目的是可以让区块链爱好者更低门槛、更加便捷的成为Cellnetwork项目中的一份子。</span>
                     </div>
                     
                     <div class="type-item">
                         <div class="title">节点投票机制</div>
-                        <img src="../../assets/7.png" alt="">
+                        <img src="../../assets/7.jpg" alt="">
                         <span>Cellnetwork出于为建设更好更优质的社区的考虑，将推出节点投票机制，由节点提出并对事件投票做出决策，用户也可以通过质押自己的通证给相应的节点用以支持节点，Cellnetwork中还省去了以往繁琐的投票流程，可以快速且公平确认最终的投票结果，从而更好的进行社区治理。在安全性方面，每个事件的发起都需要通过质押一定数额的通证作为保障，解决了以往POS共识项目中投票权分配不公平且造成出现一定的作恶节点危害社区的问题。</span>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                     <div class="advantage-inner">
                         <div class="item">
                             <h2>优势一</h2>
-                            <p>在Cellnetwork中，将组建一个去中心化的闪兑交易所，通过配置高水准的做市商团队改善了大多闪兑交易所缺乏的通证流通性。</p>
+                            <p>在Cellnetwork生态系统中将组建一个去中心化的闪兑交易所，通过配置高水准的做市商团队解决了大多闪兑交易所缺乏的流动性问题。</p>
                         </div>
                         <div class="item">
                             <h2>优势二</h2>
@@ -58,7 +58,11 @@
                         </div>
                         <div class="item">
                             <h2>优势三</h2>
-                            <p>目前Cellnetwork项目已经实现与ETH的闪兑功能，未来Cellnetwrok项目将通过跨链技术实现更多币种的闪兑。</p>
+                            <p>目前Cellnetwork项目已经实现eCell与ETH的闪兑功能，未来Cellnetwrok项目将通过跨链技术实现更多币种的闪兑。</p>
+                        </div>
+                        <div class="item">
+                            <h2>优势四</h2>
+                            <p>一对一私行级客户服务。</p>
                         </div>
                     </div>
                 </div>
@@ -71,16 +75,16 @@
                             <h1>钱包APP三大功能</h1>
                             <div class="wallet-item">
                                 <div class="item">
-                                    <img src="../../assets/8.png" alt="">
-                                    <span>STAKING、闪兑需求服务</span>
-                                </div>
-                                <div class="item">
                                     <img src="../../assets/9.png" alt="">
-                                    <span>一对一私行级客户服务</span>
+                                    <span>STAKING、币币闪兑</span>
                                 </div>
                                 <div class="item">
                                     <img src="../../assets/10.png" alt="">
-                                    <span>私人定制级需求服务</span>
+                                    <span>跨链技术</span>
+                                </div>
+                                <div class="item">
+                                    <img src="../../assets/8.jpg" alt="">
+                                    <span>支持多币种存储</span>
                                 </div>
                             </div>
                         </div>
@@ -91,16 +95,16 @@
         <div class="about" ref="top3">
             <h1>关于我们</h1>
             <div class="about-us">
-                <p>CELL NETWORK FOUNDATION LTD.有限公司位于美丽的花园城市新加坡，是在应用软件开发领域中专业从事应用系统开发、信息安全服务的高新技术企业。</p>
-                <p>公司秉承 “专业、务实、高效、创新”的企业精神，拥有一群年轻活力、敢拼实干的优秀员工，公司内部具有良好的内部管理机制，优良的工作环境以及良好的激励机制，着力于打造产品质量行业领先、服务品质一流的科技公司。</p>
-                <p>我们将以每一位客户的业务需求为导向，从客户利益最大化出发，制定并提供最完善的信息化应用解决方案并尊重客户提出的一切修改意见，及时加以完善。 "</p>
+                <p>CELL NETWORK FOUNDATION LTD.位于美丽的花园城市新加坡，是在应用软件开发领域中专业从事应用系统开发、信息安全服务的高新技术企业。</p>
+                <p>公司秉承 “专业、务实、高效、创新”的企业精神，拥有一群年轻活力、敢拼实干的优秀员工，公司具有良好的内部管理机制，优良的工作环境及激励机制，着力于打造行业领先、服务品质一流的科技公司。</p>
+                <p>我们将以每一位客户的业务需求为导向，从客户利益最大化出发，制定并提供最完善的信息化应用解决方案并尊重客户提出的一切修改意见，及时加以完善。</p>
             </div>
         </div>
         <div class="team">
             <h1>我们的团队</h1>
             <div class="item-outer">
                 <div class="item-inner" v-for="(item, index) in teams" :key="index">
-                    <img :src="item.img" alt="">
+                    <!-- <img :src="item.img" alt=""> -->
                     <div class="team-info">
                         <div class="info-title">
                             <span>{{item.name}}</span>
@@ -132,14 +136,14 @@
                 <div class="copyright-inner">
                     <h2>联系我们</h2>
                     <div class="item">
-                        <span class="phone"><img src="../../assets/phone.png" alt="">电话：006596617606</span>
+                        <span class="phone"><img src="../../assets/phone.png" alt="">电话：006596617006</span>
                         <span class="position"><img src="../../assets/position.png" alt="">地址：73 UPPER PAYA LEBAR ROAD</span>
                         <span>#07-02C CENTRO BIANCO SINGAPORE</span>
                     </div>
                 </div>
             </div>
-            <div class="footer">CELL NETWORK FOUNDATION LTD.，006596617606，73 UPPER PAYA LEBAR ROAD #07-02C CENTRO BIANCO SINGAPORE 
-© 2019-2020 www.cellnetwork.com All rights reserved</div>
+            <div class="footer">CELL NETWORK FOUNDATION LTD. ，006596617006，73 UPPER PAYA LEBAR ROAD #07-02C CENTRO BIANCO SINGAPORE 
+© 2019-2020 www.cellnetwork.io All rights reserved</div>
         </div>
     </div>
 </template>
