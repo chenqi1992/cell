@@ -61,19 +61,19 @@
                 <div class="advantage-outer">
                     <div class="advantage-inner">
                         <div class="item item-before">
-                            <h2>优势一</h2>
+                            <h1>优势一</h1>
                             <p>在Cellnetwork生态系统中将组建一个去中心化的闪兑交易所，通过配置高水准的做市商团队解决了大多闪兑交易所缺乏的流动性问题。</p>
                         </div>
                         <div class="item item-before">
-                            <h2>优势二</h2>
+                            <h1>优势二</h1>
                             <p>Cellnetwork推出了特别的节点经纪人模式，激励节点更多的参与进来。</p>
                         </div>
 						<div class="item item-before">
-						    <h2>优势三</h2>
+						    <h1>优势三</h1>
 						    <p>目前Cellnetwork项目已经实现eCell与ETH的闪兑功能，未来Cellnetwrok项目将通过跨链技术实现更多币种的闪兑。</p>
 						</div>
-                        <div class="item">
-                            <h2>优势四</h2>
+                        <div class="item item-before">
+                            <h1>优势四</h1>
                             <p>一对一私行级客户服务。</p>
                         </div>
                     </div>
@@ -148,16 +148,15 @@
                 <div class="copyright-inner">
                     <h2>联系我们</h2>
                     <div class="item">
-						<!-- <img src="../../assets/phone.png" alt=""> -->
-						<!-- <img src="../../assets/position.png" alt=""> -->
-                        <span class="phone">邮箱：ganwuyong8@gmail.com</span>
-                        <span class="position">地址：73 UPPER PAYA LEBAR ROAD</span>
+						
+                        <span class="phone"><img src="../../assets/icon_email.png" alt="">邮箱：cellnetwork888@gmail.com</span>
+                        <span class="position"><img src="../../assets/icon_map.png" alt="">地址：73 UPPER PAYA LEBAR ROAD</span>
                         <span>#07-02C CENTRO BIANCO SINGAPORE</span>
                     </div>
                 </div>
             </div>
             <div class="footer">
-                <p>CELL NETWORK FOUNDATION LTD. ganwuyong8@gmail.com</p>
+                <p>CELL NETWORK FOUNDATION LTD. cellnetwork888@gmail.com</p>
                 <p>73 UPPER PAYA LEBAR ROAD #07-02C CENTRO BIANCO SINGAPORE© 2019-2020 m.cellnetwork.io All rights reserved</p>
             </div>
         </div>
@@ -239,8 +238,8 @@ export default {
                 z-index: 11;
                 img {
                     display: block;
-                    width: rem(128);
-                    height: rem(26);
+                    width: rem(167);
+                    height: rem(22);
                 }
             }
             .menu {
