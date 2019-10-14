@@ -136,13 +136,15 @@
                 <div class="copyright-inner">
                     <h2>联系我们</h2>
                     <div class="item">
-                        <span class="phone"><img src="../../assets/phone.png" alt="">电话：006596617006</span>
-                        <span class="position"><img src="../../assets/position.png" alt="">地址：73 UPPER PAYA LEBAR ROAD</span>
+						<!-- <img src="../../assets/phone.png" alt=""> -->
+						<!-- <img src="../../assets/position.png" alt=""> -->
+                        <span class="phone"><img src="../../assets/icon_email.png" alt="">邮箱：cellnetwork888@gmail.com</span>
+                        <span class="position"><img src="../../assets/icon_map.png" alt="">地址：73 UPPER PAYA LEBAR ROAD</span>
                         <span>#07-02C CENTRO BIANCO SINGAPORE</span>
                     </div>
                 </div>
             </div>
-            <div class="footer">CELL NETWORK FOUNDATION LTD. ，006596617006，73 UPPER PAYA LEBAR ROAD #07-02C CENTRO BIANCO SINGAPORE 
+            <div class="footer">CELL NETWORK FOUNDATION LTD. ，cellnetwork888@gmail.com，73 UPPER PAYA LEBAR ROAD #07-02C CENTRO BIANCO SINGAPORE 
 © 2019-2020 www.cellnetwork.io All rights reserved</div>
         </div>
     </div>
@@ -219,8 +221,8 @@ export default {
                 .logo {
                     img {
                         display: block;
-                        width: 128px;
-                        height: 26px;
+                        width: 167px;
+                        height: 22px;
                     }
                 }
                 .nav {
