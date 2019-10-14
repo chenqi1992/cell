@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from '@/router/index.js'
 import { Popup } from 'vant';
 import 'vant/lib/index.css';
-
+// import 'lib-flexible'
 Vue.use(Popup)
 /* IE下提示Promise未定义的解决方法 */
 if (!window.Promise) {
