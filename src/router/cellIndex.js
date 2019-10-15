@@ -4,6 +4,8 @@ const Index = () =>
     import ('@/views/index/index.vue')
 const Home = () =>
     import('@/views/home/home.vue')
+const CHome = () =>
+    import('@/views/cellhome/home.vue')
 export default {
     path: '/',
     component: AppIndex,
@@ -19,6 +21,11 @@ export default {
             path: '/home',
             name: 'home',
             component: Home
+        },
+        {
+            path: '/cellhome',
+            name: 'cellHome',
+            component: CHome
         },
     ]
 }
