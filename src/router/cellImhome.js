@@ -1,7 +1,7 @@
 const AppMhome = () =>
     import('@/layout/AppMhome.vue')
 const Mhome = () =>
-    import('@/views/mhome/mhome.vue')
+    import('@/views/mhome/cellmhome.vue')
 export default {
     path: '/',
     component: AppMhome,

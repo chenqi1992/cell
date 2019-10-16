@@ -1,43 +1,45 @@
 <template>
-    <div class="cell-home">
+    <div class="cell-mhome">
         <div class="bg-content" ref="top1">
-            <img class="bg" src="../../assets/cellhome/pic_bg_banner.png" alt="">
+            <img class="bg" src="../../assets/cellmhome/icon_bg_cell.png" alt="">
             <div class="header">
                 <div class="logo">
-                    <img class="logo-pc" src="../../assets/cellhome/logo_pc.png" alt="">
+                    <img class="logo-pc" src="../../assets/cellmhome/logo_yid.png" alt="">
                     <img class="font-logo" src="../../assets/logo_1.png" alt="">
                 </div>
+            </div>
+            <div class="menu">
+                <van-popup
+                v-model="show"
+                position="right"
+                :style="{ height: '100%' }"
+                >
                 <div class="nav">
-                    <span>{{$t('blockchainTop.nav1')}}</span>
-                    <span @click="handleProject">{{$t('blockchainTop.nav2')}}</span>
-                    <span @click="handleAbout">{{$t('blockchainTop.nav3')}}</span>
-                    <span @click="handleTeam">{{$t('blockchainTop.nav4')}}</span>
+                    <span>首页</span>
+                    <span @click="handleProject">项目简介</span>
+                    <span @click="handleAbout">关于我们</span>
+                    <span @click="handleTeam">团队</span>
+                    <span @click="toggleLang('zh_CN')" :disabled="$i18n.locale == 'zh_CN'">中文简体</span>
+                    <span @click="toggleLang('zh_TW')" :disabled="$i18n.locale == 'zh_TW'">中文繁体</span>
+                    <span @click="toggleLang('en_US')" :disabled="$i18n.locale == 'en_US'">English</span>
                 </div>
-                <el-dropdown>
-                    <span class="el-dropdown-link">
-                        中文<i class="el-icon-arrow-down el-icon--right"></i>
-                    </span>
-                    <el-dropdown-menu slot="dropdown">
-                        <el-dropdown-item @click.native="toggleLang('zh_CN')" :disabled="$i18n.locale == 'zh_CN'">中文简体</el-dropdown-item>
-                        <el-dropdown-item @click.native="toggleLang('zh_TW')" :disabled="$i18n.locale == 'zh_TW'">中文繁体</el-dropdown-item>
-                        <el-dropdown-item @click.native="toggleLang('en_US')" :disabled="$i18n.locale == 'en_US'">English</el-dropdown-item>
-                    </el-dropdown-menu>
-                </el-dropdown>
+                </van-popup>
+                <img @click="handleMenu" src="../../assets/m/menu.png" alt="">
             </div>
             <div class="bg-info">
                 <img class="bg-info-logo" src="../../assets/cellhome/logo.png" alt="">
                 <span class="font">{{$t('blockchainTop.title')}}</span>
                 <div class="center">
                     <div class="center1">
-                        <img src="../../assets/cellhome/icon_staking.png" alt="">
+                        <img src="../../assets/cellmhome/icon_gongshijizhi.png" alt="">
                         <span>{{$t('blockchainTop.type1')}}</span>
                     </div>
                     <div class="center1">
-                        <img src="../../assets/cellhome/icon_exc.png" alt="">
+                        <img src="../../assets/cellmhome/icon_exc.png" alt="">
                         <span>{{$t('blockchainTop.type2')}}</span>
                     </div>
                     <div class="center1">
-                        <img src="../../assets/cellhome/icon_wallet.png" alt="">
+                        <img src="../../assets/cellmhome/icon_wallet.png" alt="">
                         <span>{{$t('blockchainTop.type3')}}</span>
                     </div>
                 </div>
@@ -53,34 +55,34 @@
         </div>
         <div class="pro" ref="top2">
             <div class="pro-info">
-                <h1>{{$t('blockchainPro.title')}}</h1>
-                <img class="pro-bg1" src="../../assets/cellhome/pic_sucai.png" alt="">
-                <div class="info">
-                    <div class="info-left"><img src="../../assets/cellhome/pic_cellnetwork.png" alt=""></div>
-                    <div class="info-right">{{$t('blockchainPro.info')}}</div>
+                <div class="info-top">  
+                    <h1>{{$t('blockchainPro.title')}}</h1>
+                    <img class="pro-bg1" src="../../assets/cellhome/pic_sucai.png" alt="">
                 </div>
+                <div class="info-right">{{$t('blockchainPro.info')}}</div>
+                <div class="info-left"><img src="../../assets/cellhome/pic_cellnetwork.png" alt=""></div>
             </div>
         </div>
         <div class="technology">
             <h1>{{$t('blockchainTec.title')}}</h1>
             <div class="wallet-item">
                 <div class="item">
-                    <img src="../../assets/cellhome/icon_zhinengheyue.png" alt="">
+                    <img src="../../assets/cellmhome/icon_zhineng.png" alt="">
                     <span>{{$t('blockchainTec.item1')}}</span>
                     <p>{{$t('blockchainTec.item1Info')}}</p>
                 </div>
                 <div class="item">
-                    <img src="../../assets/cellhome/icon_gongshijizhi.png" alt="">
+                    <img src="../../assets/cellmhome/icon_gongshi.png" alt="">
                     <span>{{$t('blockchainTec.item2')}}</span>
                     <p>{{$t('blockchainTec.item2Info')}}</p>
                 </div>
                 <div class="item">
-                    <img src="../../assets/cellhome/icon_shandui.png" alt="">
+                    <img src="../../assets/cellmhome/icon_shandui.png" alt="">
                     <span>{{$t('blockchainTec.item3')}}</span>
                     <p>{{$t('blockchainTec.item3Info')}}</p>
                 </div>
                 <div class="item">
-                    <img src="../../assets/cellhome/icon_kualiamjishu.png" alt="">
+                    <img src="../../assets/cellmhome/icon_kualian.png" alt="">
                     <span>{{$t('blockchainTec.item4')}}</span>
                     <p>{{$t('blockchainTec.item4Info')}}</p>
                 </div>
@@ -90,12 +92,12 @@
             <h1>{{$t('blockchainEco.title')}}</h1>
             <div class="bg">
                 <div class="bg-position">
-                    <div class="position1" src="../../assets/cellhome/icon_jinrong_d.png" alt=""></div>
-                    <div class="position2" src="../../assets/cellhome/icon_shequ_s.png" alt=""></div>
-                    <div class="position3" src="../../assets/cellhome/icon_xinren_d.png" alt=""></div>
-                    <div class="position4" src="../../assets/cellhome/icon_gongyinglian_d.png" alt=""></div>
-                    <div class="position5" src="../../assets/cellhome/icon_shuju_d.png" alt=""></div>
-                    <div class="position6" src="../../assets/cellhome/icon_diya_d.png" alt=""></div>
+                    <div class="position1" src="../../assets/cellmhome/icon_jinrong_d.png" alt=""></div>
+                    <div class="position2" src="../../assets/cellmhome/icon_shequ_s.png" alt=""></div>
+                    <div class="position3" src="../../assets/cellmhome/icon_xinren_d.png" alt=""></div>
+                    <div class="position4" src="../../assets/cellmhome/icon_gongyinglian_d.png" alt=""></div>
+                    <div class="position5" src="../../assets/cellmhome/icon_shuju_d.png" alt=""></div>
+                    <div class="position6" src="../../assets/cellmhome/icon_diya_d.png" alt=""></div>
                 </div>
             </div>
         </div>
@@ -163,13 +165,7 @@ export default {
     },
     data() {
         return {
-            teams: [
-                {img: require('../../assets/peo_1.png'), name: this.$t('blockchainTeam.name1'), title: this.$t('blockchainTeam.title1'), info: this.$t('blockchainTeam.info1')},
-                {img: require('../../assets/peo_2.png'), name: this.$t('blockchainTeam.name2'), title: this.$t('blockchainTeam.title2'), info: this.$t('blockchainTeam.info2')},
-                {img: require('../../assets/peo_3.png'), name: this.$t('blockchainTeam.name3'), title: this.$t('blockchainTeam.title3'), info: this.$t('blockchainTeam.info3')},
-                {img: require('../../assets/peo_4.png'), name: this.$t('blockchainTeam.name4'), title: this.$t('blockchainTeam.title4'), info: this.$t('blockchainTeam.info4')},
-                {img: require('../../assets/peo_5.png'), name: this.$t('blockchainTeam.name5'), title: this.$t('blockchainTeam.title5'), info: this.$t('blockchainTeam.info5')}
-            ]
+            show: false,
         }
     },
     created() {
@@ -178,7 +174,21 @@ export default {
     mounted() {
 
     },
+    computed: {
+        teams() {
+            return [
+                {img: require('../../assets/peo_1.png'), name: this.$t('blockchainTeam.name1'), title: this.$t('blockchainTeam.title1'), info: this.$t('blockchainTeam.info1')},
+                {img: require('../../assets/peo_2.png'), name: this.$t('blockchainTeam.name2'), title: this.$t('blockchainTeam.title2'), info: this.$t('blockchainTeam.info2')},
+                {img: require('../../assets/peo_3.png'), name: this.$t('blockchainTeam.name3'), title: this.$t('blockchainTeam.title3'), info: this.$t('blockchainTeam.info3')},
+                {img: require('../../assets/peo_4.png'), name: this.$t('blockchainTeam.name4'), title: this.$t('blockchainTeam.title4'), info: this.$t('blockchainTeam.info4')},
+                {img: require('../../assets/peo_5.png'), name: this.$t('blockchainTeam.name5'), title: this.$t('blockchainTeam.title5'), info: this.$t('blockchainTeam.info5')}
+            ]
+        }
+    },
     methods: {
+        handleMenu() {
+            this.show = true
+        },
         handleProject() {
             document.body.scrollTop = this.$refs.top1.clientHeight;
             document.documentElement.scrollTop = this.$refs.top1.clientHeight;
@@ -214,29 +224,24 @@ export default {
                     type: 'success'
                 })
             }
+            this.show = false
         },
     }
 }
 </script>
 
 <style lang="scss">
-    .el-dropdown-menu {
-        color: #ffffff;
-        cursor: pointer;
-        .el-dropdown-item {
-            color: #ffffff;
-        }
-    }
-    .cell-home {
+    @import '@/common/scss/commonsize.scss';
+    .cell-mhome {
         .bg-content {
             position: relative;
-            height: 995px;
+            height: calc(100vh);
             .bg {
                 position: absolute;
                 left: 0;
                 top: 0;
                 width: 100%;
-                height: 995px;
+                height: calc(100vh);
                 z-index: 10;
             }
             .header {
@@ -253,47 +258,56 @@ export default {
                 .logo {
                     display: flex;
                     align-items: center;
-                    margin-top: 10px;
+                    margin-top: rem(10);
                     .logo-pc {
-                        width: 56px;
-                        height: 56px;
-                        margin-right: 5px;
+                        width: rem(56);
+                        height: rem(56);
+                        margin-right: rem(15);
                     }
                     .font-logo {
                         display: block;
-                        width: 167px;
-                        height: 22px;
+                        width: rem(167);
+                        height: rem(30);
                     }
+                }
+            }
+            .menu {
+                position: absolute;
+                top: 0;
+                right: 5%;
+                display: flex;
+                align-items: center;
+                height: 50px;
+                z-index: 12;
+                cursor: pointer;
+                img {
+                    display: block;
+                    width: rem(54);
+                    height: rem(54);
                 }
                 .nav {
-                    display: flex;
-                    justify-content: space-around;
+                    height: 100%;
+                    background-color: #ffffff;
                     span {
                         display: block;
-                        padding: 0 30px;
-                        color: #ffffff;
+                        padding: rem(30) rem(160) rem(30) rem(40);
                         cursor: pointer;
+                        font-size: rem(28);
                     }
-                }
-                .el-dropdown-link {
-                    cursor: pointer;
-                    color: #ffffff;
-                }
-                .el-icon-arrow-down {
-                    font-size: 12px;
-                    color: #ffffff;
                 }
             }
             .bg-info {
                 position: absolute;
-                left: 25%;
+                left: 10%;
                 top: 110px;
-                width: 50%;
-                height: 110px;
+                width: 80%;
+                height: 300px;
                 z-index: 11;
                 color: #ffffff;
                 .bg-info-logo {
                     display: block;
+                    width: rem(278);
+                    height: rem(230);
                     margin: 0 auto;
                 }
                 .font {
@@ -308,60 +322,49 @@ export default {
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        font-size: 16px;
-                        height: 74px;
-                        line-height: 74px;
+                        font-size: rem(16);
+                        height: rem(74);
                         text-align: center;
                         background-size: 100% 100%;
                         img {
                             display: block;
-                            margin-right: 8px;
+                            margin-right: rem(8);
+                        }
+                        span {
+                            font-size: rem(12);
                         }
                     }
                     .center1:nth-child(1) {
-                        width: 283px;
-                        background: url('../../assets/cellhome/icon_home_dia2.png') 0 0 no-repeat;
+                        width: rem(269);
+                        background: url('../../assets/cellmhome/icon_home_dia2.png') 0 0 no-repeat;
                         background-size: 100% 100%;
                         img {
-                            width: 20px;
-                            height: 22px;
+                            width: rem(20);
+                            height: rem(22);
                         }
                     }
                     .center1:nth-child(2) {
-                        width: 289px;
-                        background: url('../../assets/cellhome/icon_home_dia3.png') 0 0 no-repeat;
+                        width: rem(273);
+                        background: url('../../assets/cellmhome/icon_home_dia3.png') 0 0 no-repeat;
                         background-size: 100% 100%;
                         img {
-                            width: 25px;
-                            height: 21px;
+                            width: rem(25);
+                            height: rem(21);
                         }
                     }
                     .center1:nth-child(3) {
-                        width: 231px;
-                        background: url('../../assets/cellhome/icon_home_dia4.png') 0 0 no-repeat;
+                        width: rem(202);
+                        background: url('../../assets/cellmhome/icon_home_dia4.png') 0 0 no-repeat;
                         background-size: 100% 100%;
                         img {
-                            width: 25px;
-                            height: 22px;
+                            width: rem(25);
+                            height: rem(22);
                         }
                     }
                 }
-                .font2 {
-                    font-size: 16px;
-                    margin-top: 50px;
-                }
-                .btn {
-                    width: 75px;
-                    height: 27px;
-                    line-height: 27px;
-                    margin-top: 30px;
-                    text-align: center;
-                    background-color: #1c8dea;
-                    border-radius: 4px;
-                    color: #ffffff;
-                }
             }
             .space {
+                overflow: hidden;
                 position: absolute;
                 left: 0;
                 top: 0;
@@ -393,6 +396,11 @@ export default {
                 left: 60%;
                 top: 35%;
             }
+            .stars {
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+            }
             .star {
                 display: block;
                 width: 5px;
@@ -400,7 +408,7 @@ export default {
                 border-radius: 50%;
                 background: #FFF;
                 top: 100px;
-                left: 400px;
+                left: 85%;
                 position: relative;
                 transform-origin: 100% 0;
                 animation: star-ani 6s infinite ease-out;
@@ -437,7 +445,7 @@ export default {
             }
             .blue {
                 top: 35px;
-                left: 90%;
+                left: 60%;
                 background: cyan;
                 animation-delay: 7s;
                 -webkit-animation-delay: 7s;
@@ -452,7 +460,7 @@ export default {
             }
             .yellow {
                 top: 50px;
-                left: 80%;
+                left: 50%;
                 background: #ffcd5c;
                 animation-delay: 5.8s;
             }
@@ -483,22 +491,22 @@ export default {
         }
         .pro {
             position: relative;
-            height: 900px;
 	        background-color: #0f2239;
             .pro-info {
+                box-sizing: border-box;
                 height: 100%;
-                h1 {
-                    text-align: center;
-                    padding-top: 89px;
-                    font-size: 48px;
-	                color: #e8eef3;
-                }
-                .pro-bg1 {
-                    position: absolute;
-                    top: 42px;
-                    right: 14%;
-                    width: 265px;
-                    height: 210px;
+                padding: 0 5%;
+                .info-top {
+                    display: flex;
+                    h1 {
+                        padding-top: rem(89);
+                        font-size: rem(48);
+                        color: #e8eef3;
+                    }
+                    .pro-bg1 {
+                        width: rem(265);
+                        height: rem(210);
+                    }
                 }
                 .info {
                     position: absolute;
@@ -506,38 +514,58 @@ export default {
                     left: 2%;
                     display: flex;
                     width: 90%;
-                    .info-right {
-                        padding-top: 10%;
-                        font-size: 16px;
-                        line-height: 26px;
-                        color: #e8eef3;
+                }
+                .info-right {
+                    padding-top: 10%;
+                    font-size: rem(16);
+                    line-height: rem(36);
+                    color: #e8eef3;
+                }
+                .info-left {
+                    width: 100%;
+                    height: rem(530);
+                    margin-top: rem(100);
+                    img {
+                        width: 100%;
+                        height: 100%;
                     }
                 }
             }
         }
         .technology {
-            height: 720px;
 	        background-color: #ffffff;
             h1 {
-                padding: 92px 0 110px;
+                padding: rem(92) 0 rem(110);
                 text-align: center;
-                font-size: 48px;
+                font-size: rem(48);
                 color: #000000;
             }
             .wallet-item {
-                width: 88%;
+                overflow: hidden;
+                box-sizing: border-box;
+                width: 100%;
+                padding: 0 3% 6%;
                 margin: 0 auto;
                 display: flex;
+                flex-wrap: wrap;
                 justify-content: space-around;
+                @keyframes rightEaseInAnimate1{
+                    0%{transform: translateX(-500px);opacity: 0;}
+                    100%{transform:translateX(0px);opacity: 1; }
+                }
+                @keyframes rightEaseInAnimate2{
+                    0%{transform: translateX(500px);opacity: 0;}
+                    100%{transform:translateX(0px);opacity: 1; }
+                }
                 .item {
-                    width: 22%;
-                    height: 300px;
+                    width: 47%;
+                    padding-bottom: rem(60);
                     border-radius: 10px;
                     img {
                         display: block;
-                        width: 88px;
-                        height: 95px;
-                        margin: 25px auto;
+                        width: rem(126);
+                        height: rem(129);
+                        margin: rem(25) auto;
                     }
                     span {
                         display: block;
@@ -545,16 +573,32 @@ export default {
                         width: 90%;
                         margin: 0 auto;
                         color: #000000;
-                        font-size: 20px;
-                        padding-bottom: 10px;
+                        font-size: rem(20);
+                        padding-bottom: rem(10);
                     }
                     p {
-                        width: 200px;
+                        // width: rem(20);
                         margin: 0 auto;
                         text-align: center;
                         color: #7a7b7c;
-                        font-size: 14px;
+                        font-size: rem(14);
                     }
+                }
+                .item:nth-child(1) {
+                    animation: rightEaseInAnimate1 2s ease 1; 
+                    animation-fill-mode: forwards;
+                }
+                .item:nth-child(2) {
+                    animation: rightEaseInAnimate2 2s ease 1; 
+                    animation-fill-mode: forwards;
+                }
+                .item:nth-child(3) {
+                    animation: rightEaseInAnimate1 3s ease 1; 
+                    animation-fill-mode: forwards;
+                }
+                .item:nth-child(4) {
+                    animation: rightEaseInAnimate2 3s ease 1; 
+                    animation-fill-mode: forwards;
                 }
                 .item:hover {
                     background-color: #1c8dea;
@@ -566,33 +610,34 @@ export default {
             }
         }
         .ecological {
-            height: 900px;
+            width: 100%;
+            padding-bottom: rem(200);
 	        background-color: #10223a;
             h1 {
-                padding: 92px 0 110px;
+                padding-top: rem(92);
                 text-align: center;
-                font-size: 48px;
+                font-size: rem(48);
                 color: #ffffff;
             }
             .bg {
-                width: 1253px;
-                height: 497px;
+                width: 68%;
+                height: rem(900);
                 margin: 0 auto;
-                background: url('../../assets/cellhome/pic_bg_cellnetwork.png') 0 0 no-repeat;
+                background: url('../../assets/cellmhome/pic_bg_yin.png') 0 0 no-repeat;
                 background-size: 100% 100%;
                 .bg-position {
                     position: relative;
                     width: 100%;
                     height: 100%;
                     div {
-                        width: 106px;
-                        height: 106px;
+                        width: rem(103);
+                        height: rem(103);
                     }
                     .position1 {
                         position: absolute;
-                        left: -53px;
-                        top: 194px;
-                        background: url('../../assets/cellhome/icon_jinrong_d.png') 0 0 no-repeat;
+                        left: rem(-50);
+                        top: rem(589);
+                        background: url('../../assets/cellmhome/icon_jinr.png') 0 0 no-repeat;
                         background-size: 100% 100%;
                         // animation: 
                         //     animX 12s  cubic-bezier(0.36, 0, 0.64, 1) -1s infinite alternate,
@@ -619,97 +664,97 @@ export default {
                     //         transform: scale(0.7)
                     //     }
                     // }
-                    .position1:hover {
-                        background: url('../../assets/cellhome/icon_jinrong_s.png') 0 0 no-repeat;
-                    }
+                    // .position1:hover {
+                    //     background: url('../../assets/cellhome/icon_jinrong_s.png') 0 0 no-repeat;
+                    // }
                     .position2 {
                         position: absolute;
-                        left: 240px;
-                        top: 32px;
-                        background: url('../../assets/cellhome/icon_shequ_d.png') 0 0 no-repeat;
+                        left: rem(70);
+                        top: rem(350);
+                        background: url('../../assets/cellmhome/icon_shequ.png') 0 0 no-repeat;
                         background-size: 100% 100%;
                     }
-                    .position2:hover {
-                        background: url('../../assets/cellhome/icon_shequ_s.png') 0 0 no-repeat;
-                    }
+                    // .position2:hover {
+                    //     background: url('../../assets/cellhome/icon_shequ_s.png') 0 0 no-repeat;
+                    // }
                     .position3 {
                         position: absolute;
-                        right: 240px;
-                        top: 32px;
-                        background: url('../../assets/cellhome/icon_xinren_d.png') 0 0 no-repeat;
+                        right: rem(115);
+                        top: rem(212);
+                        background: url('../../assets/cellmhome/icon_xinren.png') 0 0 no-repeat;
                         background-size: 100% 100%;
                     }
-                    .position3:hover {
-                        background: url('../../assets/cellhome/icon_xinren_s.png') 0 0 no-repeat;
-                    }
+                    // .position3:hover {
+                    //     background: url('../../assets/cellhome/icon_xinren_s.png') 0 0 no-repeat;
+                    // }
                     .position4 {
                         position: absolute;
-                        right: -53px;
-                        top: 194px;
-                        background: url('../../assets/cellhome/icon_gongyinglian_d.png') 0 0 no-repeat;
+                        right: rem(-53);
+                        top: rem(412);
+                        background: url('../../assets/cellmhome/icon_gongying.png') 0 0 no-repeat;
                         background-size: 100% 100%;
                     }
-                    .position4:hover {
-                        background: url('../../assets/cellhome/icon_gongying_s.png') 0 0 no-repeat;
-                    }
+                    // .position4:hover {
+                    //     background: url('../../assets/cellhome/icon_gongying_s.png') 0 0 no-repeat;
+                    // }
                     .position5 {
                         position: absolute;
-                        right: 350px;
-                        bottom: 16px;
-                        background: url('../../assets/cellhome/icon_shuju_d.png') 0 0 no-repeat;
+                        right: rem(96);
+                        bottom: rem(100);
+                        background: url('../../assets/cellmhome/icon_shuju.png') 0 0 no-repeat;
                         background-size: 100% 100%;
                     }
-                    .position5:hover {
-                        background: url('../../assets/cellhome/icon_shuju_s.png') 0 0 no-repeat;
-                    }
+                    // .position5:hover {
+                    //     background: url('../../assets/cellhome/icon_shuju_s.png') 0 0 no-repeat;
+                    // }
                     .position6 {
                         position: absolute;
-                        left: 276px;
-                        bottom: 16px;
-                        background: url('../../assets/cellhome/icon_diya_d.png') 0 0 no-repeat;
+                        left: rem(50);
+                        bottom: rem(-20);
+                        background: url('../../assets/cellmhome/icon_diya.png') 0 0 no-repeat;
                         background-size: 100% 100%;
                     }
-                    .position6:hover {
-                        background: url('../../assets/cellhome/icon_diya_s.png') 0 0 no-repeat;
-                    }
+                    // .position6:hover {
+                    //     background: url('../../assets/cellhome/icon_diya_s.png') 0 0 no-repeat;
+                    // }
                 }
             }
         }
         .about {
-            height: 400px;
-            background: url('../../assets/cellhome/pic_bg_aboutus.png') 0 0 no-repeat;
-            background-size: 100% 400px;
+            padding-bottom: rem(50);
+            background: url('../../assets/cellmhome/pic_bg_aboutus.png') 0 0 no-repeat;
+            background-size: 100% 100%;
             color: #ffffff;
             h1 {
-                padding: 45px 0 10px;
+                padding: rem(100) 0 rem(50);
                 text-align: center;
-                font-size: 20px;
+                font-size: rem(44);
             }
             .about-us {
                 box-sizing: border-box;
-                width: 800px;
-                height: 228px;
-                padding: 35px;
+                width: 80%;
+                padding: rem(35) 0;
                 margin: 0 auto;
                 p {
-                    margin-bottom: 30px;
+                    margin-bottom: rem(30);
                 }
             }
         }
         .team {
             h1 {
-                padding: 35px 0;
+                padding: rem(60) 0;
                 text-align: center;
                 font-size: 20px;
             }
             .item-outer {
-                width: 800px;
-                padding-bottom: 50px;
+                width: 100%;
+                padding-bottom: rem(20);
                 margin: 0 auto;
                 .item-inner {
                     display: flex;
                     justify-content: space-between;
-                    margin-bottom: 10px;
+                    width: 92%;
+                    margin: 0 auto rem(20);
                     img {
                         display: block;
                         width: 26%;
@@ -717,15 +762,17 @@ export default {
                     }
                     .team-info {
                         box-sizing: border-box;
-                        padding: 0 30px 30px;
+                        padding: 0 rem(30) rem(30);
                         width: 100%;
                         background-color: #f0f1f2;
                         .info-title {
-                            padding: 24px 0;
+                            display: flex;
+                            align-items: center;
+                            padding: rem(40) 0 rem(30);
                             color: #333;
                             span:nth-child(1) {
-                                font-size: 16px;
-                                margin-right: 20px;
+                                font-size: rem(30);
+                                margin-right: rem(20);
                             }
                         }
                     }
@@ -738,32 +785,37 @@ export default {
             .copyright-outer {
                 display: flex;
                 justify-content: space-around;
-                padding: 20px 0 40px 0;
-                h2 {
-                    font-size: 14px;
-                    padding: 20px 0;
-                }
-                .item {
-                    font-size: 12px;
-                    span {
-                        display: block;
-                        padding: 5px 0;
+                padding: rem(20) 0 rem(40) rem(40);
+                .copyright-inner {
+                    flex: 1;
+                    h2 {
+                        font-size: rem(18);
+                        padding: rem(20) 0;
                     }
-                    .phone, .position {
-                        display: flex;
-                        align-items: center;
-                        img {
+                    .item {
+                        font-size: rem(12);
+                        color: #b3b5b9;
+                        span {
                             display: block;
-                            width: 10px;
-                            height: 10px;
-                            margin-right: 4px;
+                            padding: rem(5) 0;
+                        }
+                        .phone, .position {
+                            display: flex;
+                            align-items: center;
+                            img {
+                                display: block;
+                                width: rem(20);
+                                height: rem(20);
+                                margin-right: rem(4);
+                            }
                         }
                     }
                 }
             }
             .footer {
-                line-height: 40px;
+                line-height: rem(40);
                 text-align: center;
+                color: #b3b5b9;
             }
         }
     }
