@@ -114,7 +114,7 @@
         <div class="team" ref="top6">
             <h1>{{$t('blockchainTeam.title')}}</h1>
             <div class="item-outer">
-                <div class="item-inner" v-for="(item, index) in teams" :key="index">
+                <div class="item-inner" :class="{'team-view' : teamView}" v-for="(item, index) in teams" :key="index">
                     <div class="team-info">
                         <div class="info-title">
                             <span>{{item.name}}</span>
@@ -168,19 +168,15 @@ export default {
     data() {
         return {
             show: false,
-            keyanimate: false
+            keyanimate: false,
+            teamView: false
         }
     },
     created() {
 
     },
     mounted() {
-        window.onscroll = function() {
-            let scrollTop = document.documentElement.scrollTop || document.body.scrollTop
-            if(scrollTop > 1200) {
-                this.keyanimate = true
-            }
-        } 
+        window.addEventListener('scroll', this.watchScroll)
     },
     computed: {
         teams() {
@@ -194,8 +190,18 @@ export default {
         }
     },
     methods: {
+        watchScroll() {
+            let scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+            if(scrollTop > 1200) {
+                this.keyanimate = true
+            }
+            if(scrollTop > 2800) {
+                this.teamView = true
+            }
+        },
         handleMenu() {
             this.show = true
+            this.keyanimate = true
         },
         handleIndex() {
             document.body.scrollTop = 0
@@ -587,6 +593,7 @@ export default {
                     width: 47%;
                     padding-bottom: rem(60);
                     border-radius: 10px;
+                    transform: translateX(-500px);
                     img {
                         display: block;
                         width: rem(126);
@@ -603,7 +610,6 @@ export default {
                         padding-bottom: rem(10);
                     }
                     p {
-                        // width: rem(20);
                         margin: 0 auto;
                         text-align: center;
                         color: #7a7b7c;
@@ -647,7 +653,7 @@ export default {
             }
             .bg {
                 width: 68%;
-                height: rem(900);
+                height: rem(750);
                 margin: 0 auto;
                 background: url('../../assets/cellmhome/pic_bg_yin.png') 0 0 no-repeat;
                 background-size: 100% 100%;
@@ -668,18 +674,18 @@ export default {
                         background: url('../../assets/cellmhome/icon_jinr.png') 0 0 no-repeat;
                         background-size: 100% 100%;
                         // animation: 
-                        //     animX 12s  cubic-bezier(0.36, 0, 0.64, 1) -1s infinite alternate,
-                        //     animY 12s cubic-bezier(0.36, 0, 0.64, 1) 0s infinite alternate,
-                        //     scale 4s cubic-bezier(0.36, 0, 0.64, 1) 0s infinite alternate;
+                        //     animX 2s  cubic-bezier(0.36, 0, 0.64, 1) -1s infinite alternate,
+                        //     animY 2s cubic-bezier(0.36, 0, 0.64, 1) 0s infinite alternate,
+                            // scale 4s cubic-bezier(0.36, 0, 0.64, 1) 0s infinite alternate;
                     }
-                    // @keyframes animX{
-                    //     0% {left: 0px;}
-                    //     100% {left: 500px;}
-                    // }
-                    // @keyframes animY{
-                    //     0% {top: 0px;}
-                    //     100% {top: 300px;}
-                    // }
+                    @keyframes animX{
+                        0% {left: -50px;}
+                        100% {left: 80%;}
+                    }
+                    @keyframes animY{
+                        0% {top: 0px;}
+                        100% {top: 40%;}
+                    }
                     // @keyframes scale {
  
                     //     0% {
@@ -697,7 +703,7 @@ export default {
                     // }
                     .position2 {
                         position: absolute;
-                        left: rem(70);
+                        left: rem(0);
                         top: rem(350);
                         background: url('../../assets/cellmhome/icon_shequ.png') 0 0 no-repeat;
                         background-size: 100% 100%;
@@ -707,8 +713,8 @@ export default {
                     // }
                     .position3 {
                         position: absolute;
-                        right: rem(115);
-                        top: rem(212);
+                        right: rem(75);
+                        top: rem(162);
                         background: url('../../assets/cellmhome/icon_xinren.png') 0 0 no-repeat;
                         background-size: 100% 100%;
                     }
@@ -717,7 +723,7 @@ export default {
                     // }
                     .position4 {
                         position: absolute;
-                        right: rem(-53);
+                        right: rem(-10);
                         top: rem(412);
                         background: url('../../assets/cellmhome/icon_gongying.png') 0 0 no-repeat;
                         background-size: 100% 100%;
@@ -728,7 +734,7 @@ export default {
                     .position5 {
                         position: absolute;
                         right: rem(96);
-                        bottom: rem(100);
+                        bottom: rem(80);
                         background: url('../../assets/cellmhome/icon_shuju.png') 0 0 no-repeat;
                         background-size: 100% 100%;
                     }
@@ -737,8 +743,8 @@ export default {
                     // }
                     .position6 {
                         position: absolute;
-                        left: rem(50);
-                        bottom: rem(-20);
+                        left: rem(110);
+                        bottom: rem(-40);
                         background: url('../../assets/cellmhome/icon_diya.png') 0 0 no-repeat;
                         background-size: 100% 100%;
                     }
@@ -778,11 +784,17 @@ export default {
                 width: 100%;
                 padding-bottom: rem(20);
                 margin: 0 auto;
+                @keyframes fade-in {  
+                    0% {opacity: 0;}
+                    40% {opacity: 0;}
+                    100% {opacity: 1;}
+                }  
                 .item-inner {
                     display: flex;
                     justify-content: space-between;
                     width: 92%;
                     margin: 0 auto rem(20);
+                    opacity: 0;
                     img {
                         display: block;
                         width: 26%;
@@ -804,6 +816,31 @@ export default {
                             }
                         }
                     }
+                }
+                .team-view:nth-child(1) {
+                    animation: fade-in;
+                    animation-duration: 2.5s;
+                    animation-fill-mode: forwards;
+                }
+                .team-view:nth-child(2) {
+                    animation: fade-in;
+                    animation-duration: 3s;
+                    animation-fill-mode: forwards;
+                }
+                .team-view:nth-child(3) {
+                    animation: fade-in;
+                    animation-duration: 3.5s;
+                    animation-fill-mode: forwards;
+                }
+                .team-view:nth-child(4) {
+                    animation: fade-in;
+                    animation-duration: 4s;
+                    animation-fill-mode: forwards;
+                }
+                .team-view:nth-child(5) {
+                    animation: fade-in;
+                    animation-duration: 4.5s;
+                    animation-fill-mode: forwards;
                 }
             }
         }
