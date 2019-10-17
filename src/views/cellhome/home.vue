@@ -90,12 +90,12 @@
             <h1>{{$t('blockchainEco.title')}}</h1>
             <div class="bg">
                 <div class="bg-position">
-                    <div class="position1" src="../../assets/cellhome/icon_jinrong_d.png" alt=""></div>
-                    <div class="position2" src="../../assets/cellhome/icon_shequ_s.png" alt=""></div>
-                    <div class="position3" src="../../assets/cellhome/icon_xinren_d.png" alt=""></div>
-                    <div class="position4" src="../../assets/cellhome/icon_gongyinglian_d.png" alt=""></div>
-                    <div class="position5" src="../../assets/cellhome/icon_shuju_d.png" alt=""></div>
-                    <div class="position6" src="../../assets/cellhome/icon_diya_d.png" alt=""></div>
+                    <div class="position1">{{$t('blockchainEco.desc1')}}</div>
+                    <div class="position2">{{$t('blockchainEco.desc2')}}</div>
+                    <div class="position3">{{$t('blockchainEco.desc3')}}</div>
+                    <div class="position4">{{$t('blockchainEco.desc4')}}</div>
+                    <div class="position5">{{$t('blockchainEco.desc5')}}</div>
+                    <div class="position6">{{$t('blockchainEco.desc6')}}</div>
                 </div>
             </div>
         </div>
@@ -587,6 +587,9 @@ export default {
                     div {
                         width: 106px;
                         height: 106px;
+                        color: #ffffff;
+                        line-height: 250px;
+                        font-size: 20px;
                     }
                     .position1 {
                         position: absolute;

@@ -15,8 +15,10 @@
                 :style="{ height: '100%' }"
                 >
                 <div class="nav">
-                    <span>首页</span>
+                    <span @click="handleIndex">首页</span>
                     <span @click="handleProject">项目简介</span>
+                    <span @click="handleTechnology">应用技术</span>
+                    <span @click="handleEcological">生态场景</span>
                     <span @click="handleAbout">关于我们</span>
                     <span @click="handleTeam">团队</span>
                     <span @click="toggleLang('zh_CN')" :disabled="$i18n.locale == 'zh_CN'">中文简体</span>
@@ -63,45 +65,45 @@
                 <div class="info-left"><img src="../../assets/cellhome/pic_cellnetwork.png" alt=""></div>
             </div>
         </div>
-        <div class="technology">
+        <div class="technology" ref="top3">
             <h1>{{$t('blockchainTec.title')}}</h1>
             <div class="wallet-item">
-                <div class="item">
+                <div class="item" :class="{'keyanimate1' : keyanimate}">
                     <img src="../../assets/cellmhome/icon_zhineng.png" alt="">
                     <span>{{$t('blockchainTec.item1')}}</span>
                     <p>{{$t('blockchainTec.item1Info')}}</p>
                 </div>
-                <div class="item">
+                <div class="item" :class="{'keyanimate2' : keyanimate}">
                     <img src="../../assets/cellmhome/icon_gongshi.png" alt="">
                     <span>{{$t('blockchainTec.item2')}}</span>
                     <p>{{$t('blockchainTec.item2Info')}}</p>
                 </div>
-                <div class="item">
+                <div class="item" :class="{'keyanimate3' : keyanimate}">
                     <img src="../../assets/cellmhome/icon_shandui.png" alt="">
                     <span>{{$t('blockchainTec.item3')}}</span>
                     <p>{{$t('blockchainTec.item3Info')}}</p>
                 </div>
-                <div class="item">
+                <div class="item" :class="{'keyanimate4' : keyanimate}">
                     <img src="../../assets/cellmhome/icon_kualian.png" alt="">
                     <span>{{$t('blockchainTec.item4')}}</span>
                     <p>{{$t('blockchainTec.item4Info')}}</p>
                 </div>
             </div>
         </div>
-        <div class="ecological">
+        <div class="ecological" ref="top4">
             <h1>{{$t('blockchainEco.title')}}</h1>
             <div class="bg">
                 <div class="bg-position">
-                    <div class="position1" src="../../assets/cellmhome/icon_jinrong_d.png" alt=""></div>
-                    <div class="position2" src="../../assets/cellmhome/icon_shequ_s.png" alt=""></div>
-                    <div class="position3" src="../../assets/cellmhome/icon_xinren_d.png" alt=""></div>
-                    <div class="position4" src="../../assets/cellmhome/icon_gongyinglian_d.png" alt=""></div>
-                    <div class="position5" src="../../assets/cellmhome/icon_shuju_d.png" alt=""></div>
-                    <div class="position6" src="../../assets/cellmhome/icon_diya_d.png" alt=""></div>
+                    <div class="position1">{{$t('blockchainEco.desc1')}}</div>
+                    <div class="position2">{{$t('blockchainEco.desc2')}}</div>
+                    <div class="position3">{{$t('blockchainEco.desc3')}}</div>
+                    <div class="position4">{{$t('blockchainEco.desc4')}}</div>
+                    <div class="position5">{{$t('blockchainEco.desc5')}}</div>
+                    <div class="position6">{{$t('blockchainEco.desc6')}}</div>
                 </div>
             </div>
         </div>
-        <div class="about" ref="top3">
+        <div class="about" ref="top5">
             <h1>{{$t('blockchainAbout.title')}}</h1>
             <div class="about-us">
                 <p>{{$t('blockchainAbout.info1')}}</p>
@@ -109,7 +111,7 @@
                 <p>{{$t('blockchainAbout.info3')}}</p>
             </div>
         </div>
-        <div class="team">
+        <div class="team" ref="top6">
             <h1>{{$t('blockchainTeam.title')}}</h1>
             <div class="item-outer">
                 <div class="item-inner" v-for="(item, index) in teams" :key="index">
@@ -166,13 +168,19 @@ export default {
     data() {
         return {
             show: false,
+            keyanimate: false
         }
     },
     created() {
 
     },
     mounted() {
-
+        window.onscroll = function() {
+            let scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+            if(scrollTop > 1200) {
+                this.keyanimate = true
+            }
+        } 
     },
     computed: {
         teams() {
@@ -189,17 +197,35 @@ export default {
         handleMenu() {
             this.show = true
         },
+        handleIndex() {
+            document.body.scrollTop = 0
+            document.documentElement.scrollTop = 0
+            this.show = false
+        },
         handleProject() {
             document.body.scrollTop = this.$refs.top1.clientHeight;
             document.documentElement.scrollTop = this.$refs.top1.clientHeight;
+            this.show = false
         },
-        handleAbout() {
+        handleTechnology() {
             document.body.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight)
             document.documentElement.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight)
+            this.show = false
         },
-        handleTeam() {
+        handleEcological() {
             document.body.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight + this.$refs.top3.clientHeight)
             document.documentElement.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight + this.$refs.top3.clientHeight)
+            this.show = false
+        },
+        handleAbout() {
+            document.body.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight + this.$refs.top3.clientHeight + this.$refs.top4.clientHeight)
+            document.documentElement.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight + this.$refs.top3.clientHeight + this.$refs.top4.clientHeight)
+            this.show = false
+        },
+        handleTeam() {
+            document.body.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight + this.$refs.top3.clientHeight + this.$refs.top4.clientHeight + this.$refs.top5.clientHeight)
+            document.documentElement.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight + this.$refs.top3.clientHeight + this.$refs.top4.clientHeight + this.$refs.top5.clientHeight)
+            this.show = false
         },
         toggleLang(lang) {
             if(lang == 'zh_CN') {
@@ -584,19 +610,19 @@ export default {
                         font-size: rem(14);
                     }
                 }
-                .item:nth-child(1) {
+                .keyanimate1 {
                     animation: rightEaseInAnimate1 2s ease 1; 
                     animation-fill-mode: forwards;
                 }
-                .item:nth-child(2) {
+                .keyanimate2 {
                     animation: rightEaseInAnimate2 2s ease 1; 
                     animation-fill-mode: forwards;
                 }
-                .item:nth-child(3) {
+                .keyanimate3 {
                     animation: rightEaseInAnimate1 3s ease 1; 
                     animation-fill-mode: forwards;
                 }
-                .item:nth-child(4) {
+                .keyanimate4 {
                     animation: rightEaseInAnimate2 3s ease 1; 
                     animation-fill-mode: forwards;
                 }
@@ -632,6 +658,8 @@ export default {
                     div {
                         width: rem(103);
                         height: rem(103);
+                        line-height: rem(250);
+                        color: #ffffff;
                     }
                     .position1 {
                         position: absolute;

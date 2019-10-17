@@ -14,7 +14,13 @@ export default {
         info: 'Cellnetwork is an intelligent contract platform supporting Turing. Cellnetwork combines smart contract with STAKING (pledge) mode, assists data security through professional encryption algorithm and Distributed Accounting mode, adopts unique node layout mode, and sets a certain number of nodes to improve TPS of block packaging transactions, which will bring better block chain experience to community users. In the future, Cellnetwork will build a one-stop, multi-application set. The service platform will build a new distributed ecosystem to provide more convenient and practical services for community users. It is dedicated to serving the rich ecological scenarios of asset issuance, real simulation of business alliance operation and management, integral management system, decentralized exchange and cross-border settlement through the application of complete matching block chain technology.'
     },
     blockchainEco: {
-        title: 'Ecological Scene'
+        title: 'EcologicalScene',
+        desc1: 'Finance',
+        desc2: 'Community',
+        desc3: 'TrustMechanism',
+        desc4: 'SupplyChain',
+        desc5: 'DataSecurity',
+        desc6: 'MortgageLending',
     },
     blockchainTec: {
         title: 'Applied Technology',
