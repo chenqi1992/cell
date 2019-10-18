@@ -415,8 +415,8 @@ export default {
                 }
                 .star {
                     display: block;
-                    width: 5px;
-                    height: 5px;
+                    width: 0;
+                    height: 0;
                     border-radius: 50%;
                     background: #FFF;
                     top: 100px;
@@ -424,7 +424,7 @@ export default {
                     position: relative;
                     transform-origin: 100% 0;
                     animation: star-ani 6s infinite ease-out;
-                    box-shadow: 0 0 5px 5px rgba(255, 255, 255, .3);
+                    // box-shadow: 0 0 5px 5px rgba(255, 255, 255, .3);
                     opacity: 0;
                     z-index: 2;
                 }

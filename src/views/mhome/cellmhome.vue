@@ -34,16 +34,16 @@
                     <span class="font">{{$t('blockchainTop.title')}}</span>
                     <div class="center">
                         <div class="center1">
-                            <img src="../../assets/cellmhome/icon_gongshijizhi.png" alt="">
-                            <span>{{$t('blockchainTop.type1')}}</span>
+                            <img src="../../assets/cellmhome/icon_wallet.png" alt="">
+                            <span>{{$t('blockchainTop.type3')}}</span>
                         </div>
                         <div class="center1">
                             <img src="../../assets/cellmhome/icon_exc.png" alt="">
                             <span>{{$t('blockchainTop.type2')}}</span>
                         </div>
                         <div class="center1">
-                            <img src="../../assets/cellmhome/icon_wallet.png" alt="">
-                            <span>{{$t('blockchainTop.type3')}}</span>
+                            <img src="../../assets/cellmhome/icon_gongshijizhi.png" alt="">
+                            <span>{{$t('blockchainTop.type1')}}</span>
                         </div>
                     </div>
                 </div>
@@ -194,10 +194,10 @@ export default {
     methods: {
         watchScroll() {
             let scrollTop = document.documentElement.scrollTop || document.body.scrollTop
-            if(scrollTop > 1200) {
+            if(scrollTop > 800) {
                 this.keyanimate = true
             }
-            if(scrollTop > 2800) {
+            if(scrollTop > 2000) {
                 this.teamView = true
             }
         },
@@ -369,7 +369,7 @@ export default {
                             }
                         }
                         .center1:nth-child(1) {
-                            width: rem(269);
+                            width: 26.9%;
                             background: url('../../assets/cellmhome/icon_home_dia2.png') 0 0 no-repeat;
                             background-size: 100% 100%;
                             img {
@@ -378,7 +378,7 @@ export default {
                             }
                         }
                         .center1:nth-child(2) {
-                            width: rem(273);
+                            width: 36.4%;
                             background: url('../../assets/cellmhome/icon_home_dia3.png') 0 0 no-repeat;
                             background-size: 100% 100%;
                             img {
@@ -387,7 +387,7 @@ export default {
                             }
                         }
                         .center1:nth-child(3) {
-                            width: rem(202);
+                            width: 35.8%;
                             background: url('../../assets/cellmhome/icon_home_dia4.png') 0 0 no-repeat;
                             background-size: 100% 100%;
                             img {
@@ -437,8 +437,8 @@ export default {
                 }
                 .star {
                     display: block;
-                    width: 5px;
-                    height: 5px;
+                    width: 0;
+                    height: 0;
                     border-radius: 50%;
                     background: #FFF;
                     top: 100px;
@@ -446,7 +446,7 @@ export default {
                     position: relative;
                     transform-origin: 100% 0;
                     animation: star-ani 6s infinite ease-out;
-                    box-shadow: 0 0 5px 5px rgba(255, 255, 255, .3);
+                    // box-shadow: 0 0 5px 5px rgba(255, 255, 255, .3);
                     opacity: 0;
                     z-index: 2;
                 }
