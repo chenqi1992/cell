@@ -1,53 +1,54 @@
 <template>
     <div class="cell-home">
         <div class="bg-content" ref="top1">
-            <img class="bg" src="../../assets/cellhome/pic_bg_banner.png" alt="">
-            <div class="header">
-                <div class="logo">
-                    <img class="logo-pc" src="../../assets/cellhome/logo_pc.png" alt="">
-                    <img class="font-logo" src="../../assets/logo_1.png" alt="">
-                </div>
-                <div class="nav">
-                    <span>{{$t('blockchainTop.nav1')}}</span>
-                    <span @click="handleProject">{{$t('blockchainTop.nav2')}}</span>
-                    <span @click="handleAbout">{{$t('blockchainTop.nav3')}}</span>
-                    <span @click="handleTeam">{{$t('blockchainTop.nav4')}}</span>
-                </div>
-                <el-dropdown>
-                    <span class="el-dropdown-link">
-                        中文<i class="el-icon-arrow-down el-icon--right"></i>
-                    </span>
-                    <el-dropdown-menu slot="dropdown">
-                        <el-dropdown-item @click.native="toggleLang('zh_CN')" :disabled="$i18n.locale == 'zh_CN'">中文简体</el-dropdown-item>
-                        <el-dropdown-item @click.native="toggleLang('zh_TW')" :disabled="$i18n.locale == 'zh_TW'">中文繁体</el-dropdown-item>
-                        <el-dropdown-item @click.native="toggleLang('en_US')" :disabled="$i18n.locale == 'en_US'">English</el-dropdown-item>
-                    </el-dropdown-menu>
-                </el-dropdown>
-            </div>
-            <div class="bg-info">
-                <img class="bg-info-logo" src="../../assets/cellhome/logo.png" alt="">
-                <span class="font">{{$t('blockchainTop.title')}}</span>
-                <div class="center">
-                    <div class="center1">
-                        <img src="../../assets/cellhome/icon_staking.png" alt="">
-                        <span>{{$t('blockchainTop.type1')}}</span>
+            <div class="bg-content-outer">
+                <div class="header">
+                    <div class="logo">
+                        <img class="logo-pc" src="../../assets/cellhome/logo_06.png" alt="">
                     </div>
-                    <div class="center1">
-                        <img src="../../assets/cellhome/icon_exc.png" alt="">
-                        <span>{{$t('blockchainTop.type2')}}</span>
+                    <div class="nav">
+                        <span>{{$t('blockchainTop.nav1')}}</span>
+                        <span @click="handleProject">{{$t('blockchainTop.nav2')}}</span>
+                        <span @click="handleAbout">{{$t('blockchainTop.nav3')}}</span>
+                        <span @click="handleTeam">{{$t('blockchainTop.nav4')}}</span>
+                        <span @click="handlePledge">{{$t('blockchainTop.nav5')}}</span>
                     </div>
-                    <div class="center1">
-                        <img src="../../assets/cellhome/icon_wallet.png" alt="">
-                        <span>{{$t('blockchainTop.type3')}}</span>
+                    <el-dropdown>
+                        <span class="el-dropdown-link">
+                            {{language}}<i class="el-icon-arrow-down el-icon--right"></i>
+                        </span>
+                        <el-dropdown-menu slot="dropdown">
+                            <el-dropdown-item @click.native="toggleLang('zh_CN')" :disabled="$i18n.locale == 'zh_CN'">中文简体</el-dropdown-item>
+                            <el-dropdown-item @click.native="toggleLang('zh_TW')" :disabled="$i18n.locale == 'zh_TW'">中文繁体</el-dropdown-item>
+                            <el-dropdown-item @click.native="toggleLang('en_US')" :disabled="$i18n.locale == 'en_US'">English</el-dropdown-item>
+                        </el-dropdown-menu>
+                    </el-dropdown>
+                </div>
+                <div class="bg-info">
+                    <img class="bg-info-logo" src="../../assets/cellhome/logo.png" alt="">
+                    <span class="font">{{$t('blockchainTop.title')}}</span>
+                    <div class="center">
+                        <div class="center1">
+                            <img src="../../assets/cellhome/icon_wallet.png" alt="">
+                            <span>{{$t('blockchainTop.type3')}}</span>
+                        </div>
+                        <div class="center1">
+                            <img src="../../assets/cellhome/icon_exc.png" alt="">
+                            <span>{{$t('blockchainTop.type2')}}</span>
+                        </div>
+                        <div class="center1">
+                            <img src="../../assets/cellhome/icon_staking.png" alt="">
+                            <span>{{$t('blockchainTop.type1')}}</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="space">
-                <div class="stars">
-                    <div class="star"></div>
-                    <div class="star pink"></div>
-                    <div class="star blue"></div>
-                    <div class="star yellow"></div>
+                <div class="space">
+                    <div class="stars">
+                        <div class="star"></div>
+                        <div class="star pink"></div>
+                        <div class="star blue"></div>
+                        <div class="star yellow"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -61,7 +62,7 @@
                 </div>
             </div>
         </div>
-        <div class="technology">
+        <div class="technology" ref="top3">
             <h1>{{$t('blockchainTec.title')}}</h1>
             <div class="wallet-item">
                 <div class="item">
@@ -86,7 +87,7 @@
                 </div>
             </div>
         </div>
-        <div class="ecological">
+        <div class="ecological" ref="top4">
             <h1>{{$t('blockchainEco.title')}}</h1>
             <div class="bg">
                 <div class="bg-position">
@@ -99,7 +100,7 @@
                 </div>
             </div>
         </div>
-        <div class="about" ref="top3">
+        <div class="about" ref="top5">
             <h1>{{$t('blockchainAbout.title')}}</h1>
             <div class="about-us">
                 <p>{{$t('blockchainAbout.info1')}}</p>
@@ -142,8 +143,8 @@
                 <div class="copyright-inner">
                     <h2>{{$t('blockchainCopyright.item3.title1')}}</h2>
                     <div class="item">
-                        <span class="phone"><img src="../../assets/icon_email.png" alt="">{{$t('blockchainCopyright.item3.label1')}}</span>
-                        <span class="position"><img src="../../assets/icon_map.png" alt="">{{$t('blockchainCopyright.item3.label2')}}</span>
+                        <span class="phone"><img src="../../assets/cellhome/icon_email.png" alt="">{{$t('blockchainCopyright.item3.label1')}}</span>
+                        <span class="position"><img src="../../assets/cellhome/icon_add.png" alt="">{{$t('blockchainCopyright.item3.label2')}}</span>
                         <span>{{$t('blockchainCopyright.item3.label3')}}</span>
                     </div>
                 </div>
@@ -163,7 +164,12 @@ export default {
     },
     data() {
         return {
-            teams: [
+            language: '中文',
+        }
+    },
+    computed: {
+        teams() {
+            return [
                 {img: require('../../assets/peo_1.png'), name: this.$t('blockchainTeam.name1'), title: this.$t('blockchainTeam.title1'), info: this.$t('blockchainTeam.info1')},
                 {img: require('../../assets/peo_2.png'), name: this.$t('blockchainTeam.name2'), title: this.$t('blockchainTeam.title2'), info: this.$t('blockchainTeam.info2')},
                 {img: require('../../assets/peo_3.png'), name: this.$t('blockchainTeam.name3'), title: this.$t('blockchainTeam.title3'), info: this.$t('blockchainTeam.info3')},
@@ -180,21 +186,25 @@ export default {
     },
     methods: {
         handleProject() {
-            document.body.scrollTop = this.$refs.top1.clientHeight;
-            document.documentElement.scrollTop = this.$refs.top1.clientHeight;
+            document.body.scrollTop = this.$refs.top1.clientHeight - 50;
+            document.documentElement.scrollTop = this.$refs.top1.clientHeight - 50;
         },
         handleAbout() {
-            document.body.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight)
-            document.documentElement.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight)
+            document.body.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight + this.$refs.top3.clientHeight + this.$refs.top4.clientHeight - 50)
+            document.documentElement.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight + this.$refs.top3.clientHeight + this.$refs.top4.clientHeight - 50)
         },
         handleTeam() {
-            document.body.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight + this.$refs.top3.clientHeight)
-            document.documentElement.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight + this.$refs.top3.clientHeight)
+                        document.body.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight + this.$refs.top3.clientHeight + this.$refs.top4.clientHeight + this.$refs.top5.clientHeight - 50)
+            document.documentElement.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight + this.$refs.top3.clientHeight + this.$refs.top4.clientHeight + this.$refs.top5.clientHeight - 50)
+        },
+        handlePledge() {
+            window.location.href = 'https://cellcoin.in/#/u/0x5921D17875Fc5fCcEc60CC9c2f6caC0D8E1Ac985'
         },
         toggleLang(lang) {
             if(lang == 'zh_CN') {
                 localStorage.setItem('locale', 'zh_CN')
                 this.$i18n.locale = localStorage.getItem('locale')
+                this.language = '中文'
                 this.$message({
                     message: '切换为中文简体！',
                     type: 'success'
@@ -202,6 +212,7 @@ export default {
             } else if (lang == 'en_US') {
                 localStorage.setItem('locale', 'en_US')
                 this.$i18n.locale = localStorage.getItem('locale')
+                this.language = 'English'
                 this.$message({
                     message: 'Switch to English!',
                     type: 'success'
@@ -209,6 +220,7 @@ export default {
             } else if(lang == 'zh_TW') {
                 localStorage.setItem('locale', 'zh_TW')
                 this.$i18n.locale = localStorage.getItem('locale')
+                this.language = '中文'
                 this.$message({
                     message: '切换为中文繁体!',
                     type: 'success'
@@ -223,261 +235,270 @@ export default {
     .el-dropdown-menu {
         color: #ffffff;
         cursor: pointer;
+        margin-right: 25px;
         .el-dropdown-item {
             color: #ffffff;
         }
     }
     .cell-home {
         .bg-content {
-            position: relative;
-            height: 995px;
-            .bg {
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 995px;
-                z-index: 10;
-            }
-            .header {
-                position: absolute;
-                top: 0;
-                left: 10%;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                width: 80%;
-                height: 50px;
-                margin: 0 auto;
-                z-index: 12;
-                .logo {
+            height: calc(100vh);
+            background: url('../../assets/cellhome/pic_bg_banner.png') 0 0 no-repeat;
+            background-size: 100% 100%;
+            .bg-content-outer {
+                position: relative;
+                height: 100%;
+                .bg {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: calc(100vh);
+                    z-index: 10;
+                }
+                .header {
+                    position: fixed;
+                    top: 0;
+                    width: 100%;
+                    left: 0;
                     display: flex;
+                    justify-content: space-between;
                     align-items: center;
-                    margin-top: 10px;
-                    .logo-pc {
-                        width: 56px;
-                        height: 56px;
-                        margin-right: 5px;
-                    }
-                    .font-logo {
-                        display: block;
-                        width: 167px;
-                        height: 22px;
-                    }
-                }
-                .nav {
-                    display: flex;
-                    justify-content: space-around;
-                    span {
-                        display: block;
-                        padding: 0 30px;
-                        color: #ffffff;
-                        cursor: pointer;
-                    }
-                }
-                .el-dropdown-link {
-                    cursor: pointer;
-                    color: #ffffff;
-                }
-                .el-icon-arrow-down {
-                    font-size: 12px;
-                    color: #ffffff;
-                }
-            }
-            .bg-info {
-                position: absolute;
-                left: 25%;
-                top: 110px;
-                width: 50%;
-                height: 110px;
-                z-index: 11;
-                color: #ffffff;
-                .bg-info-logo {
-                    display: block;
+                    height: 50px;
                     margin: 0 auto;
-                }
-                .font {
-                    display: block;
-                    font-size: 32px;
-                    text-align: center;
-                    padding: 80px 0 100px;
-                }
-                .center {
-                    display: flex;
-                    .center1 {
+                    z-index: 1992;
+                    background-color: #010d18;
+                    .logo {
                         display: flex;
                         align-items: center;
-                        justify-content: center;
-                        font-size: 16px;
-                        height: 74px;
-                        line-height: 74px;
-                        text-align: center;
-                        background-size: 100% 100%;
-                        img {
+                        margin: 0 0 0 10%;
+                        .logo-pc {
+                            width: 200px;
+                            height: 40px;
+                            margin-right: 5px;
+                        }
+                    }
+                    .nav {
+                        display: flex;
+                        justify-content: space-around;
+                        span {
+                            font-size: 18px;
                             display: block;
-                            margin-right: 8px;
+                            padding: 0 30px;
+                            color: #ffffff;
+                            cursor: pointer;
                         }
                     }
-                    .center1:nth-child(1) {
-                        width: 283px;
-                        background: url('../../assets/cellhome/icon_home_dia2.png') 0 0 no-repeat;
-                        background-size: 100% 100%;
-                        img {
-                            width: 20px;
-                            height: 22px;
-                        }
+                    .el-dropdown-link {
+                        cursor: pointer;
+                        color: #ffffff;
+                        font-size: 18px;
+                        margin-right: 40px;
                     }
-                    .center1:nth-child(2) {
-                        width: 289px;
-                        background: url('../../assets/cellhome/icon_home_dia3.png') 0 0 no-repeat;
-                        background-size: 100% 100%;
-                        img {
-                            width: 25px;
-                            height: 21px;
-                        }
-                    }
-                    .center1:nth-child(3) {
-                        width: 231px;
-                        background: url('../../assets/cellhome/icon_home_dia4.png') 0 0 no-repeat;
-                        background-size: 100% 100%;
-                        img {
-                            width: 25px;
-                            height: 22px;
-                        }
+                    .el-icon-arrow-down {
+                        color: #ffffff;
                     }
                 }
-                .font2 {
-                    font-size: 16px;
-                    margin-top: 50px;
-                }
-                .btn {
-                    width: 75px;
-                    height: 27px;
-                    line-height: 27px;
-                    margin-top: 30px;
-                    text-align: center;
-                    background-color: #1c8dea;
-                    border-radius: 4px;
+                .bg-info {
+                    position: absolute;
+                    left: 25%;
+                    top: 110px;
+                    width: 50%;
+                    height: 110px;
+                    z-index: 12;
                     color: #ffffff;
+                    .bg-info-logo {
+                        display: block;
+                        margin: 0 auto;
+                    }
+                    .font {
+                        display: block;
+                        font-size: 32px;
+                        text-align: center;
+                        padding: 80px 0 100px;
+                    }
+                    .center {
+                        display: flex;
+                        .center1 {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: 16px;
+                            height: 74px;
+                            line-height: 74px;
+                            text-align: center;
+                            background-size: 100% 100%;
+                            img {
+                                display: block;
+                                margin-right: 8px;
+                            }
+                        }
+                        .center1:nth-child(1) {
+                            width: 283px;
+                            background: url('../../assets/cellhome/icon_home_dia3.png') 0 0 no-repeat;
+                            background-size: 100% 100%;
+                            img {
+                                width: 20px;
+                                height: 22px;
+                            }
+                        }
+                        .center1:nth-child(2) {
+                            width: 289px;
+                            background: url('../../assets/cellhome/icon_home_dia3.png') 0 0 no-repeat;
+                            background-size: 100% 100%;
+                            img {
+                                width: 25px;
+                                height: 21px;
+                            }
+                        }
+                        .center1:nth-child(3) {
+                            width: 231px;
+                            background: url('../../assets/cellhome/icon_home_dia3.png') 0 0 no-repeat;
+                            background-size: 100% 100%;
+                            img {
+                                width: 25px;
+                                height: 22px;
+                            }
+                        }
+                        .center1:hover {
+                            background: url('../../assets/cellhome/icon_home_dia2.png') 0 0 no-repeat;
+                            background-size: 100% 100%;
+                            cursor: pointer;
+                        }
+                    }
+                    .font2 {
+                        font-size: 16px;
+                        margin-top: 50px;
+                    }
+                    .btn {
+                        width: 75px;
+                        height: 27px;
+                        line-height: 27px;
+                        margin-top: 30px;
+                        text-align: center;
+                        background-color: #1c8dea;
+                        border-radius: 4px;
+                        color: #ffffff;
+                    }
                 }
-            }
-            .space {
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                z-index: 11;
-            }
-            .crater1 {
-                width: 20px;
-                height: 20px;
-                left: 25%;
-                top: 20%;
-            }
-            .crater2 {
-                width: 10px;
-                height: 10px;
-                left: 50%;
-                top: 60%;
-            }
-            .crater3 {
-                width: 15px;
-                height: 15px;
-                left: 30%;
-                top: 65%;
-            }
-            .crater4 {
-                width: 15px;
-                height: 15px;
-                left: 60%;
-                top: 35%;
-            }
-            .star {
-                display: block;
-                width: 5px;
-                height: 5px;
-                border-radius: 50%;
-                background: #FFF;
-                top: 100px;
-                left: 400px;
-                position: relative;
-                transform-origin: 100% 0;
-                animation: star-ani 6s infinite ease-out;
-                box-shadow: 0 0 5px 5px rgba(255, 255, 255, .3);
-                opacity: 0;
-                z-index: 2;
-            }
-            .star:after {
-                content: '';
-                display: block;
-                top: 0px;
-                left: 4px;
-                border: 0px solid #fff;
-                border-width: 0px 90px 2px 90px;
-                border-color: transparent transparent transparent rgba(255, 255, 255, .3);
-                transform: rotate(-45deg) translate3d(1px, 3px, 0);
-                box-shadow: 0 0 1px 0 rgba(255, 255, 255, .1);
-                transform-origin: 0% 100%;
-                animation: shooting-ani 3s infinite ease-out;
-            }
-            .pink {
-                top: 30px;
-                left: 20%;
-                background: #ff5a99;
-                animation-delay: 5s;
-                -webkit-animation-delay: 5s;
-                -moz-animation-delay: 5s;
-            }
-            .pink:after {
-                border-color: transparent transparent transparent #ff5a99;
-                animation-delay: 5s;
-                -webkit-animation-delay: 5s;
-                -moz-animation-delay: 5s;
-            }
-            .blue {
-                top: 35px;
-                left: 90%;
-                background: cyan;
-                animation-delay: 7s;
-                -webkit-animation-delay: 7s;
-                -moz-animation-delay: 7s;
-            }
-            .blue:after {
-                border-color: transparent;
-                animation-delay: 12s;
-                -webkit-animation-delay: 7s;
-                -moz-animation-delay: 7s;
-                animation-delay: 7s;
-            }
-            .yellow {
-                top: 50px;
-                left: 80%;
-                background: #ffcd5c;
-                animation-delay: 5.8s;
-            }
-            .yellow:after {
-                border-color: transparent transparent transparent #ffcd5c;
-                animation-delay: 5.8s;
-            }
-            @keyframes star-ani {
-                0% {
+                .space {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 11;
+                }
+                .crater1 {
+                    width: 20px;
+                    height: 20px;
+                    left: 25%;
+                    top: 20%;
+                }
+                .crater2 {
+                    width: 10px;
+                    height: 10px;
+                    left: 50%;
+                    top: 60%;
+                }
+                .crater3 {
+                    width: 15px;
+                    height: 15px;
+                    left: 30%;
+                    top: 65%;
+                }
+                .crater4 {
+                    width: 15px;
+                    height: 15px;
+                    left: 60%;
+                    top: 35%;
+                }
+                .star {
+                    display: block;
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 50%;
+                    background: #FFF;
+                    top: 100px;
+                    left: 400px;
+                    position: relative;
+                    transform-origin: 100% 0;
+                    animation: star-ani 6s infinite ease-out;
+                    box-shadow: 0 0 5px 5px rgba(255, 255, 255, .3);
                     opacity: 0;
-                    transform: scale(0) rotate(0) translate3d(0, 0, 0);
-                    -webkit-transform: scale(0) rotate(0) translate3d(0, 0, 0);
-                    -moz-transform: scale(0) rotate(0) translate3d(0, 0, 0);
+                    z-index: 2;
                 }
-                50% {
-                    opacity: 1;
-                    transform: scale(1) rotate(0) translate3d(-200px, 200px, 0);
-                    -webkit-transform: scale(1) rotate(0) translate3d(-200px, 200px, 0);
-                    -moz-transform: scale(1) rotate(0) translate3d(-200px, 200px, 0);
+                .star:after {
+                    content: '';
+                    display: block;
+                    top: 0px;
+                    left: 4px;
+                    border: 0px solid #fff;
+                    border-width: 0px 90px 2px 90px;
+                    border-color: transparent transparent transparent rgba(255, 255, 255, .3);
+                    transform: rotate(-45deg) translate3d(1px, 3px, 0);
+                    box-shadow: 0 0 1px 0 rgba(255, 255, 255, .1);
+                    transform-origin: 0% 100%;
+                    animation: shooting-ani 3s infinite ease-out;
                 }
-                100% {
-                    opacity: 0;
-                    transform: scale(1) rotate(0) translate3d(-300px, 300px, 0);
-                    -webkit-transform: scale(1) rotate(0) translate3d(-300px, 300px, 0);
-                    -moz-transform: scale(1) rotate(0) translate3d(-300px, 300px, 0);
+                .pink {
+                    top: 30px;
+                    left: 20%;
+                    background: #FFF;
+                    animation-delay: 5s;
+                    -webkit-animation-delay: 5s;
+                    -moz-animation-delay: 5s;
+                }
+                .pink:after {
+                    border-color: transparent transparent transparent #FFF;
+                    animation-delay: 5s;
+                    -webkit-animation-delay: 5s;
+                    -moz-animation-delay: 5s;
+                }
+                .blue {
+                    top: 35px;
+                    left: 90%;
+                    background: #FFF;
+                    animation-delay: 7s;
+                    -webkit-animation-delay: 7s;
+                    -moz-animation-delay: 7s;
+                }
+                .blue:after {
+                    border-color: transparent;
+                    animation-delay: 12s;
+                    -webkit-animation-delay: 7s;
+                    -moz-animation-delay: 7s;
+                    animation-delay: 7s;
+                }
+                .yellow {
+                    top: 50px;
+                    left: 80%;
+                    background: #FFF;
+                    animation-delay: 5.8s;
+                }
+                .yellow:after {
+                    border-color: transparent transparent transparent #FFF;
+                    animation-delay: 5.8s;
+                }
+                @keyframes star-ani {
+                    0% {
+                        opacity: 0;
+                        transform: scale(0) rotate(0) translate3d(0, 0, 0);
+                        -webkit-transform: scale(0) rotate(0) translate3d(0, 0, 0);
+                        -moz-transform: scale(0) rotate(0) translate3d(0, 0, 0);
+                    }
+                    50% {
+                        opacity: 1;
+                        transform: scale(1) rotate(0) translate3d(-200px, 200px, 0);
+                        -webkit-transform: scale(1) rotate(0) translate3d(-200px, 200px, 0);
+                        -moz-transform: scale(1) rotate(0) translate3d(-200px, 200px, 0);
+                    }
+                    100% {
+                        opacity: 0;
+                        transform: scale(1) rotate(0) translate3d(-300px, 300px, 0);
+                        -webkit-transform: scale(1) rotate(0) translate3d(-300px, 300px, 0);
+                        -moz-transform: scale(1) rotate(0) translate3d(-300px, 300px, 0);
+                    }
                 }
             }
         }
@@ -506,7 +527,11 @@ export default {
                     left: 2%;
                     display: flex;
                     width: 90%;
+                    .info-left {
+                        width: 70%;
+                    }
                     .info-right {
+                        width: 30%;
                         padding-top: 10%;
                         font-size: 16px;
                         line-height: 26px;
@@ -535,8 +560,8 @@ export default {
                     border-radius: 10px;
                     img {
                         display: block;
-                        width: 88px;
-                        height: 95px;
+                        width: 126px;
+                        height: 129px;
                         margin: 25px auto;
                     }
                     span {
@@ -751,6 +776,7 @@ export default {
                     span {
                         display: block;
                         padding: 5px 0;
+                        color: #b3b5b9;
                     }
                     .phone, .position {
                         display: flex;
@@ -767,6 +793,7 @@ export default {
             .footer {
                 line-height: 40px;
                 text-align: center;
+                color: #b3b5b9;
             }
         }
     }

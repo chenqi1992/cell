@@ -1,57 +1,59 @@
 <template>
     <div class="cell-mhome">
         <div class="bg-content" ref="top1">
-            <img class="bg" src="../../assets/cellmhome/icon_bg_cell.png" alt="">
-            <div class="header">
-                <div class="logo">
-                    <img class="logo-pc" src="../../assets/cellmhome/logo_yid.png" alt="">
-                    <img class="font-logo" src="../../assets/logo_1.png" alt="">
-                </div>
-            </div>
-            <div class="menu">
-                <van-popup
-                v-model="show"
-                position="right"
-                :style="{ height: '100%' }"
-                >
-                <div class="nav">
-                    <span @click="handleIndex">首页</span>
-                    <span @click="handleProject">项目简介</span>
-                    <span @click="handleTechnology">应用技术</span>
-                    <span @click="handleEcological">生态场景</span>
-                    <span @click="handleAbout">关于我们</span>
-                    <span @click="handleTeam">团队</span>
-                    <span @click="toggleLang('zh_CN')" :disabled="$i18n.locale == 'zh_CN'">中文简体</span>
-                    <span @click="toggleLang('zh_TW')" :disabled="$i18n.locale == 'zh_TW'">中文繁体</span>
-                    <span @click="toggleLang('en_US')" :disabled="$i18n.locale == 'en_US'">English</span>
-                </div>
-                </van-popup>
-                <img @click="handleMenu" src="../../assets/m/menu.png" alt="">
-            </div>
-            <div class="bg-info">
-                <img class="bg-info-logo" src="../../assets/cellhome/logo.png" alt="">
-                <span class="font">{{$t('blockchainTop.title')}}</span>
-                <div class="center">
-                    <div class="center1">
-                        <img src="../../assets/cellmhome/icon_gongshijizhi.png" alt="">
-                        <span>{{$t('blockchainTop.type1')}}</span>
-                    </div>
-                    <div class="center1">
-                        <img src="../../assets/cellmhome/icon_exc.png" alt="">
-                        <span>{{$t('blockchainTop.type2')}}</span>
-                    </div>
-                    <div class="center1">
-                        <img src="../../assets/cellmhome/icon_wallet.png" alt="">
-                        <span>{{$t('blockchainTop.type3')}}</span>
+            <div class="bg-content-outer">
+                <img class="bg" src="../../assets/cellmhome/icon_bg_cell.png" alt="">
+                <div class="header">
+                    <div class="logo">
+                        <img class="logo-pc" src="../../assets/cellmhome/logo_06.png" alt="">
                     </div>
                 </div>
-            </div>
-            <div class="space">
-                <div class="stars">
-                    <div class="star"></div>
-                    <div class="star pink"></div>
-                    <div class="star blue"></div>
-                    <div class="star yellow"></div>
+                <div class="menu">
+                    <van-popup
+                    v-model="show"
+                    position="right"
+                    :style="{ height: '100%' }"
+                    >
+                    <div class="nav">
+                        <span @click="handleIndex">{{$t('blockchainTop.nav1')}}</span>
+                        <span @click="handleProject">{{$t('blockchainTop.nav2')}}</span>
+                        <span @click="handleTechnology">{{$t('blockchainTop.navm5')}}</span>
+                        <span @click="handleEcological">{{$t('blockchainTop.navm6')}}</span>
+                        <span @click="handleAbout">{{$t('blockchainTop.nav3')}}</span>
+                        <span @click="handleTeam">{{$t('blockchainTop.nav4')}}</span>
+                        <span @click="handlePledge">{{$t('blockchainTop.nav5')}}</span>
+                        <span @click="toggleLang('zh_CN')" :disabled="$i18n.locale == 'zh_CN'">中文简体</span>
+                        <span @click="toggleLang('zh_TW')" :disabled="$i18n.locale == 'zh_TW'">中文繁体</span>
+                        <span @click="toggleLang('en_US')" :disabled="$i18n.locale == 'en_US'">English</span>
+                    </div>
+                    </van-popup>
+                    <img @click="handleMenu" src="../../assets/m/menu.png" alt="">
+                </div>
+                <div class="bg-info">
+                    <img class="bg-info-logo" src="../../assets/cellhome/logo.png" alt="">
+                    <span class="font">{{$t('blockchainTop.title')}}</span>
+                    <div class="center">
+                        <div class="center1">
+                            <img src="../../assets/cellmhome/icon_gongshijizhi.png" alt="">
+                            <span>{{$t('blockchainTop.type1')}}</span>
+                        </div>
+                        <div class="center1">
+                            <img src="../../assets/cellmhome/icon_exc.png" alt="">
+                            <span>{{$t('blockchainTop.type2')}}</span>
+                        </div>
+                        <div class="center1">
+                            <img src="../../assets/cellmhome/icon_wallet.png" alt="">
+                            <span>{{$t('blockchainTop.type3')}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="space">
+                    <div class="stars">
+                        <div class="star"></div>
+                        <div class="star pink"></div>
+                        <div class="star blue"></div>
+                        <div class="star yellow"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -146,8 +148,8 @@
                 <div class="copyright-inner">
                     <h2>{{$t('blockchainCopyright.item3.title1')}}</h2>
                     <div class="item">
-                        <span class="phone"><img src="../../assets/icon_email.png" alt="">{{$t('blockchainCopyright.item3.label1')}}</span>
-                        <span class="position"><img src="../../assets/icon_map.png" alt="">{{$t('blockchainCopyright.item3.label2')}}</span>
+                        <span class="phone">{{$t('blockchainCopyright.item3.label1')}}</span>
+                        <span class="position">{{$t('blockchainCopyright.item3.label2')}}</span>
                         <span>{{$t('blockchainCopyright.item3.label3')}}</span>
                     </div>
                 </div>
@@ -169,7 +171,7 @@ export default {
         return {
             show: false,
             keyanimate: false,
-            teamView: false
+            teamView: false,
         }
     },
     created() {
@@ -233,6 +235,9 @@ export default {
             document.documentElement.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight + this.$refs.top3.clientHeight + this.$refs.top4.clientHeight + this.$refs.top5.clientHeight)
             this.show = false
         },
+        handlePledge() {
+            window.location.href = 'https://cellcoin.in/#/u/0x5921D17875Fc5fCcEc60CC9c2f6caC0D8E1Ac985'
+        },
         toggleLang(lang) {
             if(lang == 'zh_CN') {
                 localStorage.setItem('locale', 'zh_CN')
@@ -266,258 +271,256 @@ export default {
     @import '@/common/scss/commonsize.scss';
     .cell-mhome {
         .bg-content {
-            position: relative;
             height: calc(100vh);
-            .bg {
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: calc(100vh);
-                z-index: 10;
-            }
-            .header {
-                position: absolute;
-                top: 0;
-                left: 10%;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                width: 80%;
-                height: 50px;
-                margin: 0 auto;
-                z-index: 12;
-                .logo {
+            .bg-content-outer {
+                position: relative;
+                height: 100%;
+                .bg {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: calc(100vh);
+                    z-index: 10;
+                }
+                .header {
+                    position: absolute;
+                    top: 0;
+                    left: 10%;
                     display: flex;
+                    justify-content: space-between;
                     align-items: center;
-                    margin-top: rem(10);
-                    .logo-pc {
-                        width: rem(56);
-                        height: rem(56);
-                        margin-right: rem(15);
-                    }
-                    .font-logo {
-                        display: block;
-                        width: rem(167);
-                        height: rem(30);
-                    }
-                }
-            }
-            .menu {
-                position: absolute;
-                top: 0;
-                right: 5%;
-                display: flex;
-                align-items: center;
-                height: 50px;
-                z-index: 12;
-                cursor: pointer;
-                img {
-                    display: block;
-                    width: rem(54);
-                    height: rem(54);
-                }
-                .nav {
-                    height: 100%;
-                    background-color: #ffffff;
-                    span {
-                        display: block;
-                        padding: rem(30) rem(160) rem(30) rem(40);
-                        cursor: pointer;
-                        font-size: rem(28);
-                    }
-                }
-            }
-            .bg-info {
-                position: absolute;
-                left: 10%;
-                top: 110px;
-                width: 80%;
-                height: 300px;
-                z-index: 11;
-                color: #ffffff;
-                .bg-info-logo {
-                    display: block;
-                    width: rem(278);
-                    height: rem(230);
+                    width: 80%;
+                    height: 50px;
                     margin: 0 auto;
-                }
-                .font {
-                    display: block;
-                    font-size: 32px;
-                    text-align: center;
-                    padding: 80px 0 100px;
-                }
-                .center {
-                    display: flex;
-                    .center1 {
+                    z-index: 12;
+                    .logo {
                         display: flex;
                         align-items: center;
-                        justify-content: center;
-                        font-size: rem(16);
-                        height: rem(74);
-                        text-align: center;
-                        background-size: 100% 100%;
-                        img {
-                            display: block;
-                            margin-right: rem(8);
+                        margin-top: rem(10);
+                        .logo-pc {
+                            width: rem(300);
+                            height: rem(66);
+                            margin-right: rem(15);
                         }
+                    }
+                }
+                .menu {
+                    position: fixed;
+                    top: 0;
+                    right: 5%;
+                    display: flex;
+                    align-items: center;
+                    height: 50px;
+                    z-index: 12;
+                    cursor: pointer;
+                    img {
+                        display: block;
+                        width: rem(54);
+                        height: rem(54);
+                    }
+                    .nav {
+                        height: 100%;
+                        background-color: #ffffff;
                         span {
-                            font-size: rem(12);
-                        }
-                    }
-                    .center1:nth-child(1) {
-                        width: rem(269);
-                        background: url('../../assets/cellmhome/icon_home_dia2.png') 0 0 no-repeat;
-                        background-size: 100% 100%;
-                        img {
-                            width: rem(20);
-                            height: rem(22);
-                        }
-                    }
-                    .center1:nth-child(2) {
-                        width: rem(273);
-                        background: url('../../assets/cellmhome/icon_home_dia3.png') 0 0 no-repeat;
-                        background-size: 100% 100%;
-                        img {
-                            width: rem(25);
-                            height: rem(21);
-                        }
-                    }
-                    .center1:nth-child(3) {
-                        width: rem(202);
-                        background: url('../../assets/cellmhome/icon_home_dia4.png') 0 0 no-repeat;
-                        background-size: 100% 100%;
-                        img {
-                            width: rem(25);
-                            height: rem(22);
+                            display: block;
+                            padding: rem(30) rem(160) rem(30) rem(40);
+                            cursor: pointer;
+                            font-size: rem(28);
                         }
                     }
                 }
-            }
-            .space {
-                overflow: hidden;
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                z-index: 11;
-            }
-            .crater1 {
-                width: 20px;
-                height: 20px;
-                left: 25%;
-                top: 20%;
-            }
-            .crater2 {
-                width: 10px;
-                height: 10px;
-                left: 50%;
-                top: 60%;
-            }
-            .crater3 {
-                width: 15px;
-                height: 15px;
-                left: 30%;
-                top: 65%;
-            }
-            .crater4 {
-                width: 15px;
-                height: 15px;
-                left: 60%;
-                top: 35%;
-            }
-            .stars {
-                overflow: hidden;
-                width: 100%;
-                height: 100%;
-            }
-            .star {
-                display: block;
-                width: 5px;
-                height: 5px;
-                border-radius: 50%;
-                background: #FFF;
-                top: 100px;
-                left: 85%;
-                position: relative;
-                transform-origin: 100% 0;
-                animation: star-ani 6s infinite ease-out;
-                box-shadow: 0 0 5px 5px rgba(255, 255, 255, .3);
-                opacity: 0;
-                z-index: 2;
-            }
-            .star:after {
-                content: '';
-                display: block;
-                top: 0px;
-                left: 4px;
-                border: 0px solid #fff;
-                border-width: 0px 90px 2px 90px;
-                border-color: transparent transparent transparent rgba(255, 255, 255, .3);
-                transform: rotate(-45deg) translate3d(1px, 3px, 0);
-                box-shadow: 0 0 1px 0 rgba(255, 255, 255, .1);
-                transform-origin: 0% 100%;
-                animation: shooting-ani 3s infinite ease-out;
-            }
-            .pink {
-                top: 30px;
-                left: 20%;
-                background: #ff5a99;
-                animation-delay: 5s;
-                -webkit-animation-delay: 5s;
-                -moz-animation-delay: 5s;
-            }
-            .pink:after {
-                border-color: transparent transparent transparent #ff5a99;
-                animation-delay: 5s;
-                -webkit-animation-delay: 5s;
-                -moz-animation-delay: 5s;
-            }
-            .blue {
-                top: 35px;
-                left: 60%;
-                background: cyan;
-                animation-delay: 7s;
-                -webkit-animation-delay: 7s;
-                -moz-animation-delay: 7s;
-            }
-            .blue:after {
-                border-color: transparent;
-                animation-delay: 12s;
-                -webkit-animation-delay: 7s;
-                -moz-animation-delay: 7s;
-                animation-delay: 7s;
-            }
-            .yellow {
-                top: 50px;
-                left: 50%;
-                background: #ffcd5c;
-                animation-delay: 5.8s;
-            }
-            .yellow:after {
-                border-color: transparent transparent transparent #ffcd5c;
-                animation-delay: 5.8s;
-            }
-            @keyframes star-ani {
-                0% {
+                .bg-info {
+                    position: absolute;
+                    left: 10%;
+                    top: 110px;
+                    width: 80%;
+                    height: 300px;
+                    z-index: 11;
+                    color: #ffffff;
+                    .bg-info-logo {
+                        display: block;
+                        width: rem(278);
+                        height: rem(200);
+                        margin: 0 auto;
+                    }
+                    .font {
+                        display: block;
+                        font-size: 32px;
+                        text-align: center;
+                        padding: 80px 0 100px;
+                    }
+                    .center {
+                        display: flex;
+                        .center1 {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: rem(16);
+                            height: rem(74);
+                            text-align: center;
+                            background-size: 100% 100%;
+                            img {
+                                display: block;
+                                margin-right: rem(8);
+                            }
+                            span {
+                                font-size: rem(12);
+                            }
+                        }
+                        .center1:nth-child(1) {
+                            width: rem(269);
+                            background: url('../../assets/cellmhome/icon_home_dia2.png') 0 0 no-repeat;
+                            background-size: 100% 100%;
+                            img {
+                                width: rem(20);
+                                height: rem(22);
+                            }
+                        }
+                        .center1:nth-child(2) {
+                            width: rem(273);
+                            background: url('../../assets/cellmhome/icon_home_dia3.png') 0 0 no-repeat;
+                            background-size: 100% 100%;
+                            img {
+                                width: rem(25);
+                                height: rem(21);
+                            }
+                        }
+                        .center1:nth-child(3) {
+                            width: rem(202);
+                            background: url('../../assets/cellmhome/icon_home_dia4.png') 0 0 no-repeat;
+                            background-size: 100% 100%;
+                            img {
+                                width: rem(25);
+                                height: rem(22);
+                            }
+                        }
+                    }
+                }
+                .space {
+                    overflow: hidden;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 11;
+                }
+                .crater1 {
+                    width: 20px;
+                    height: 20px;
+                    left: 25%;
+                    top: 20%;
+                }
+                .crater2 {
+                    width: 10px;
+                    height: 10px;
+                    left: 50%;
+                    top: 60%;
+                }
+                .crater3 {
+                    width: 15px;
+                    height: 15px;
+                    left: 30%;
+                    top: 65%;
+                }
+                .crater4 {
+                    width: 15px;
+                    height: 15px;
+                    left: 60%;
+                    top: 35%;
+                }
+                .stars {
+                    overflow: hidden;
+                    width: 100%;
+                    height: 100%;
+                }
+                .star {
+                    display: block;
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 50%;
+                    background: #FFF;
+                    top: 100px;
+                    left: 85%;
+                    position: relative;
+                    transform-origin: 100% 0;
+                    animation: star-ani 6s infinite ease-out;
+                    box-shadow: 0 0 5px 5px rgba(255, 255, 255, .3);
                     opacity: 0;
-                    transform: scale(0) rotate(0) translate3d(0, 0, 0);
-                    -webkit-transform: scale(0) rotate(0) translate3d(0, 0, 0);
-                    -moz-transform: scale(0) rotate(0) translate3d(0, 0, 0);
+                    z-index: 2;
                 }
-                50% {
-                    opacity: 1;
-                    transform: scale(1) rotate(0) translate3d(-200px, 200px, 0);
-                    -webkit-transform: scale(1) rotate(0) translate3d(-200px, 200px, 0);
-                    -moz-transform: scale(1) rotate(0) translate3d(-200px, 200px, 0);
+                .star:after {
+                    content: '';
+                    display: block;
+                    top: 0px;
+                    left: 4px;
+                    border: 0px solid #fff;
+                    border-width: 0px 90px 2px 90px;
+                    border-color: transparent transparent transparent rgba(255, 255, 255, .3);
+                    transform: rotate(-45deg) translate3d(1px, 3px, 0);
+                    box-shadow: 0 0 1px 0 rgba(255, 255, 255, .1);
+                    transform-origin: 0% 100%;
+                    animation: shooting-ani 3s infinite ease-out;
                 }
-                100% {
-                    opacity: 0;
-                    transform: scale(1) rotate(0) translate3d(-300px, 300px, 0);
-                    -webkit-transform: scale(1) rotate(0) translate3d(-300px, 300px, 0);
-                    -moz-transform: scale(1) rotate(0) translate3d(-300px, 300px, 0);
+                .pink {
+                    top: 30px;
+                    left: 20%;
+                    background: #FFF;
+                    animation-delay: 5s;
+                    -webkit-animation-delay: 5s;
+                    -moz-animation-delay: 5s;
+                }
+                .pink:after {
+                    border-color: transparent transparent transparent #FFF;
+                    animation-delay: 5s;
+                    -webkit-animation-delay: 5s;
+                    -moz-animation-delay: 5s;
+                }
+                .blue {
+                    top: 35px;
+                    left: 60%;
+                    background: #FFF;
+                    animation-delay: 7s;
+                    -webkit-animation-delay: 7s;
+                    -moz-animation-delay: 7s;
+                }
+                .blue:after {
+                    border-color: transparent;
+                    animation-delay: 12s;
+                    -webkit-animation-delay: 7s;
+                    -moz-animation-delay: 7s;
+                    animation-delay: 7s;
+                }
+                .yellow {
+                    top: 50px;
+                    left: 50%;
+                    background: #FFF;
+                    animation-delay: 5.8s;
+                }
+                .yellow:after {
+                    border-color: transparent transparent transparent #FFF;
+                    animation-delay: 5.8s;
+                }
+                @keyframes star-ani {
+                    0% {
+                        opacity: 0;
+                        transform: scale(0) rotate(0) translate3d(0, 0, 0);
+                        -webkit-transform: scale(0) rotate(0) translate3d(0, 0, 0);
+                        -moz-transform: scale(0) rotate(0) translate3d(0, 0, 0);
+                    }
+                    50% {
+                        opacity: 1;
+                        transform: scale(1) rotate(0) translate3d(-200px, 200px, 0);
+                        -webkit-transform: scale(1) rotate(0) translate3d(-200px, 200px, 0);
+                        -moz-transform: scale(1) rotate(0) translate3d(-200px, 200px, 0);
+                    }
+                    100% {
+                        opacity: 0;
+                        transform: scale(1) rotate(0) translate3d(-300px, 300px, 0);
+                        -webkit-transform: scale(1) rotate(0) translate3d(-300px, 300px, 0);
+                        -moz-transform: scale(1) rotate(0) translate3d(-300px, 300px, 0);
+                    }
                 }
             }
         }
@@ -549,7 +552,7 @@ export default {
                 }
                 .info-right {
                     padding-top: 10%;
-                    font-size: rem(16);
+                    font-size: rem(24);
                     line-height: rem(36);
                     color: #e8eef3;
                 }
@@ -606,30 +609,31 @@ export default {
                         width: 90%;
                         margin: 0 auto;
                         color: #000000;
-                        font-size: rem(20);
+                        font-size: rem(30);
                         padding-bottom: rem(10);
                     }
                     p {
+                        width: 80%;
                         margin: 0 auto;
                         text-align: center;
                         color: #7a7b7c;
-                        font-size: rem(14);
+                        font-size: rem(20);
                     }
                 }
                 .keyanimate1 {
-                    animation: rightEaseInAnimate1 2s ease 1; 
+                    animation: rightEaseInAnimate1 1s ease 1; 
                     animation-fill-mode: forwards;
                 }
                 .keyanimate2 {
-                    animation: rightEaseInAnimate2 2s ease 1; 
+                    animation: rightEaseInAnimate2 1s ease 1; 
                     animation-fill-mode: forwards;
                 }
                 .keyanimate3 {
-                    animation: rightEaseInAnimate1 3s ease 1; 
+                    animation: rightEaseInAnimate1 2s ease 1; 
                     animation-fill-mode: forwards;
                 }
                 .keyanimate4 {
-                    animation: rightEaseInAnimate2 3s ease 1; 
+                    animation: rightEaseInAnimate2 2s ease 1; 
                     animation-fill-mode: forwards;
                 }
                 .item:hover {
@@ -650,6 +654,7 @@ export default {
                 text-align: center;
                 font-size: rem(48);
                 color: #ffffff;
+                margin-bottom: -20px;
             }
             .bg {
                 width: 68%;
@@ -703,8 +708,8 @@ export default {
                     // }
                     .position2 {
                         position: absolute;
-                        left: rem(0);
-                        top: rem(350);
+                        left: rem(40);
+                        top: rem(300);
                         background: url('../../assets/cellmhome/icon_shequ.png') 0 0 no-repeat;
                         background-size: 100% 100%;
                     }
@@ -723,8 +728,8 @@ export default {
                     // }
                     .position4 {
                         position: absolute;
-                        right: rem(-10);
-                        top: rem(412);
+                        right: rem(-30);
+                        top: rem(352);
                         background: url('../../assets/cellmhome/icon_gongying.png') 0 0 no-repeat;
                         background-size: 100% 100%;
                     }
@@ -733,7 +738,7 @@ export default {
                     // }
                     .position5 {
                         position: absolute;
-                        right: rem(96);
+                        right: rem(66);
                         bottom: rem(80);
                         background: url('../../assets/cellmhome/icon_shuju.png') 0 0 no-repeat;
                         background-size: 100% 100%;
@@ -743,7 +748,7 @@ export default {
                     // }
                     .position6 {
                         position: absolute;
-                        left: rem(110);
+                        left: rem(130);
                         bottom: rem(-40);
                         background: url('../../assets/cellmhome/icon_diya.png') 0 0 no-repeat;
                         background-size: 100% 100%;
@@ -819,27 +824,27 @@ export default {
                 }
                 .team-view:nth-child(1) {
                     animation: fade-in;
-                    animation-duration: 2.5s;
+                    animation-duration: 2s;
                     animation-fill-mode: forwards;
                 }
                 .team-view:nth-child(2) {
                     animation: fade-in;
-                    animation-duration: 3s;
+                    animation-duration: 2.5s;
                     animation-fill-mode: forwards;
                 }
                 .team-view:nth-child(3) {
                     animation: fade-in;
-                    animation-duration: 3.5s;
+                    animation-duration: 3s;
                     animation-fill-mode: forwards;
                 }
                 .team-view:nth-child(4) {
                     animation: fade-in;
-                    animation-duration: 4s;
+                    animation-duration: 3.5s;
                     animation-fill-mode: forwards;
                 }
                 .team-view:nth-child(5) {
                     animation: fade-in;
-                    animation-duration: 4.5s;
+                    animation-duration: 4s;
                     animation-fill-mode: forwards;
                 }
             }

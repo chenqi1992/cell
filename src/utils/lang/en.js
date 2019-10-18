@@ -4,6 +4,9 @@ export default {
         nav2: 'Project',
         nav3: 'About us',
         nav4: 'Team',
+        nav5: 'Pledge',
+        navm5: 'Applied Technology',
+        navm6: 'Ecological Scene',
         title: 'Focus On Eco-construction Of Block Chain',
         type1: 'STAKING Pattern',
         type2: 'Decentralized exchange ',
@@ -77,5 +80,5 @@ export default {
             label3: '#07-02C CENTRO BIANCO SINGAPORE'
         }
     },
-    footer: 'CELL NETWORK FOUNDATION LTD. ，cellnetwork888@gmail.com，73 UPPER PAYA LEBAR ROAD #07-02C CENTRO BIANCO SINGAPORE ©2019 - 2020 www.cellnetwork.io All rights reserved '
+    footer: '© 2019 CELL NETWORK FOUNDATION LTD.  All rights reserved'
 }

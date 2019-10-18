@@ -4,6 +4,9 @@ export default {
         nav2: '项目简介',
         nav3: '关于我们',
         nav4: '团队',
+        nav5: '质押',
+        navm5: '应用技术',
+        navm6: '生态场景',
         title: '专注区块链生态打造',
         type1: 'STAKING模式',
         type2: '去中心化交易所',
@@ -77,5 +80,5 @@ export default {
             label3: '#07-02C CENTRO BIANCO SINGAPORE'
         }
     },
-    footer: 'CELL NETWORK FOUNDATION LTD. ，cellnetwork888@gmail.com，73 UPPER PAYA LEBAR ROAD #07-02C CENTRO BIANCO SINGAPORE ©2019 - 2020 www.cellnetwork.io All rights reserved '
+    footer: '© 2019 CELL NETWORK FOUNDATION LTD.  All rights reserved'
 }
