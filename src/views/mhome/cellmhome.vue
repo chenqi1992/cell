@@ -365,7 +365,7 @@ export default {
                                 margin-right: rem(8);
                             }
                             span {
-                                font-size: rem(12);
+                                font-size: rem(22);
                             }
                         }
                         .center1:nth-child(1) {
