@@ -182,7 +182,20 @@ export default {
 
     },
     mounted() {
-
+        let lang = localStorage.getItem('locale')
+        switch (lang) {
+            case 'zh_CN':
+                this.language = '中文'
+                break;
+            case 'en_US':
+                this.language = 'English'
+                break;
+            case 'zh_TW':
+                this.language = '中文'
+                break;
+            default:
+                break;
+        }
     },
     methods: {
         handleIndex() {
@@ -728,13 +741,13 @@ export default {
             background-size: 100% 500px;
             color: #ffffff;
             h1 {
-                padding: 95px 0 10px;
+                padding: 80px 0 10px;
                 text-align: center;
                 font-size: 26px;
             }
             .about-us {
                 box-sizing: border-box;
-                width: 800px;
+                width: 860px;
                 height: 228px;
                 padding: 35px;
                 margin: 0 auto;
