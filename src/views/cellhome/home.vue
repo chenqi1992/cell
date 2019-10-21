@@ -295,8 +295,8 @@ export default {
                             cursor: pointer;
                         }
                         span:hover {
-                            color: #2F68A7;
-                            box-shadow: 0px -4px 0px #2F68A7 inset;
+                            color: #1c8dea;
+                            box-shadow: 0px -2px 0px #1c8dea inset;
                         }
                     }
                     .el-dropdown-link {
@@ -320,12 +320,12 @@ export default {
                     .bg-info-logo {
                         display: block;
                         margin: 0 auto;
-                        width: 180px;
-                        height: 130px;
+                        width: 200px;
+                        height: 150px;
                     }
                     .font {
                         display: block;
-                        font-size: 32px;
+                        font-size: 34px;
                         text-align: center;
                         padding: 80px 0 100px;
                     }
@@ -723,12 +723,12 @@ export default {
             }
         }
         .about {
-            height: 400px;
+            height: 500px;
             background: url('../../assets/cellhome/pic_bg_aboutus.png') 0 0 no-repeat;
-            background-size: 100% 400px;
+            background-size: 100% 500px;
             color: #ffffff;
             h1 {
-                padding: 45px 0 10px;
+                padding: 95px 0 10px;
                 text-align: center;
                 font-size: 26px;
             }
@@ -740,6 +740,7 @@ export default {
                 margin: 0 auto;
                 p {
                     margin-bottom: 30px;
+                    font-size: 16px;
                 }
             }
         }
@@ -770,10 +771,13 @@ export default {
                         .info-title {
                             padding: 24px 0;
                             color: #333;
-                            span:nth-child(1) {
-                                font-size: 16px;
+                            span:nth-child(1), span:nth-child(2), p {
+                                font-size: 18px;
                                 margin-right: 20px;
                             }
+                        }
+                        p {
+                            font-size: 16px;
                         }
                     }
                 }
