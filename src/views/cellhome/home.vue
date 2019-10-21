@@ -7,7 +7,7 @@
                         <img class="logo-pc" src="../../assets/cellhome/logo_06.png" alt="">
                     </div>
                     <div class="nav">
-                        <span>{{$t('blockchainTop.nav1')}}</span>
+                        <span @click="handleIndex">{{$t('blockchainTop.nav1')}}</span>
                         <span @click="handleProject">{{$t('blockchainTop.nav2')}}</span>
                         <span @click="handleAbout">{{$t('blockchainTop.nav3')}}</span>
                         <span @click="handleTeam">{{$t('blockchainTop.nav4')}}</span>
@@ -185,6 +185,10 @@ export default {
 
     },
     methods: {
+        handleIndex() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        },
         handleProject() {
             document.body.scrollTop = this.$refs.top1.clientHeight - 50;
             document.documentElement.scrollTop = this.$refs.top1.clientHeight - 50;
@@ -233,9 +237,11 @@ export default {
 
 <style lang="scss">
     .el-dropdown-menu {
-        color: #ffffff;
-        cursor: pointer;
         margin-right: 25px;
+        padding: 10px;
+        color: #ffffff;
+        background-color: #262728;
+        cursor: pointer;
         .el-dropdown-item {
             color: #ffffff;
         }
@@ -264,7 +270,7 @@ export default {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    height: 50px;
+                    // height: 50px;
                     margin: 0 auto;
                     z-index: 1992;
                     background-color: #010d18;
@@ -274,7 +280,7 @@ export default {
                         margin: 0 0 0 10%;
                         .logo-pc {
                             width: 200px;
-                            height: 40px;
+                            height: 50px;
                             margin-right: 5px;
                         }
                     }
@@ -284,9 +290,13 @@ export default {
                         span {
                             font-size: 18px;
                             display: block;
-                            padding: 0 30px;
+                            padding: 10px 30px;
                             color: #ffffff;
                             cursor: pointer;
+                        }
+                        span:hover {
+                            color: #2F68A7;
+                            box-shadow: 0px -4px 0px #2F68A7 inset;
                         }
                     }
                     .el-dropdown-link {
@@ -302,7 +312,7 @@ export default {
                 .bg-info {
                     position: absolute;
                     left: 25%;
-                    top: 110px;
+                    top: 180px;
                     width: 50%;
                     height: 110px;
                     z-index: 12;
@@ -310,6 +320,8 @@ export default {
                     .bg-info-logo {
                         display: block;
                         margin: 0 auto;
+                        width: 180px;
+                        height: 130px;
                     }
                     .font {
                         display: block;
@@ -334,7 +346,7 @@ export default {
                             }
                         }
                         .center1:nth-child(1) {
-                            width: 283px;
+                            width: 231px;
                             background: url('../../assets/cellhome/icon_home_dia3.png') 0 0 no-repeat;
                             background-size: 100% 100%;
                             img {
@@ -343,8 +355,8 @@ export default {
                             }
                         }
                         .center1:nth-child(2) {
-                            width: 289px;
-                            background: url('../../assets/cellhome/icon_home_dia3.png') 0 0 no-repeat;
+                            width: 283px;
+                            background: url('../../assets/cellhome/icon_home_dia1.png') 0 0 no-repeat;
                             background-size: 100% 100%;
                             img {
                                 width: 25px;
@@ -360,8 +372,15 @@ export default {
                                 height: 22px;
                             }
                         }
-                        .center1:hover {
+                        .center1:nth-child(1):hover, .center1:nth-child(3):hover {
+                            width: 231px;
                             background: url('../../assets/cellhome/icon_home_dia2.png') 0 0 no-repeat;
+                            background-size: 100% 100%;
+                            cursor: pointer;
+                        }
+                        .center1:nth-child(2):hover {
+                            width: 283px;
+                            background: url('../../assets/cellhome/icon_home_dia4.png') 0 0 no-repeat;
                             background-size: 100% 100%;
                             cursor: pointer;
                         }
@@ -546,7 +565,7 @@ export default {
             h1 {
                 padding: 92px 0 110px;
                 text-align: center;
-                font-size: 48px;
+                font-size: 30px;
                 color: #000000;
             }
             .wallet-item {
@@ -596,7 +615,7 @@ export default {
             h1 {
                 padding: 92px 0 110px;
                 text-align: center;
-                font-size: 48px;
+                font-size: 30px;
                 color: #ffffff;
             }
             .bg {
@@ -711,7 +730,7 @@ export default {
             h1 {
                 padding: 45px 0 10px;
                 text-align: center;
-                font-size: 20px;
+                font-size: 26px;
             }
             .about-us {
                 box-sizing: border-box;
@@ -728,7 +747,7 @@ export default {
             h1 {
                 padding: 35px 0;
                 text-align: center;
-                font-size: 20px;
+                font-size: 26px;
             }
             .item-outer {
                 width: 800px;
