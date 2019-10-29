@@ -19,8 +19,8 @@
                         <span @click="handleProject">{{$t('blockchainTop.nav2')}}</span>
                         <span @click="handleTechnology">{{$t('blockchainTop.navm5')}}</span>
                         <span @click="handleEcological">{{$t('blockchainTop.navm6')}}</span>
-                        <span @click="handleAbout">{{$t('blockchainTop.nav3')}}</span>
-                        <span @click="handleTeam">{{$t('blockchainTop.nav4')}}</span>
+                        <span @click="handleAbout">{{$t('blockchainTop.navm7')}}</span>
+                        <!-- <span @click="handleTeam">{{$t('blockchainTop.nav4')}}</span> -->
                         <span @click="handlePledge">{{$t('blockchainTop.nav5')}}</span>
                         <span @click="toggleLang('zh_CN')" :disabled="$i18n.locale == 'zh_CN'">中文简体</span>
                         <span @click="toggleLang('zh_TW')" :disabled="$i18n.locale == 'zh_TW'">中文繁体</span>
@@ -90,9 +90,15 @@
                     <span>{{$t('blockchainTec.item4')}}</span>
                     <p>{{$t('blockchainTec.item4Info')}}</p>
                 </div>
+                <div class="item" :class="{'keyanimate3' : keyanimate}">
+                    <img src="../../assets/cellmhome/icon_kualian.png" alt="">
+                    <span>{{$t('blockchainTec.item5')}}</span>
+                    <p>{{$t('blockchainTec.item5Info')}}</p>
+                </div>
             </div>
         </div>
-        <div class="ecological" ref="top4">
+        <div class="eco" ref="top4"><img src="../../assets/cellmhome/a01.png" alt=""></div>
+        <div class="ecological" ref="top5">
             <h1>{{$t('blockchainEco.title')}}</h1>
             <div class="bg">
                 <div class="bg-position">
@@ -102,10 +108,13 @@
                     <div class="position4">{{$t('blockchainEco.desc4')}}</div>
                     <div class="position5">{{$t('blockchainEco.desc5')}}</div>
                     <div class="position6">{{$t('blockchainEco.desc6')}}</div>
+                    <div class="position7">{{$t('blockchainEco.desc7')}}</div>
+                    <div class="position8">{{$t('blockchainEco.desc8')}}</div>
+                    <div class="position9">{{$t('blockchainEco.desc9')}}</div>
                 </div>
             </div>
         </div>
-        <div class="about" ref="top5">
+        <!-- <div class="about" ref="top5">
             <h1>{{$t('blockchainAbout.title')}}</h1>
             <div class="about-us">
                 <p>{{$t('blockchainAbout.info1')}}</p>
@@ -126,6 +135,20 @@
                     </div>
                 </div>
             </div>
+        </div> -->
+        <div class="rescenter">
+            <h1>{{$t('blockchainRescenter.title')}}</h1>
+            <div class="rescenter-center">
+                <img src="../../assets/cellmhome/a02.png" alt="">
+                <div class="img2">
+                    <img src="../../assets/cellmhome/a03.png" alt="">
+                    <p>{{$t('blockchainRescenter.info')}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="partners">
+            <!-- <h1>{{$t('blockchainPartners.title')}}</h1> -->
+            <img src="../../assets/cellmhome/a04.png" alt="">
         </div>
         <div class="copyright">
             <div class="copyright-outer">
@@ -221,13 +244,13 @@ export default {
             this.show = false
         },
         handleEcological() {
-            document.body.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight + this.$refs.top3.clientHeight)
-            document.documentElement.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight + this.$refs.top3.clientHeight)
+            document.body.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight  + this.$refs.top4.clientHeight)
+            document.documentElement.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight + this.$refs.top3.clientHeight + this.$refs.top4.clientHeight)
             this.show = false
         },
         handleAbout() {
-            document.body.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight + this.$refs.top3.clientHeight + this.$refs.top4.clientHeight)
-            document.documentElement.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight + this.$refs.top3.clientHeight + this.$refs.top4.clientHeight)
+            document.body.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight + this.$refs.top3.clientHeight + this.$refs.top4.clientHeight + this.$refs.top5.clientHeight)
+            document.documentElement.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight + this.$refs.top3.clientHeight + this.$refs.top4.clientHeight + this.$refs.top5.clientHeight)
             this.show = false
         },
         handleTeam() {
@@ -583,7 +606,7 @@ export default {
                 margin: 0 auto;
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: space-around;
+                // justify-content: space-around;
                 @keyframes rightEaseInAnimate1{
                     0%{transform: translateX(-500px);opacity: 0;}
                     100%{transform:translateX(0px);opacity: 1; }
@@ -593,7 +616,7 @@ export default {
                     100%{transform:translateX(0px);opacity: 1; }
                 }
                 .item {
-                    width: 47%;
+                    width: 50%;
                     padding-bottom: rem(60);
                     border-radius: 10px;
                     transform: translateX(-500px);
@@ -645,6 +668,12 @@ export default {
                 }
             }
         }
+        .eco {
+            overflow: hidden;
+            img {
+                width: 100%;
+            }
+        }
         .ecological {
             width: 100%;
             padding-bottom: rem(200);
@@ -675,7 +704,7 @@ export default {
                     .position1 {
                         position: absolute;
                         left: rem(-50);
-                        top: rem(589);
+                        top: rem(489);
                         background: url('../../assets/cellmhome/icon_jinr.png') 0 0 no-repeat;
                         background-size: 100% 100%;
                         // animation: 
@@ -718,7 +747,7 @@ export default {
                     // }
                     .position3 {
                         position: absolute;
-                        right: rem(75);
+                        right: rem(20);
                         top: rem(162);
                         background: url('../../assets/cellmhome/icon_xinren.png') 0 0 no-repeat;
                         background-size: 100% 100%;
@@ -738,8 +767,8 @@ export default {
                     // }
                     .position5 {
                         position: absolute;
-                        right: rem(66);
-                        bottom: rem(80);
+                        right: rem(16);
+                        bottom: rem(120);
                         background: url('../../assets/cellmhome/icon_shuju.png') 0 0 no-repeat;
                         background-size: 100% 100%;
                     }
@@ -756,7 +785,66 @@ export default {
                     // .position6:hover {
                     //     background: url('../../assets/cellhome/icon_diya_s.png') 0 0 no-repeat;
                     // }
+                    .position7 {
+                        position: absolute;
+                        left: rem(200);
+                        top: rem(170);
+                        background: url('../../assets/cellhome/icon_game_d.png') 0 0 no-repeat;
+                        background-size: 100% 100%;
+                    }
+                    .position8 {
+                        position: absolute;
+                        right: rem(133);
+                        top: rem(654);
+                        background: url('../../assets/cellhome/icon_yiliao_d.png') 0 0 no-repeat;
+                        background-size: 100% 100%;
+                    }
+                    .position9 {
+                        position: absolute;
+                        left: rem(-10);
+                        bottom: rem(-34);
+                        background: url('../../assets/cellhome/icon_jiaoyu_d.png') 0 0 no-repeat;
+                        background-size: 100% 100%;
+                    }
                 }
+            }
+        }
+        .rescenter {
+            h1 {
+                padding: rem(50) 0 rem(80);
+                text-align: center;
+                font-size: rem(48);
+                color: #000000;
+            }
+            .rescenter-center {
+                overflow: hidden;
+                img {
+                    display: block;
+                    width: 100%;
+                }
+                .img2 {
+                    position: relative;
+                    p {
+                        position: absolute;
+                        bottom: 73px;
+                        width: 88%;
+                        left: 6%;
+                        font-size: 1.2rem;
+                        line-height: 2.2rem;
+                    }
+                }
+            }
+        }
+        .partners {
+            h1 {
+                padding: 40px 0;
+                text-align: center;
+                font-size: rem(48);
+                color: #000000;
+                background-color: #f9f9f9;
+            }
+            img {
+                width: 100%;
             }
         }
         .about {

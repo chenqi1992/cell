@@ -5,8 +5,9 @@ export default {
         nav3: '关于我们',
         nav4: '团队',
         nav5: '质押',
-        navm5: '应用技术',
+        navm5: '核心技术',
         navm6: '生态场景',
+        navm7: '研究中心',
         title: '专注区块链生态打造',
         type1: 'STAKING模式',
         type2: '去中心化交易所',
@@ -24,9 +25,12 @@ export default {
         desc4: '供应链',
         desc5: '数据安全',
         desc6: '抵押借贷',
+        desc7: '游戏',
+        desc8: '医疗',
+        desc9: '教育',
     },
     blockchainTec: {
-        title: '应用技术',
+        title: '核心技术',
         item1: '智能合约',
         item1Info: '支持可扩展编程的合约开发并提供标准化的合约模版',
         item2: '共识机制',
@@ -34,7 +38,16 @@ export default {
         item3: '闪兑',
         item3Info: '快速实现高效安全优质的币币兑换',
         item4: '跨链技术',
-        item4Info: '支持跨链分布式架构及多链技术架构'
+        item4Info: '支持跨链分布式架构及多链技术架构',
+        item5: '预言机',
+        item5Info: '实现区块链与现实世界的数据互通'
+    },
+    blockchainRescenter: {
+        title: '研究中心',
+        info: 'Cellation的研发团队由世界各地的开发人员产品设计师和经济学家组成，围绕着共同塑造未来区块链生态圈的一致目标，合作伙伴们组建了强大的开发者社区,遍布x个国家的xx个城市。'
+    },
+    blockchainPartners: {
+        title: '合作伙伴',
     },
     blockchainAbout: {
         title: '关于我们',

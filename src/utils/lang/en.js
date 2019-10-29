@@ -24,6 +24,9 @@ export default {
         desc4: 'SupplyChain',
         desc5: 'DataSecurity',
         desc6: 'MortgageLending',
+        desc7: 'Game',
+        desc8: 'Medical',
+        desc9: 'Education',
     },
     blockchainTec: {
         title: 'Applied Technology',
@@ -34,7 +37,16 @@ export default {
         item3: 'Flash Exchange',
         item3Info: 'Fast realization of high efficiency, safety and quality Currency exchange ',
         item4: 'Cross Link Technology',
-        item4Info: 'Supporting cross-chain distributed architecture andMulti Chain Technology Architecture '
+        item4Info: 'Supporting cross-chain distributed architecture andMulti Chain Technology Architecture ',
+        item5: 'Predicting machine',
+        item5Info: 'Supporting cross-chain distributed architecture andMulti Chain Technology Architecture '
+    },
+    blockchainRescenter: {
+        title: 'Research center',
+        info: 'The research and development team of Cellation is composed of developers, product designers and economists from all over the world. Around the consistent goal of jointly shaping the future blockchain ecosystem, the partners have established a strong developer community, covering xx cities in x countries.'
+    },
+    blockchainPartners: {
+        title: 'partners',
     },
     blockchainAbout: {
         title: 'About Us',

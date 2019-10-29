@@ -85,8 +85,14 @@
                     <span>{{$t('blockchainTec.item4')}}</span>
                     <p>{{$t('blockchainTec.item4Info')}}</p>
                 </div>
+                <div class="item">
+                    <img src="../../assets/cellhome/icon_kualiamjishu.png" alt="">
+                    <span>{{$t('blockchainTec.item5')}}</span>
+                    <p>{{$t('blockchainTec.item5Info')}}</p>
+                </div>
             </div>
         </div>
+        <div class="eco"><img src="../../assets/cellhome/a01.png" alt=""></div>
         <div class="ecological" ref="top4">
             <h1>{{$t('blockchainEco.title')}}</h1>
             <div class="bg">
@@ -97,10 +103,13 @@
                     <div class="position4">{{$t('blockchainEco.desc4')}}</div>
                     <div class="position5">{{$t('blockchainEco.desc5')}}</div>
                     <div class="position6">{{$t('blockchainEco.desc6')}}</div>
+                    <div class="position7">{{$t('blockchainEco.desc7')}}</div>
+                    <div class="position8">{{$t('blockchainEco.desc8')}}</div>
+                    <div class="position9">{{$t('blockchainEco.desc9')}}</div>
                 </div>
             </div>
         </div>
-        <div class="about" ref="top5">
+        <!-- <div class="about" ref="top5">
             <h1>{{$t('blockchainAbout.title')}}</h1>
             <div class="about-us">
                 <p>{{$t('blockchainAbout.info1')}}</p>
@@ -121,6 +130,17 @@
                     </div>
                 </div>
             </div>
+        </div> -->
+        <div class="rescenter">
+            <h1>{{$t('blockchainRescenter.title')}}</h1>
+            <div class="rescenter-center">
+                <img src="../../assets/cellhome/a02.png" alt="">
+                <img src="../../assets/cellhome/a03.png" alt="">
+            </div>
+        </div>
+        <div class="partners">
+            <h1>{{$t('blockchainPartners.title')}}</h1>
+            <img src="../../assets/cellhome/a04.png" alt="">
         </div>
         <div class="copyright">
             <div class="copyright-outer">
@@ -622,6 +642,12 @@ export default {
                 }
             }
         }
+        .eco {
+            overflow: hidden;
+            img {
+                width: 100%;
+            }
+        }
         .ecological {
             height: 900px;
 	        background-color: #10223a;
@@ -704,8 +730,8 @@ export default {
                     }
                     .position4 {
                         position: absolute;
-                        right: -53px;
-                        top: 194px;
+                        right: 200px;
+                        top: 344px;
                         background: url('../../assets/cellhome/icon_gongyinglian_d.png') 0 0 no-repeat;
                         background-size: 100% 100%;
                     }
@@ -714,8 +740,8 @@ export default {
                     }
                     .position5 {
                         position: absolute;
-                        right: 350px;
-                        bottom: 16px;
+                        right: 450px;
+                        bottom: 0px;
                         background: url('../../assets/cellhome/icon_shuju_d.png') 0 0 no-repeat;
                         background-size: 100% 100%;
                     }
@@ -724,15 +750,71 @@ export default {
                     }
                     .position6 {
                         position: absolute;
-                        left: 276px;
-                        bottom: 16px;
+                        left: 356px;
+                        bottom: 0px;
                         background: url('../../assets/cellhome/icon_diya_d.png') 0 0 no-repeat;
                         background-size: 100% 100%;
                     }
                     .position6:hover {
                         background: url('../../assets/cellhome/icon_diya_s.png') 0 0 no-repeat;
                     }
+                    .position7 {
+                        position: absolute;
+                        left: 550px;
+                        top: -20px;
+                        background: url('../../assets/cellhome/icon_game_d.png') 0 0 no-repeat;
+                        background-size: 100% 100%;
+                    }
+                    .position7:hover {
+                        background: url('../../assets/cellhome/icon_game_s.png') 0 0 no-repeat;
+                    }
+                    .position8 {
+                        position: absolute;
+                        right: -53px;
+                        top: 194px;
+                        background: url('../../assets/cellhome/icon_yiliao_d.png') 0 0 no-repeat;
+                        background-size: 100% 100%;
+                    }
+                    .position8:hover {
+                        background: url('../../assets/cellhome/icon_yiliao_s.png') 0 0 no-repeat;
+                    }
+                    .position9 {
+                        position: absolute;
+                        left: 76px;
+                        bottom: 34px;
+                        background: url('../../assets/cellhome/icon_jiaoyu_d.png') 0 0 no-repeat;
+                        background-size: 100% 100%;
+                    }
+                    .position9:hover {
+                        background: url('../../assets/cellhome/icon_jiaoyu_s.png') 0 0 no-repeat;
+                    }
                 }
+            }
+        }
+        .rescenter {
+            h1 {
+                padding: 50px 0 80px;
+                text-align: center;
+                font-size: 30px;
+                color: #000000;
+            }
+            .rescenter-center {
+                display: flex;
+                width: 80%;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+        }
+        .partners {
+            h1 {
+                padding: 40px 0;
+                text-align: center;
+                font-size: 30px;
+                color: #000000;
+                background-color: #f9f9f9;
+            }
+            img {
+                width: 100%;
             }
         }
         .about {
