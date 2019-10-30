@@ -318,7 +318,7 @@ export default {
                     left: 0;
                     width: 100%;
                     height: 50px;
-                    z-index: 11;                    
+                    z-index: 12;                    
                     .header {
                         position: absolute;
                         top: 0;
