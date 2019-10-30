@@ -92,7 +92,7 @@
                     <p>{{$t('blockchainTec.item4Info')}}</p>
                 </div>
                 <div class="item" :class="{'keyanimate3' : keyanimate}">
-                    <img src="../../assets/cellmhome/icon_kualian.png" alt="">
+                    <img src="../../assets/cellmhome/icon_yuyanji.png" alt="">
                     <span>{{$t('blockchainTec.item5')}}</span>
                     <p>{{$t('blockchainTec.item5Info')}}</p>
                 </div>

@@ -86,7 +86,7 @@
                     <p>{{$t('blockchainTec.item4Info')}}</p>
                 </div>
                 <div class="item">
-                    <img src="../../assets/cellhome/icon_kualiamjishu.png" alt="">
+                    <img src="../../assets/cellhome/icon_yuyanji.png" alt="">
                     <span>{{$t('blockchainTec.item5')}}</span>
                     <p>{{$t('blockchainTec.item5Info')}}</p>
                 </div>
