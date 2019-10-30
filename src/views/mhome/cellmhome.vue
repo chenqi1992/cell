@@ -3,31 +3,33 @@
         <div class="bg-content" ref="top1">
             <div class="bg-content-outer">
                 <img class="bg" src="../../assets/cellmhome/icon_bg_cell.png" alt="">
-                <div class="header">
-                    <div class="logo">
-                        <img class="logo-pc" src="../../assets/cellmhome/logo_06.png" alt="">
+                <div class="fix" :class="{'active': active}">
+                    <div class="header">
+                        <div class="logo">
+                            <img class="logo-pc" src="../../assets/cellmhome/logo_06.png" alt="">
+                        </div>
                     </div>
-                </div>
-                <div class="menu">
-                    <van-popup
-                    v-model="show"
-                    position="right"
-                    :style="{ height: '100%' }"
-                    >
-                    <div class="nav">
-                        <span @click="handleIndex">{{$t('blockchainTop.nav1')}}</span>
-                        <span @click="handleProject">{{$t('blockchainTop.nav2')}}</span>
-                        <span @click="handleTechnology">{{$t('blockchainTop.navm5')}}</span>
-                        <span @click="handleEcological">{{$t('blockchainTop.navm6')}}</span>
-                        <span @click="handleAbout">{{$t('blockchainTop.navm7')}}</span>
-                        <!-- <span @click="handleTeam">{{$t('blockchainTop.nav4')}}</span> -->
-                        <span @click="handlePledge">{{$t('blockchainTop.nav5')}}</span>
-                        <span @click="toggleLang('zh_CN')" :disabled="$i18n.locale == 'zh_CN'">中文简体</span>
-                        <span @click="toggleLang('zh_TW')" :disabled="$i18n.locale == 'zh_TW'">中文繁体</span>
-                        <span @click="toggleLang('en_US')" :disabled="$i18n.locale == 'en_US'">English</span>
+                    <div class="menu">
+                        <van-popup
+                        v-model="show"
+                        position="right"
+                        :style="{ height: '100%' }"
+                        >
+                        <div class="nav">
+                            <span @click="handleIndex">{{$t('blockchainTop.nav1')}}</span>
+                            <!-- <span @click="handleProject">{{$t('blockchainTop.nav2')}}</span> -->
+                            <span @click="handleTechnology">{{$t('blockchainTop.navm5')}}</span>
+                            <span @click="handleEcological">{{$t('blockchainTop.navm6')}}</span>
+                            <span @click="handleAbout">{{$t('blockchainTop.navm7')}}</span>
+                            <!-- <span @click="handleTeam">{{$t('blockchainTop.nav4')}}</span> -->
+                            <span @click="handlePledge">{{$t('blockchainTop.nav5')}}</span>
+                            <span @click="toggleLang('zh_CN')" :disabled="$i18n.locale == 'zh_CN'">中文简体</span>
+                            <span @click="toggleLang('zh_TW')" :disabled="$i18n.locale == 'zh_TW'">中文繁体</span>
+                            <span @click="toggleLang('en_US')" :disabled="$i18n.locale == 'en_US'">English</span>
+                        </div>
+                        </van-popup>
+                        <img @click="handleMenu" src="../../assets/m/menu.png" alt="">
                     </div>
-                    </van-popup>
-                    <img @click="handleMenu" src="../../assets/m/menu.png" alt="">
                 </div>
                 <div class="bg-info">
                     <img class="bg-info-logo" src="../../assets/cellhome/logo.png" alt="">
@@ -193,6 +195,7 @@ export default {
     },
     data() {
         return {
+            active: false,
             show: false,
             keyanimate: false,
             teamView: false,
@@ -220,7 +223,9 @@ export default {
             let scrollTop = document.documentElement.scrollTop || document.body.scrollTop
             if(scrollTop > 800) {
                 this.keyanimate = true
+                this.active = true
             }
+            scrollTop > 800 ? this.active = true : this.active = false
             if(scrollTop > 2000) {
                 this.teamView = true
             }
@@ -307,52 +312,63 @@ export default {
                     height: calc(100vh);
                     z-index: 10;
                 }
-                .header {
-                    position: absolute;
+                .fix {
+                    position: fixed;
                     top: 0;
-                    left: 10%;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    width: 80%;
+                    left: 0;
+                    width: 100%;
                     height: 50px;
-                    margin: 0 auto;
-                    z-index: 12;
-                    .logo {
+                    z-index: 11;                    
+                    .header {
+                        position: absolute;
+                        top: 0;
+                        left: 10%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 80%;
+                        height: 50px;
+                        margin: 0 auto;
+                        z-index: 12;
+                        .logo {
+                            display: flex;
+                            align-items: center;
+                            margin-top: rem(10);
+                            .logo-pc {
+                                width: rem(300);
+                                height: rem(66);
+                                margin-right: rem(15);
+                            }
+                        }
+                    }
+                    .menu {
+                        position: fixed;
+                        top: 0;
+                        right: 5%;
                         display: flex;
                         align-items: center;
-                        margin-top: rem(10);
-                        .logo-pc {
-                            width: rem(300);
-                            height: rem(66);
-                            margin-right: rem(15);
+                        height: 50px;
+                        z-index: 12;
+                        cursor: pointer;
+                        img {
+                            display: block;
+                            width: rem(54);
+                            height: rem(54);
+                        }
+                        .nav {
+                            height: 100%;
+                            background-color: #ffffff;
+                            span {
+                                display: block;
+                                padding: rem(30) rem(160) rem(30) rem(40);
+                                cursor: pointer;
+                                font-size: rem(28);
+                            }
                         }
                     }
                 }
-                .menu {
-                    position: fixed;
-                    top: 0;
-                    right: 5%;
-                    display: flex;
-                    align-items: center;
-                    height: 50px;
-                    z-index: 12;
-                    cursor: pointer;
-                    img {
-                        display: block;
-                        width: rem(54);
-                        height: rem(54);
-                    }
-                    .nav {
-                        height: 100%;
-                        background-color: #ffffff;
-                        span {
-                            display: block;
-                            padding: rem(30) rem(160) rem(30) rem(40);
-                            cursor: pointer;
-                            font-size: rem(28);
-                        }
-                    }
+                .active {
+                    background: rgba(20, 35, 57, 1);
                 }
                 .bg-info {
                     position: absolute;

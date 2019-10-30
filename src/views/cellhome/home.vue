@@ -28,6 +28,7 @@
                 <div class="bg-info">
                     <img class="bg-info-logo" src="../../assets/cellhome/logo.png" alt="">
                     <span class="font">{{$t('blockchainTop.title')}}</span>
+                    <span class="fontinfo">{{$t('blockchainTop.titleInfo')}}</span>
                     <!-- <div class="center">
                         <div class="center1">
                             <img src="../../assets/cellhome/icon_wallet.png" alt="">
@@ -364,7 +365,12 @@ export default {
                         display: block;
                         font-size: 34px;
                         text-align: center;
-                        padding: 80px 0 100px;
+                        padding: 80px 0 40px;
+                    }
+                    .fontinfo {
+                        display: block;
+                        text-align: center;
+                        font-size: 16px;
                     }
                     .center {
                         display: flex;
