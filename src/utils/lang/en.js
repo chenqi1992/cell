@@ -4,7 +4,7 @@ export default {
         nav2: 'Project',
         nav3: 'About us',
         nav4: 'Team',
-        nav5: 'Pledge',
+        nav5: 'Product',
         navm5: 'Core Technology',
         navm6: 'Ecological Scene',
         navm7: 'Research Centre',
