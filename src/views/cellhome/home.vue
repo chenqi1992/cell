@@ -800,9 +800,11 @@ export default {
             }
             .rescenter-center {
                 display: flex;
-                width: 80%;
-                margin: 0 auto;
                 overflow: hidden;
+                height: 555px;
+                img {
+                    width: 100%;
+                }
             }
         }
         .partners {
