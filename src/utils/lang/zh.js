@@ -9,6 +9,7 @@ export default {
         navm6: '生态场景',
         navm7: '研究中心',
         title: '专注区块链生态打造',
+        titleInfo: '专业打造致臻精品，服务成就携手并进',
         type1: 'STAKING模式',
         type2: '去中心化交易所',
         type3: '钱包APP',

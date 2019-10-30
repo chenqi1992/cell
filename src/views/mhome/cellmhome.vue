@@ -32,7 +32,8 @@
                 <div class="bg-info">
                     <img class="bg-info-logo" src="../../assets/cellhome/logo.png" alt="">
                     <span class="font">{{$t('blockchainTop.title')}}</span>
-                    <div class="center">
+                    <span class="fontinfo">{{$t('blockchainTop.titleInfo')}}</span>
+                    <!-- <div class="center">
                         <div class="center1">
                             <img src="../../assets/cellmhome/icon_wallet.png" alt="">
                             <span>{{$t('blockchainTop.type3')}}</span>
@@ -45,7 +46,7 @@
                             <img src="../../assets/cellmhome/icon_gongshijizhi.png" alt="">
                             <span>{{$t('blockchainTop.type1')}}</span>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="space">
                     <div class="stars">
@@ -356,7 +357,7 @@ export default {
                 .bg-info {
                     position: absolute;
                     left: 10%;
-                    top: 110px;
+                    top: 180px;
                     width: 80%;
                     height: 300px;
                     z-index: 11;
@@ -371,7 +372,11 @@ export default {
                         display: block;
                         font-size: 32px;
                         text-align: center;
-                        padding: 80px 0 100px;
+                        padding: 60px 0 10px;
+                    }
+                    .fontinfo {
+                        text-align: center;
+                        font-size: rem(24);
                     }
                     .center {
                         display: flex;

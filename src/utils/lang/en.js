@@ -8,6 +8,7 @@ export default {
         navm5: 'Applied Technology',
         navm6: 'Ecological Scene',
         title: 'Focus On Eco-construction Of Block Chain',
+        titleInfo: 'Professional to make the best quality, service achievements hand in hand',
         type1: 'STAKING Pattern',
         type2: 'Decentralized exchange ',
         type3: 'Wallet APP',
