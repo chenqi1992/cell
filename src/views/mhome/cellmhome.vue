@@ -142,7 +142,7 @@
             <div class="rescenter-center">
                 <img src="../../assets/cellmhome/a02.png" alt="">
                 <div class="img2">
-                    <img src="../../assets/cellmhome/a03.png" alt="">
+                    <img src="../../assets/cellmhome/pic_xiada_pc.png" alt="">
                     <p>{{$t('blockchainRescenter.info')}}</p>
                 </div>
             </div>
@@ -831,9 +831,9 @@ export default {
                     position: relative;
                     p {
                         position: absolute;
-                        bottom: 73px;
-                        width: 88%;
-                        left: 6%;
+                        bottom: 75px;
+                        width: 82%;
+                        left: 9%;
                         font-size: 1.2rem;
                         line-height: 2.2rem;
                     }

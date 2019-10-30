@@ -8,9 +8,10 @@
                     </div>
                     <div class="nav">
                         <span @click="handleIndex">{{$t('blockchainTop.nav1')}}</span>
-                        <span @click="handleProject">{{$t('blockchainTop.nav2')}}</span>
-                        <span @click="handleAbout">{{$t('blockchainTop.nav3')}}</span>
-                        <span @click="handleTeam">{{$t('blockchainTop.nav4')}}</span>
+                        <span @click="handleProject">{{$t('blockchainTop.navm5')}}</span>
+                        <span @click="handleAbout">{{$t('blockchainTop.navm6')}}</span>
+                        <span @click="handleTeam">{{$t('blockchainTop.navm7')}}</span>
+                        <!-- <span @click="handleTeam">{{$t('blockchainTop.navm8')}}</span> -->
                         <span @click="handlePledge">{{$t('blockchainTop.nav5')}}</span>
                     </div>
                     <el-dropdown>
@@ -27,7 +28,7 @@
                 <div class="bg-info">
                     <img class="bg-info-logo" src="../../assets/cellhome/logo.png" alt="">
                     <span class="font">{{$t('blockchainTop.title')}}</span>
-                    <div class="center">
+                    <!-- <div class="center">
                         <div class="center1">
                             <img src="../../assets/cellhome/icon_wallet.png" alt="">
                             <span>{{$t('blockchainTop.type3')}}</span>
@@ -40,7 +41,7 @@
                             <img src="../../assets/cellhome/icon_staking.png" alt="">
                             <span>{{$t('blockchainTop.type1')}}</span>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="space">
                     <div class="stars">
@@ -92,8 +93,8 @@
                 </div>
             </div>
         </div>
-        <div class="eco"><img src="../../assets/cellhome/a01.png" alt=""></div>
-        <div class="ecological" ref="top4">
+        <div class="eco" ref="top4"><img src="../../assets/cellhome/a01.png" alt=""></div>
+        <div class="ecological" ref="top5">
             <h1>{{$t('blockchainEco.title')}}</h1>
             <div class="bg">
                 <div class="bg-position">
@@ -135,7 +136,10 @@
             <h1>{{$t('blockchainRescenter.title')}}</h1>
             <div class="rescenter-center">
                 <img src="../../assets/cellhome/a02.png" alt="">
-                <img src="../../assets/cellhome/a03.png" alt="">
+                <div class="img2">
+                    <img src="../../assets/cellhome/pic_xiada_yid.png" alt="">
+                    <p>{{$t('blockchainRescenter.info')}}</p>
+                </div>
             </div>
         </div>
         <div class="partners">
@@ -223,15 +227,15 @@ export default {
             document.documentElement.scrollTop = 0;
         },
         handleProject() {
-            document.body.scrollTop = this.$refs.top1.clientHeight - 50;
-            document.documentElement.scrollTop = this.$refs.top1.clientHeight - 50;
+            document.body.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight - 50);
+            document.documentElement.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight - 50);
         },
         handleAbout() {
-            document.body.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight + this.$refs.top3.clientHeight + this.$refs.top4.clientHeight - 50)
-            document.documentElement.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight + this.$refs.top3.clientHeight + this.$refs.top4.clientHeight - 50)
+            document.body.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight + this.$refs.top3.clientHeight + this.$refs.top4.clientHeight)
+            document.documentElement.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight + this.$refs.top3.clientHeight + this.$refs.top4.clientHeight)
         },
         handleTeam() {
-                        document.body.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight + this.$refs.top3.clientHeight + this.$refs.top4.clientHeight + this.$refs.top5.clientHeight - 50)
+            document.body.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight + this.$refs.top3.clientHeight + this.$refs.top4.clientHeight + this.$refs.top5.clientHeight - 50)
             document.documentElement.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight + this.$refs.top3.clientHeight + this.$refs.top4.clientHeight + this.$refs.top5.clientHeight - 50)
         },
         handlePledge() {
@@ -731,7 +735,7 @@ export default {
                     .position4 {
                         position: absolute;
                         right: 200px;
-                        top: 344px;
+                        top: 362px;
                         background: url('../../assets/cellhome/icon_gongyinglian_d.png') 0 0 no-repeat;
                         background-size: 100% 100%;
                     }
@@ -741,7 +745,7 @@ export default {
                     .position5 {
                         position: absolute;
                         right: 450px;
-                        bottom: 0px;
+                        bottom: -16px;
                         background: url('../../assets/cellhome/icon_shuju_d.png') 0 0 no-repeat;
                         background-size: 100% 100%;
                     }
@@ -751,7 +755,7 @@ export default {
                     .position6 {
                         position: absolute;
                         left: 356px;
-                        bottom: 0px;
+                        bottom: -16px;
                         background: url('../../assets/cellhome/icon_diya_d.png') 0 0 no-repeat;
                         background-size: 100% 100%;
                     }
@@ -761,7 +765,7 @@ export default {
                     .position7 {
                         position: absolute;
                         left: 550px;
-                        top: -20px;
+                        top: -44px;
                         background: url('../../assets/cellhome/icon_game_d.png') 0 0 no-repeat;
                         background-size: 100% 100%;
                     }
@@ -801,9 +805,20 @@ export default {
             .rescenter-center {
                 display: flex;
                 overflow: hidden;
-                height: 555px;
+                height: 580px;
                 img {
                     width: 100%;
+                }
+                .img2 {
+                    position: relative;
+                    p {
+                        position: absolute;
+                        bottom: 140px;
+                        width: 80%;
+                        left: 10%;
+                        font-size: 16px;
+                        line-height: 30px;
+                    }
                 }
             }
         }

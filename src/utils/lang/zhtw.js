@@ -5,8 +5,10 @@ export default {
         nav3: '关于我们',
         nav4: '团队',
         nav5: '质押',
-        navm5: '应用技术',
+        navm5: '核心技术',
         navm6: '生态场景',
+        navm7: '研究中心',
+        navm8: '测试网络',
         title: '专注区块链生态打造',
         titleInfo: '专业打造致臻精品，服务成就携手并进',
         type1: 'STAKING模式',
@@ -82,9 +84,9 @@ export default {
         },
         item2: {
             title1: '项目简介',
-            label1: '应用技术',
-            label2: '应用场景',
-            label3: '钱包'
+            label1: '核心技术',
+            label2: '生态场景',
+            label3: '研究中心'
         },
         item3: {
             title1: '联系我们',

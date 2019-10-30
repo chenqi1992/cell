@@ -5,8 +5,10 @@ export default {
         nav3: 'About us',
         nav4: 'Team',
         nav5: 'Pledge',
-        navm5: 'Applied Technology',
+        navm5: 'Core Technology',
         navm6: 'Ecological Scene',
+        navm7: 'Research Centre',
+        navm8: '测试网络',
         title: 'Focus On Eco-construction Of Block Chain',
         titleInfo: 'Professional to make the best quality, service achievements hand in hand',
         type1: 'STAKING Pattern',
@@ -82,9 +84,9 @@ export default {
         },
         item2: {
             title1: 'Project brief introduction',
-            label1: 'Applied technology',
-            label2: 'Ecological scene',
-            label3: 'Wallet'
+            label1: 'Core Technology',
+            label2: 'Ecological Scene',
+            label3: 'Research Centre'
         },
         item3: {
             title1: 'Contact us',
