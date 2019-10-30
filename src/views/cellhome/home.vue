@@ -138,7 +138,7 @@
             <div class="rescenter-center">
                 <img src="../../assets/cellhome/a02.png" alt="">
                 <div class="img2">
-                    <img src="../../assets/cellhome/pic_xiada_yid.png" alt="">
+                    <!-- <img src="../../assets/cellhome/pic_xiada_yid.png" alt=""> -->
                     <p>{{$t('blockchainRescenter.info')}}</p>
                 </div>
             </div>
@@ -811,19 +811,22 @@ export default {
             .rescenter-center {
                 display: flex;
                 overflow: hidden;
-                height: 580px;
+                height: 530px;
                 img {
-                    width: 100%;
+                    width: 60%;
                 }
                 .img2 {
                     position: relative;
+                    width: 40%;
+                    background: url('../../assets/cellhome/pic_xiada_yid.png') 0 0 no-repeat;
+                    background-size: 100% 100%;
                     p {
                         position: absolute;
-                        bottom: 140px;
+                        bottom: 80px;
                         width: 80%;
                         left: 10%;
                         font-size: 16px;
-                        line-height: 30px;
+                        line-height: 26px;
                     }
                 }
             }
