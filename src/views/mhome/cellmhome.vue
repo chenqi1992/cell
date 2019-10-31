@@ -2,7 +2,7 @@
     <div class="cell-mhome">
         <div class="bg-content" ref="top1">
             <div class="bg-content-outer">
-                <img class="bg" src="../../assets/cellmhome/icon_bg_cell.png" alt="">
+                <img class="bg" src="../../assets/cellmhome/icon_bg_cell2.png" alt="">
                 <div class="fix" :class="{'active': active}">
                     <div class="header">
                         <div class="logo">
@@ -21,7 +21,7 @@
                             <span @click="handleTechnology">{{$t('blockchainTop.navm5')}}</span>
                             <span @click="handleEcological">{{$t('blockchainTop.navm6')}}</span>
                             <span @click="handleAbout">{{$t('blockchainTop.navm7')}}</span>
-                            <!-- <span @click="handleTeam">{{$t('blockchainTop.nav4')}}</span> -->
+                            <span @click="handleTeam">{{$t('blockchainPartners.title')}}</span>
                             <span @click="handlePledge">{{$t('blockchainTop.nav5')}}</span>
                             <!-- <span @click="toggleLang('zh_CN')" :disabled="$i18n.locale == 'zh_CN'">中文简体</span>
                             <span @click="toggleLang('zh_TW')" :disabled="$i18n.locale == 'zh_TW'">中文繁体</span>
@@ -139,7 +139,7 @@
                 </div>
             </div>
         </div> -->
-        <div class="rescenter">
+        <div class="rescenter" ref="top6">
             <h1>{{$t('blockchainRescenter.title')}}</h1>
             <div class="rescenter-center">
                 <img src="../../assets/cellmhome/a02.png" alt="">
@@ -150,7 +150,7 @@
             </div>
         </div>
         <div class="partners">
-            <!-- <h1>{{$t('blockchainPartners.title')}}</h1> -->
+            <h1>{{$t('blockchainPartners.title')}}</h1>
             <img src="../../assets/cellmhome/a04.png" alt="">
         </div>
         <div class="copyright">
@@ -240,28 +240,28 @@ export default {
             this.show = false
         },
         handleProject() {
-            document.body.scrollTop = this.$refs.top1.clientHeight;
-            document.documentElement.scrollTop = this.$refs.top1.clientHeight;
+            document.body.scrollTop = this.$refs.top1.clientHeight - 50;
+            document.documentElement.scrollTop = this.$refs.top1.clientHeight - 50;
             this.show = false
         },
         handleTechnology() {
-            document.body.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight)
-            document.documentElement.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight)
+            document.body.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight - 50)
+            document.documentElement.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight - 50)
             this.show = false
         },
         handleEcological() {
-            document.body.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight  + this.$refs.top4.clientHeight)
-            document.documentElement.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight + this.$refs.top3.clientHeight + this.$refs.top4.clientHeight)
+            document.body.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight  + this.$refs.top4.clientHeight - 50)
+            document.documentElement.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight + this.$refs.top3.clientHeight + this.$refs.top4.clientHeight - 50)
             this.show = false
         },
         handleAbout() {
-            document.body.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight + this.$refs.top3.clientHeight + this.$refs.top4.clientHeight + this.$refs.top5.clientHeight)
-            document.documentElement.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight + this.$refs.top3.clientHeight + this.$refs.top4.clientHeight + this.$refs.top5.clientHeight)
+            document.body.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight + this.$refs.top3.clientHeight + this.$refs.top4.clientHeight + this.$refs.top5.clientHeight - 50)
+            document.documentElement.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight + this.$refs.top3.clientHeight + this.$refs.top4.clientHeight + this.$refs.top5.clientHeight - 50)
             this.show = false
         },
         handleTeam() {
-            document.body.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight + this.$refs.top3.clientHeight + this.$refs.top4.clientHeight + this.$refs.top5.clientHeight)
-            document.documentElement.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight + this.$refs.top3.clientHeight + this.$refs.top4.clientHeight + this.$refs.top5.clientHeight)
+            document.body.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight + this.$refs.top3.clientHeight + this.$refs.top4.clientHeight + this.$refs.top5.clientHeight + this.$refs.top6.clientHeight - 50)
+            document.documentElement.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight + this.$refs.top3.clientHeight + this.$refs.top4.clientHeight + this.$refs.top5.clientHeight + this.$refs.top6.clientHeight -50)
             this.show = false
         },
         handlePledge() {
@@ -858,7 +858,7 @@ export default {
         }
         .partners {
             h1 {
-                padding: 40px 0;
+                padding: rem(50) 0 rem(40);
                 text-align: center;
                 font-size: rem(48);
                 color: #000000;
