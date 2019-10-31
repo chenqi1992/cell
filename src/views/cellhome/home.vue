@@ -94,7 +94,7 @@
                 </div>
             </div>
         </div>
-        <div class="eco" ref="top4"><img src="../../assets/cellhome/a01.png" alt=""></div>
+        <div class="eco" ref="top4"><img src="../../assets/cellhome/a01.jpg" alt=""></div>
         <div class="ecological" ref="top5">
             <h1>{{$t('blockchainEco.title')}}</h1>
             <div class="bg">
