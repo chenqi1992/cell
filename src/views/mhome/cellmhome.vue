@@ -23,9 +23,9 @@
                             <span @click="handleAbout">{{$t('blockchainTop.navm7')}}</span>
                             <!-- <span @click="handleTeam">{{$t('blockchainTop.nav4')}}</span> -->
                             <span @click="handlePledge">{{$t('blockchainTop.nav5')}}</span>
-                            <span @click="toggleLang('zh_CN')" :disabled="$i18n.locale == 'zh_CN'">中文简体</span>
+                            <!-- <span @click="toggleLang('zh_CN')" :disabled="$i18n.locale == 'zh_CN'">中文简体</span>
                             <span @click="toggleLang('zh_TW')" :disabled="$i18n.locale == 'zh_TW'">中文繁体</span>
-                            <span @click="toggleLang('en_US')" :disabled="$i18n.locale == 'en_US'">English</span>
+                            <span @click="toggleLang('en_US')" :disabled="$i18n.locale == 'en_US'">English</span> -->
                         </div>
                         </van-popup>
                         <img @click="handleMenu" src="../../assets/m/menu.png" alt="">
@@ -175,8 +175,8 @@
                     <h2>{{$t('blockchainCopyright.item3.title1')}}</h2>
                     <div class="item">
                         <span class="phone">{{$t('blockchainCopyright.item3.label1')}}</span>
-                        <span class="position">{{$t('blockchainCopyright.item3.label2')}}</span>
-                        <span>{{$t('blockchainCopyright.item3.label3')}}</span>
+                        <!-- <span class="position">{{$t('blockchainCopyright.item3.label2')}}</span>
+                        <span>{{$t('blockchainCopyright.item3.label3')}}</span> -->
                     </div>
                 </div>
             </div>
@@ -570,7 +570,7 @@ export default {
         }
         .pro {
             position: relative;
-	        background-color: #0f2239;
+            background-color: #0f2239;
             .pro-info {
                 box-sizing: border-box;
                 height: 100%;
@@ -612,7 +612,7 @@ export default {
             }
         }
         .technology {
-	        background-color: #ffffff;
+            background-color: #ffffff;
             h1 {
                 padding: rem(92) 0 rem(110);
                 text-align: center;
@@ -698,7 +698,7 @@ export default {
         .ecological {
             width: 100%;
             padding-bottom: rem(200);
-	        background-color: #10223a;
+            background-color: #10223a;
             h1 {
                 padding-top: rem(92);
                 text-align: center;

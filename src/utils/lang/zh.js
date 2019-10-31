@@ -4,7 +4,7 @@ export default {
         nav2: '项目简介',
         nav3: '关于我们',
         nav4: '团队',
-        nav5: '质押',
+        nav5: '产品',
         navm5: '核心技术',
         navm6: '生态场景',
         navm7: '研究中心',
@@ -46,7 +46,7 @@ export default {
     },
     blockchainRescenter: {
         title: '研究中心',
-        info: 'Cellation的研发团队由世界各地的开发人员产品设计师和经济学家组成，围绕着共同塑造未来区块链生态圈的一致目标，合作伙伴们组建了强大的开发者社区,遍布x个国家的xx个城市。'
+        info: 'Cellation的研发团队由世界各地的开发人员产品设计师和经济学家组成，围绕着共同塑造未来区块链生态圈的一致目标，合作伙伴们组建了强大的开发者社区,遍布各个国家的各个城市。'
     },
     blockchainPartners: {
         title: '合作伙伴',

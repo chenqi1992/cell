@@ -14,15 +14,15 @@
                         <!-- <span @click="handleTeam">{{$t('blockchainTop.navm8')}}</span> -->
                         <span @click="handlePledge">{{$t('blockchainTop.nav5')}}</span>
                     </div>
-                    <el-dropdown>
-                        <span class="el-dropdown-link">
+                   <el-dropdown>
+                        <!-- <span class="el-dropdown-link">
                             {{language}}<i class="el-icon-arrow-down el-icon--right"></i>
                         </span>
                         <el-dropdown-menu slot="dropdown">
                             <el-dropdown-item @click.native="toggleLang('zh_CN')" :disabled="$i18n.locale == 'zh_CN'">中文简体</el-dropdown-item>
                             <el-dropdown-item @click.native="toggleLang('zh_TW')" :disabled="$i18n.locale == 'zh_TW'">中文繁体</el-dropdown-item>
                             <el-dropdown-item @click.native="toggleLang('en_US')" :disabled="$i18n.locale == 'en_US'">English</el-dropdown-item>
-                        </el-dropdown-menu>
+                        </el-dropdown-menu> -->
                     </el-dropdown>
                 </div>
                 <div class="bg-info">
@@ -169,8 +169,8 @@
                     <h2>{{$t('blockchainCopyright.item3.title1')}}</h2>
                     <div class="item">
                         <span class="phone"><img src="../../assets/cellhome/icon_email.png" alt="">{{$t('blockchainCopyright.item3.label1')}}</span>
-                        <span class="position"><img src="../../assets/cellhome/icon_add.png" alt="">{{$t('blockchainCopyright.item3.label2')}}</span>
-                        <span>{{$t('blockchainCopyright.item3.label3')}}</span>
+                        <!-- <span class="position"><img src="../../assets/cellhome/icon_add.png" alt="">{{$t('blockchainCopyright.item3.label2')}}</span>
+                        <span>{{$t('blockchainCopyright.item3.label3')}}</span> -->
                     </div>
                 </div>
             </div>
