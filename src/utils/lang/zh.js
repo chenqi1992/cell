@@ -46,7 +46,7 @@ export default {
     },
     blockchainRescenter: {
         title: '研究中心',
-        info: 'Cellation的研发团队由世界各地的开发人员产品设计师和经济学家组成，围绕着共同塑造未来区块链生态圈的一致目标，合作伙伴们组建了强大的开发者社区,遍布各个国家的各个城市。'
+        info: 'Cell Network的研发团队由世界各地的开发人员产品设计师和经济学家组成，围绕着共同塑造未来区块链生态圈的一致目标，合作伙伴们组建了强大的开发者社区,遍布各个国家的各个城市。'
     },
     blockchainPartners: {
         title: '合作伙伴',
@@ -90,7 +90,7 @@ export default {
         },
         item3: {
             title1: '联系我们',
-            label1: '邮箱：cellnetwork888@gmail.com',
+            label1: '邮箱：cellnetworkchain@outlook.com',
             label2: '地址：73 UPPER PAYA LEBAR ROAD',
             label3: '#07-02C CENTRO BIANCO SINGAPORE'
         }

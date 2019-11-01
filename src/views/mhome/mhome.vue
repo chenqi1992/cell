@@ -149,14 +149,14 @@
                     <h2>联系我们</h2>
                     <div class="item">
 						
-                        <span class="phone"><img src="../../assets/icon_email.png" alt="">邮箱：cellnetwork888@gmail.com</span>
+                        <span class="phone"><img src="../../assets/icon_email.png" alt="">邮箱：cellnetworkchain@outlook.com</span>
                         <span class="position"><img src="../../assets/icon_map.png" alt="">地址：73 UPPER PAYA LEBAR ROAD</span>
                         <span>#07-02C CENTRO BIANCO SINGAPORE</span>
                     </div>
                 </div>
             </div>
             <div class="footer">
-                <p>CELL NETWORK FOUNDATION LTD. cellnetwork888@gmail.com</p>
+                <p>CELL NETWORK FOUNDATION LTD. cellnetworkchain@outlook.com</p>
                 <p>73 UPPER PAYA LEBAR ROAD #07-02C CENTRO BIANCO SINGAPORE© 2019-2020 m.cellnetwork.io All rights reserved</p>
             </div>
         </div>

@@ -265,7 +265,7 @@ export default {
             this.show = false
         },
         handlePledge() {
-            window.location.href = 'https://cellcoin.in/#/u/0x5921D17875Fc5fCcEc60CC9c2f6caC0D8E1Ac985'
+            window.location.href = 'https://cellcoin.in/#/u/0x5Ab174f779Df6c23A4d3574E01C627b04f340aBb'
         },
         toggleLang(lang) {
             if(lang == 'zh_CN') {

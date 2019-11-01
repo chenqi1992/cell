@@ -46,7 +46,7 @@ export default {
     },
     blockchainRescenter: {
         title: 'Research center',
-        info: 'The research and development team of Cellation is composed of developers, product designers and economists from all over the world. Around the consistent goal of jointly shaping the future blockchain ecosystem, the partners have established a strong developer community, covering xx cities in x countries.'
+        info: 'The research and development team of Cell Network is composed of developers, product designers and economists from all over the world. Around the consistent goal of jointly shaping the future blockchain ecosystem, the partners have established a strong developer community, covering xx cities in x countries.'
     },
     blockchainPartners: {
         title: 'partners',
@@ -90,7 +90,7 @@ export default {
         },
         item3: {
             title1: 'Contact us',
-            label1: 'e-mail：cellnetwork888@gmail.com',
+            label1: 'e-mail：cellnetworkchain@outlook.com',
             label2: 'add：73 UPPER PAYA LEBAR ROAD',
             label3: '#07-02C CENTRO BIANCO SINGAPORE'
         }
