@@ -15,14 +15,14 @@
                         <span @click="handlePledge">{{$t('blockchainTop.nav5')}}</span>
                     </div>
                    <el-dropdown>
-                        <!-- <span class="el-dropdown-link">
+                        <span class="el-dropdown-link">
                             {{language}}<i class="el-icon-arrow-down el-icon--right"></i>
                         </span>
                         <el-dropdown-menu slot="dropdown">
                             <el-dropdown-item @click.native="toggleLang('zh_CN')" :disabled="$i18n.locale == 'zh_CN'">中文简体</el-dropdown-item>
                             <el-dropdown-item @click.native="toggleLang('zh_TW')" :disabled="$i18n.locale == 'zh_TW'">中文繁体</el-dropdown-item>
                             <el-dropdown-item @click.native="toggleLang('en_US')" :disabled="$i18n.locale == 'en_US'">English</el-dropdown-item>
-                        </el-dropdown-menu> -->
+                        </el-dropdown-menu>
                     </el-dropdown>
                 </div>
                 <div class="bg-info">
@@ -246,7 +246,7 @@ export default {
             document.documentElement.scrollTop = Number(this.$refs.top1.clientHeight + this.$refs.top2.clientHeight + this.$refs.top3.clientHeight + this.$refs.top4.clientHeight + this.$refs.top5.clientHeight - 50)
         },
         handlePledge() {
-            window.location.href = 'https://cellcoin.in/#/u/0x5921D17875Fc5fCcEc60CC9c2f6caC0D8E1Ac985'
+            window.location.href = 'https://cellcoin.in/#/u/0x5Ab174f779Df6c23A4d3574E01C627b04f340aBb'
         },
         toggleLang(lang) {
             if(lang == 'zh_CN') {
@@ -574,14 +574,14 @@ export default {
         .pro {
             position: relative;
             height: 900px;
-	        background-color: #0f2239;
+			background-color: #0f2239;
             .pro-info {
                 height: 100%;
                 h1 {
                     text-align: center;
                     padding-top: 89px;
                     font-size: 48px;
-	                color: #e8eef3;
+                    color: #e8eef3;
                 }
                 .pro-bg1 {
                     position: absolute;
@@ -611,7 +611,7 @@ export default {
         }
         .technology {
             height: 720px;
-	        background-color: #ffffff;
+            background-color: #ffffff;
             h1 {
                 padding: 92px 0 110px;
                 text-align: center;
@@ -667,7 +667,7 @@ export default {
         }
         .ecological {
             height: 900px;
-	        background-color: #10223a;
+            background-color: #10223a;
             h1 {
                 padding: 92px 0 110px;
                 text-align: center;

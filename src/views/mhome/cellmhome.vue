@@ -23,9 +23,9 @@
                             <span @click="handleAbout">{{$t('blockchainTop.navm7')}}</span>
                             <span @click="handleTeam">{{$t('blockchainPartners.title')}}</span>
                             <span @click="handlePledge">{{$t('blockchainTop.nav5')}}</span>
-                            <!-- <span @click="toggleLang('zh_CN')" :disabled="$i18n.locale == 'zh_CN'">中文简体</span>
+                            <span @click="toggleLang('zh_CN')" :disabled="$i18n.locale == 'zh_CN'">中文简体</span>
                             <span @click="toggleLang('zh_TW')" :disabled="$i18n.locale == 'zh_TW'">中文繁体</span>
-                            <span @click="toggleLang('en_US')" :disabled="$i18n.locale == 'en_US'">English</span> -->
+                            <span @click="toggleLang('en_US')" :disabled="$i18n.locale == 'en_US'">English</span>
                         </div>
                         </van-popup>
                         <img @click="handleMenu" src="../../assets/m/menu.png" alt="">
@@ -270,7 +270,7 @@ export default {
             this.show = false
         },
         handlePledge() {
-            window.location.href = 'https://cellcoin.in/#/u/0x5921D17875Fc5fCcEc60CC9c2f6caC0D8E1Ac985'
+            window.location.href = 'https://cellcoin.in/#/u/0x5Ab174f779Df6c23A4d3574E01C627b04f340aBb'
         },
         toggleLang(lang) {
             this.lang = lang
