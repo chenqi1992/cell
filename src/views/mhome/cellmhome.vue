@@ -100,7 +100,11 @@
                 </div>
             </div>
         </div>
-        <div class="eco" ref="top4"><img src="../../assets/cellmhome/a01.jpg" alt=""></div>
+        <div class="eco" ref="top4">
+            <img v-if="lang === 'zh_CN'" src="../../assets/cellmhome/a0zh.png" alt="">
+            <img v-if="lang === 'zh_TW'" src="../../assets/cellmhome/a0zhft.png" alt="">
+            <img v-if="lang === 'en_US'" src="../../assets/cellmhome/a0en.png" alt="">
+        </div>
         <div class="ecological" ref="top5">
             <h1>{{$t('blockchainEco.title')}}</h1>
             <div class="bg">
@@ -195,6 +199,7 @@ export default {
     },
     data() {
         return {
+            lang: 'zh_CN',
             active: false,
             show: false,
             keyanimate: false,
@@ -268,6 +273,7 @@ export default {
             window.location.href = 'https://cellcoin.in/#/u/0x5921D17875Fc5fCcEc60CC9c2f6caC0D8E1Ac985'
         },
         toggleLang(lang) {
+            this.lang = lang
             if(lang == 'zh_CN') {
                 localStorage.setItem('locale', 'zh_CN')
                 this.$i18n.locale = localStorage.getItem('locale')
