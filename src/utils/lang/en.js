@@ -9,47 +9,47 @@ export default {
         navm6: 'Ecological Scene',
         navm7: 'Research Centre',
         navm8: '测试网络',
-        title: 'Focus On Eco-construction Of Block Chain',
-        titleInfo: 'Professional to make the best quality, service achievements hand in hand',
+        title: 'Focus on buiding blockchain ecosystem.',
+        titleInfo: 'Strength build quality, Service creates future.',
         type1: 'STAKING Pattern',
         type2: 'Decentralized exchange ',
         type3: 'Wallet APP',
     },
     blockchainPro: {
         title: 'What is Cell Network？',
-        info: 'Cellnetwork is an intelligent contract platform supporting Turing. Cellnetwork combines smart contract with STAKING (pledge) mode, assists data security through professional encryption algorithm and Distributed Accounting mode, adopts unique node layout mode, and sets a certain number of nodes to improve TPS of block packaging transactions, which will bring better block chain experience to community users. In the future, Cellnetwork will build a one-stop, multi-application set. The service platform will build a new distributed ecosystem to provide more convenient and practical services for community users. It is dedicated to serving the rich ecological scenarios of asset issuance, real simulation of business alliance operation and management, integral management system, decentralized exchange and cross-border settlement through the application of complete matching block chain technology.'
+        info: 'Cell represents the endless possibility of human future. Cell Network is a globally oriented decentralized network system, which regards blockchain as the connotation and decentralized application as the extension. What’s more, Cell Network is under continuous evolution which fostered by network users and developers. Staking mechanisms forms the economic infrastructure of Cell Network, on which a node consensus mechanism with high level of efficiency, extensibility and safety is built. Cell Network is committed to the construction of a co-maintaining blockchain ecosystem, which will remold traditional application scenarios by using dependable self-executing intelligent contracts, to bring brand-new experience to the users in the field of decentralized finance, online communities and game.'
     },
     blockchainEco: {
-        title: 'EcologicalScene',
+        title: 'Ecological Scene',
         desc1: 'Finance',
         desc2: 'Community',
         desc3: 'TrustMechanism',
         desc4: 'SupplyChain',
         desc5: 'DataSecurity',
-        desc6: 'MortgageLending',
+        desc6: 'Mortgage',
         desc7: 'Game',
         desc8: 'Medical',
         desc9: 'Education',
     },
     blockchainTec: {
-        title: 'Applied Technology',
-        item1: 'Intelligent Contract',
-        item1Info: 'Contracts Development and Provision for Extensible Programming Standardized contract template ',
-        item2: 'Consensus Mechanism',
-        item2Info: 'POS consensus algorithm for high transaction throughput Quantity, scalability and security ',
-        item3: 'Flash Exchange',
-        item3Info: 'Fast realization of high efficiency, safety and quality Currency exchange ',
-        item4: 'Cross Link Technology',
-        item4Info: 'Supporting cross-chain distributed architecture andMulti Chain Technology Architecture ',
-        item5: 'Predicting machine',
-        item5Info: 'Supporting cross-chain distributed architecture andMulti Chain Technology Architecture '
+        title: 'Core Technology',
+        item1: 'Smart Contract',
+        item1Info: 'Support Extensible programming and offer standardized contract.',
+        item2: 'Consensus',
+        item2Info: 'PoS consensus algorithm with high level of efficiency, extensibility and safety.',
+        item3: 'Instant Exchange',
+        item3Info: 'Provide rapid, efficient,safe and decentralized currency exchange service.',
+        item4: 'Cross-Chain',
+        item4Info: 'Distributed architecture which is compatible with cross-chain and multi-chain.',
+        item5: 'Oracles',
+        item5Info: 'Handle the data exchange between blockchain and real world.'
     },
     blockchainRescenter: {
-        title: 'Research center',
-        info: 'The research and development team of Cell Network is composed of developers, product designers and economists from all over the world. Around the consistent goal of jointly shaping the future blockchain ecosystem, the partners have established a strong developer community, covering xx cities in x countries.'
+        title: 'Research Center',
+        info: 'The R&D team of Cell Network is composed of developers, product designers and economists from all over the world. On the basis of a common goal to redefine the future blockchain ecosystem, the partners have set up a strong developer community, attracting many experts from blockchain technology team, developer community, security audit institutions, financial institutions, colleges and universities.'
     },
     blockchainPartners: {
-        title: 'partners',
+        title: 'Partners',
     },
     blockchainAbout: {
         title: 'About Us',
