@@ -46,7 +46,8 @@ export default {
     },
     blockchainRescenter: {
         title: 'Research Center',
-        info: 'The R&D team of Cell Network is composed of developers, product designers and economists from all over the world. On the basis of a common goal to redefine the future blockchain ecosystem, the partners have set up a strong developer community, attracting many experts from blockchain technology team, developer community, security audit institutions, financial institutions, colleges and universities.'
+        // info: 'The R&D team of Cell Network is composed of developers, product designers and economists from all over the world. On the basis of a common goal to redefine the future blockchain ecosystem, the partners have set up a strong developer community, attracting many experts from blockchain technology team, developer community, security audit institutions, financial institutions, colleges and universities.'
+		info: 'The R&D team of Cell Network is composed of many experts from blockchain technology team, developer community, security audit institutions, financial institutions, colleges and universities.'
     },
     blockchainPartners: {
         title: 'Partners',
