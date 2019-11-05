@@ -94,7 +94,11 @@
                 </div>
             </div>
         </div>
-        <div class="eco" ref="top4"><img src="../../assets/cellhome/a01.jpg" alt=""></div>
+        <div class="eco" ref="top4">
+            <img v-if="lang === 'zh_CN'" src="../../assets/cellhome/a0zh.png" alt="">
+            <img v-if="lang === 'zh_TW'" src="../../assets/cellhome/a0zhft.png" alt="">
+            <img v-if="lang === 'en_US'" src="../../assets/cellhome/a0en.png" alt="">
+        </div>
         <div class="ecological" ref="top5">
             <h1>{{$t('blockchainEco.title')}}</h1>
             <div class="bg">
@@ -190,6 +194,7 @@ export default {
     data() {
         return {
             language: '中文',
+            lang: 'zh_CN'
         }
     },
     computed: {
@@ -208,6 +213,7 @@ export default {
     },
     mounted() {
         let lang = localStorage.getItem('locale')
+        this.lang = lang
         switch (lang) {
             case 'zh_CN':
                 this.language = '中文'
@@ -268,6 +274,7 @@ export default {
                     type: 'success'
                 })
             }
+            this.lang = lang
         },
     }
 }
