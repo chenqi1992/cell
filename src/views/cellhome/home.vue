@@ -325,7 +325,7 @@ export default {
                         margin: 0 0 0 10%;
                         .logo-pc {
                             width: 200px;
-                            height: 50px;
+                            height: 45px;
                             margin-right: 5px;
                         }
                     }
