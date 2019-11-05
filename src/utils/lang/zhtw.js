@@ -1,55 +1,55 @@
 export default {
     blockchainTop: {
-        nav1: '首页',
-        nav2: '项目简介',
-        nav3: '关于我们',
-        nav4: '团队',
-        nav5: '产品',
-        navm5: '核心技术',
-        navm6: '生态场景',
+        nav1: '首頁',
+        nav2: '項目簡介',
+        nav3: '關於我們',
+        nav4: '團隊',
+        nav5: '產品',
+        navm5: '核心技術',
+        navm6: '生態場景',
         navm7: '研究中心',
         navm8: '测试网络',
-        title: '专注区块链生态打造',
-        titleInfo: '专业打造致臻精品，服务成就无限未来',
+        title: '專注區塊鏈生態打造',
+        titleInfo: '專業打造致臻精品，服務成就無限未來',
         type1: 'STAKING模式',
         type2: '去中心化交易所',
         type3: '钱包APP',
     },
     blockchainPro: {
-        title: '什么是 Cell Network？',
-        info: 'Cellnetwork是一个支持图灵完备的智能合约平台。Cellnetwork结合智能合约采用特色的STAKING（质押）模式，通过专业的加密算法及分布式记账模式辅助数据安全，采用独特的节点布局模式，用设置一定的节点数量来提高区块打包交易的TPS，给社区用户带来更好的区块链体验，未来Cellnetwork将搭建一站式、多种应用集成的服务平台，建设一个全新分布式的生态系统，为社区用户提供更为便捷、实用的服务，致力于通过完整配套的区块链技术应用服务于资产发行、真实模拟商业联盟运转及管理、积分管理系统、去中心化交易所、跨境结算等丰富的生态场景。'
+        title: '什麼是Cell Network？',
+        info: 'Cell的釋義是細胞，代表著人類未來的無限可能。Cell Network是一個面向全球的，以區塊鏈科技為內核，以區塊鏈應用為外延，由開發者和用戶共同賦能，在不斷裂變中反覆運算進化的去中心化網絡體系。Cell Network以staking作為基礎經濟模型，構築了具備高TPS、高拓展性、高安全性的節點共識機制，致力於營造由全體網絡參與者共同維護的區塊鏈生態圈，以去信任化、透明化的智慧協定重塑傳統應用場景，在去中心化金融、社區、遊戲等垂直領域給用戶來全新體驗。'
     },
     blockchainEco: {
-        title: '生态场景',
+        title: '生態場景',
         desc1: '金融',
-        desc2: '社区',
-        desc3: '信任机制',
-        desc4: '供应链',
-        desc5: '数据安全',
-        desc6: '抵押借贷',
-        desc7: '游戏',
-        desc8: '医疗',
-        desc9: '教育',
+        desc2: '社區',
+        desc3: '信任機制',
+        desc4: '供應鏈',
+        desc5: '資料安全',
+        desc6: '抵押借貸',
+        desc7: '遊戲',
+        desc8: '醫療',
+        desc9: '教育'
     },
     blockchainTec: {
-        title: '应用技术',
-        item1: '智能合约',
-        item1Info: '支持可扩展编程的合约开发并提供标准化的合约模版',
-        item2: '共识机制',
-        item2Info: 'PoS共识算法，实现高交易吞吐量、可扩展和安全性',
-        item3: '闪兑',
-        item3Info: '快速实现高效安全优质的币币兑换',
-        item4: '跨链技术',
-        item4Info: '支持跨链分布式架构及多链技术架构',
-        item5: '预言机',
-        item5Info: '实现区块链与现实世界的数据互通'
+        title: '核心技術',
+        item1: '智慧合約',
+        item1Info: '支持可擴展程式設計的合約開發並提供標準化的合約模版',
+        item2: '共識機制',
+        item2Info: 'POS共識算灋，具備安全、可擴展、高TPS特性',
+        item3: '閃兌',
+        item3Info: '快速、高效、安全、去中心化的幣幣兌換',
+        item4: '跨鏈科技',
+        item4Info: '支持跨鏈分佈式架構及多鏈科技架構',
+        item5: '預言機',
+        item5Info: '實現區塊鏈與現實世界的數據互通'
     },
     blockchainRescenter: {
         title: '研究中心',
-        info: 'Cell Network的研发团队由世界各地的开发人员产品设计师和经济学家组成，围绕着共同塑造未来区块链生态圈的一致目标，合作伙伴们组建了强大的开发者社区,遍布各个国家的各个城市。'
+        info: 'Cell Network的研發團隊由世界各地的開發人員、產品設計師和經濟學家組成，圍繞著共同塑造未來區塊鏈生態圈的一致目標，合作夥伴們組建了强大的開發者社區，彙聚了來自於公鏈科技團隊、開發者社區、安全稽核機构、金融機構、高校等諸多領域的尖端人才。'
     },
     blockchainPartners: {
-        title: '合作伙伴',
+        title: '合作夥伴',
     },
     blockchainAbout: {
         title: '关于我们',
@@ -77,20 +77,20 @@ export default {
     },
     blockchainCopyright: {
         item1: {
-            title1: '企业介绍',
-            label1: '关于我们',
-            label2: '团队介绍',
-            label3: '企业历程'
+            title1: '企業介紹',
+            label1: '關於我們',
+            label2: '團隊介紹',
+            label3: '企業歷程',
         },
         item2: {
-            title1: '项目简介',
-            label1: '核心技术',
-            label2: '生态场景',
+            title1: '項目簡介',
+            label1: '核心技術',
+            label2: '生態場景',
             label3: '研究中心'
         },
         item3: {
-            title1: '联系我们',
-            label1: '邮箱：cellnetworkchain@outlook.com',
+            title1: '聯繫我們',
+            label1: '郵箱：cellnetworkchain@outlook.com',
             label2: '地址：73 UPPER PAYA LEBAR ROAD',
             label3: '#07-02C CENTRO BIANCO SINGAPORE'
         }
