@@ -210,6 +210,8 @@ export default {
 
     },
     mounted() {
+        let lang = localStorage.getItem('locale')
+        this.lang = lang
         window.addEventListener('scroll', this.watchScroll)
     },
     computed: {
