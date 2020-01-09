@@ -52,12 +52,12 @@
                     </div> -->
                 </div>
                 <div class="space">
-                    <div class="stars">
+                    <!-- <div class="stars">
                         <div class="star"></div>
                         <div class="star pink"></div>
                         <div class="star blue"></div>
                         <div class="star yellow"></div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
