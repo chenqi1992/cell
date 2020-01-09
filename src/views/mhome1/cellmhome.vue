@@ -1,8 +1,8 @@
 <template>
-    <div class="cell-mhome">
+    <div class="cell-mhome1">
         <div class="bg-content" ref="top1">
             <div class="bg-content-outer">
-                <img class="bg" src="../../assets/cellmhome/icon_bg_cell2.png" alt="">
+                <img class="bg" src="../../assets/cellmhome1/wallet_img_1.png" alt="">
                 <div class="fix" :class="{'active': active}">
                     <div class="header">
                         <div class="logo">
@@ -17,13 +17,11 @@
                         >
                         <div class="nav">
                             <span @click="handleIndex">{{$t('blockchainTop.nav1')}}</span>
-                            <!-- <span @click="handleProject">{{$t('blockchainTop.nav2')}}</span> -->
-                            <span @click="handleTechnology">{{$t('blockchainTop.navm5')}}</span>
+                            <!-- <span @click="handleTechnology">{{$t('blockchainTop.navm5')}}</span>
                             <span @click="handleEcological">{{$t('blockchainTop.navm6')}}</span>
                             <span @click="handleAbout">{{$t('blockchainTop.navm7')}}</span>
-                            <span @click="handleTeam">{{$t('blockchainPartners.title')}}</span>
+                            <span @click="handleTeam">{{$t('blockchainPartners.title')}}</span> -->
                             <span @click="handlePledge">{{$t('blockchainTop.nav5')}}</span>
-                            <span @click="handleCellWallet">{{$t('blockchainTop.nav6')}}</span>
                             <span @click="toggleLang('zh_CN')" :disabled="$i18n.locale == 'zh_CN'">中文简体</span>
                             <span @click="toggleLang('zh_TW')" :disabled="$i18n.locale == 'zh_TW'">中文繁体</span>
                             <span @click="toggleLang('en_US')" :disabled="$i18n.locale == 'en_US'">English</span>
@@ -33,159 +31,37 @@
                     </div>
                 </div>
                 <div class="bg-info">
-                    <img class="bg-info-logo" src="../../assets/cellhome/logo.png" alt="">
-                    <span class="font">{{$t('blockchainTop.title')}}</span>
-                    <span class="fontinfo">{{$t('blockchainTop.titleInfo')}}</span>
-                    <!-- <div class="center">
-                        <div class="center1">
-                            <img src="../../assets/cellmhome/icon_wallet.png" alt="">
-                            <span>{{$t('blockchainTop.type3')}}</span>
-                        </div>
-                        <div class="center1">
-                            <img src="../../assets/cellmhome/icon_exc.png" alt="">
-                            <span>{{$t('blockchainTop.type2')}}</span>
-                        </div>
-                        <div class="center1">
-                            <img src="../../assets/cellmhome/icon_gongshijizhi.png" alt="">
-                            <span>{{$t('blockchainTop.type1')}}</span>
-                        </div>
-                    </div> -->
-                </div>
-                <div class="space">
-                    <div class="stars">
-                        <div class="star"></div>
-                        <div class="star pink"></div>
-                        <div class="star blue"></div>
-                        <div class="star yellow"></div>
+                    <span class="font1">CellWallet</span>
+                    <span class="font">{{$t('celldetailtop.title')}}</span>
+                    <span class="fontinfo">CellWallet 1.0 Ethereum</span>
+                    <div class="btn">
+                        <van-button type="info"><img class="img1" src="../../assets/cellmhome1/wallet_icon_iphone.png" alt="">IOS</van-button>
+                        <!-- <a href="market://details?id=com.meetings&target=market&from=met"> -->
+                            <van-button type="default"><img class="img2" src="../../assets/cellmhome1/wallet_icon_android.png" alt="">Android</van-button>
+                        <!-- </a> -->
                     </div>
                 </div>
             </div>
         </div>
-        <div class="pro" ref="top2">
-            <div class="pro-info">
-                <div class="info-top">
-                    <h1>{{$t('blockchainPro.title')}}</h1>
-                    <img class="pro-bg1" src="../../assets/cellhome/pic_sucai.png" alt="">
-                </div>
-                <div class="info-right">{{$t('blockchainPro.info')}}</div>
-                <div class="info-left"><img src="../../assets/cellhome/pic_cellnetwork.png" alt=""></div>
-            </div>
+        <div class="mokuai">
+            <div class="lar">{{$t('mokuai1.title')}}</div>
+            <div class="mid">{{$t('mokuai1.content')}}</div>
+            <img src="../../assets/cellmhome1/wallet_icon_10.png" alt="">
         </div>
-        <div class="technology" ref="top3">
-            <h1>{{$t('blockchainTec.title')}}</h1>
-            <div class="wallet-item">
-                <div class="item" :class="{'keyanimate1' : keyanimate}">
-                    <img src="../../assets/cellmhome/icon_zhineng.png" alt="">
-                    <span>{{$t('blockchainTec.item1')}}</span>
-                    <p>{{$t('blockchainTec.item1Info')}}</p>
-                </div>
-                <div class="item" :class="{'keyanimate2' : keyanimate}">
-                    <img src="../../assets/cellmhome/icon_gongshi.png" alt="">
-                    <span>{{$t('blockchainTec.item2')}}</span>
-                    <p>{{$t('blockchainTec.item2Info')}}</p>
-                </div>
-                <div class="item" :class="{'keyanimate3' : keyanimate}">
-                    <img src="../../assets/cellmhome/icon_shandui.png" alt="">
-                    <span>{{$t('blockchainTec.item3')}}</span>
-                    <p>{{$t('blockchainTec.item3Info')}}</p>
-                </div>
-                <div class="item" :class="{'keyanimate4' : keyanimate}">
-                    <img src="../../assets/cellmhome/icon_kualian.png" alt="">
-                    <span>{{$t('blockchainTec.item4')}}</span>
-                    <p>{{$t('blockchainTec.item4Info')}}</p>
-                </div>
-                <div class="item" :class="{'keyanimate3' : keyanimate}">
-                    <img src="../../assets/cellmhome/icon_yuyanji.png" alt="">
-                    <span>{{$t('blockchainTec.item5')}}</span>
-                    <p>{{$t('blockchainTec.item5Info')}}</p>
-                </div>
-            </div>
+        <div class="mokuai bg">
+            <div class="lar">{{$t('mokuai2.title')}}</div>
+            <div class="mid">{{$t('mokuai2.content')}}</div>
+            <img src="../../assets/cellmhome1/wallet_icon_13.png" alt="">
         </div>
-        <div class="eco" ref="top4">
-            <img v-if="lang === 'zh_CN'" src="../../assets/cellmhome/a0zh.png" alt="">
-            <img v-if="lang === 'zh_TW'" src="../../assets/cellmhome/a0zhft.png" alt="">
-            <img v-if="lang === 'en_US'" src="../../assets/cellmhome/a0en.png" alt="">
+        <div class="mokuai">
+            <div class="lar">{{$t('mokuai3.title')}}</div>
+            <div class="mid">{{$t('mokuai3.content')}}</div>
+            <img src="../../assets/cellmhome1/wallet_icon_15.png" alt="">
         </div>
-        <div class="ecological" ref="top5">
-            <h1>{{$t('blockchainEco.title')}}</h1>
-            <div class="bg">
-                <div class="bg-position">
-                    <div class="position1">{{$t('blockchainEco.desc1')}}</div>
-                    <div class="position2">{{$t('blockchainEco.desc2')}}</div>
-                    <div class="position3">{{$t('blockchainEco.desc3')}}</div>
-                    <div class="position4">{{$t('blockchainEco.desc4')}}</div>
-                    <div class="position5">{{$t('blockchainEco.desc5')}}</div>
-                    <div class="position6">{{$t('blockchainEco.desc6')}}</div>
-                    <div class="position7">{{$t('blockchainEco.desc7')}}</div>
-                    <div class="position8">{{$t('blockchainEco.desc8')}}</div>
-                    <div class="position9">{{$t('blockchainEco.desc9')}}</div>
-                </div>
-            </div>
-        </div>
-        <!-- <div class="about" ref="top5">
-            <h1>{{$t('blockchainAbout.title')}}</h1>
-            <div class="about-us">
-                <p>{{$t('blockchainAbout.info1')}}</p>
-                <p>{{$t('blockchainAbout.info2')}}</p>
-                <p>{{$t('blockchainAbout.info3')}}</p>
-            </div>
-        </div>
-        <div class="team" ref="top6">
-            <h1>{{$t('blockchainTeam.title')}}</h1>
-            <div class="item-outer">
-                <div class="item-inner" :class="{'team-view' : teamView}" v-for="(item, index) in teams" :key="index">
-                    <div class="team-info">
-                        <div class="info-title">
-                            <span>{{item.name}}</span>
-                            <span>{{item.title}}</span>
-                        </div>
-                        <p>{{item.info}}</p>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <div class="rescenter" ref="top6">
-            <h1>{{$t('blockchainRescenter.title')}}</h1>
-            <div class="rescenter-center">
-                <img src="../../assets/cellmhome/a02.png" alt="">
-                <div class="img2">
-                    <img src="../../assets/cellmhome/pic_xiada_pc.png" alt="">
-                    <p>{{$t('blockchainRescenter.info')}}</p>
-                </div>
-            </div>
-        </div>
-        <div class="partners">
-            <h1>{{$t('blockchainPartners.title')}}</h1>
-            <img src="../../assets/cellmhome/a04.png" alt="">
-        </div>
-        <div class="copyright">
-            <div class="copyright-outer">
-                <div class="copyright-inner">
-                    <h2>{{$t('blockchainCopyright.item1.title1')}}</h2>
-                    <div class="item">
-                        <span>{{$t('blockchainCopyright.item1.label1')}}</span>
-                        <span>{{$t('blockchainCopyright.item1.label2')}}</span>
-                        <span>{{$t('blockchainCopyright.item1.label3')}}</span>
-                    </div>
-                </div>
-                <div class="copyright-inner">
-                    <h2>{{$t('blockchainCopyright.item2.title1')}}</h2>
-                    <div class="item">
-                        <span>{{$t('blockchainCopyright.item2.label1')}}</span>
-                        <span>{{$t('blockchainCopyright.item2.label2')}}</span>
-                        <span>{{$t('blockchainCopyright.item2.label3')}}</span>
-                    </div>
-                </div>
-                <div class="copyright-inner">
-                    <h2>{{$t('blockchainCopyright.item3.title1')}}</h2>
-                    <div class="item">
-                        <span class="phone">{{$t('blockchainCopyright.item3.label1')}}</span>
-                        <!-- <span class="position">{{$t('blockchainCopyright.item3.label2')}}</span>
-                        <span>{{$t('blockchainCopyright.item3.label3')}}</span> -->
-                    </div>
-                </div>
-            </div>
-            <div class="footer">{{$t('footer')}}</div>
+        <div class="mokuai bg">
+            <div class="lar">{{$t('mokuai4.title')}}</div>
+            <div class="mid">{{$t('mokuai4.content')}}</div>
+            <img src="../../assets/cellmhome1/wallet_icon_17.png" alt="">
         </div>
     </div>
 </template>
@@ -243,9 +119,10 @@ export default {
             this.keyanimate = true
         },
         handleIndex() {
-            document.body.scrollTop = 0
-            document.documentElement.scrollTop = 0
-            this.show = false
+            // document.body.scrollTop = 0
+            // document.documentElement.scrollTop = 0
+            // this.show = false
+            this.$router.push({path: './mhome'})
         },
         handleProject() {
             document.body.scrollTop = this.$refs.top1.clientHeight - 50;
@@ -274,9 +151,6 @@ export default {
         },
         handlePledge() {
             window.location.href = 'https://cellcoin.in/#/u/0x5Ab174f779Df6c23A4d3574E01C627b04f340aBb'
-        },
-        handleCellWallet() {
-            this.$router.push({path: './mhomedetail'})
         },
         toggleLang(lang) {
             this.lang = lang
@@ -310,7 +184,7 @@ export default {
 
 <style lang="scss">
     @import '@/common/scss/commonsize.scss';
-    .cell-mhome {
+    .cell-mhome1 {
         .bg-content {
             height: calc(100vh);
             .bg-content-outer {
@@ -385,7 +259,7 @@ export default {
                 .bg-info {
                     position: absolute;
                     left: 10%;
-                    top: 180px;
+                    top: 120px;
                     width: 80%;
                     height: 300px;
                     z-index: 11;
@@ -396,15 +270,43 @@ export default {
                         height: rem(200);
                         margin: 0 auto;
                     }
+                    .font1 {
+                        font-size: 44px;
+                        text-align: center;
+                    }
                     .font {
                         display: block;
                         font-size: 32px;
                         text-align: center;
-                        padding: 60px 0 10px;
+                        font-family: PingFangSC-Ultralight;
+                        padding: 20px 0 10px;
                     }
                     .fontinfo {
                         text-align: center;
                         font-size: rem(24);
+                    }
+                    .btn {
+                        padding-top: 50px;
+                        text-align: center;
+                        .van-button {
+                            width: 40%;
+                            margin: 0 8px;
+                            .van-button__text {
+                                display: flex;
+                                align-items: center;
+                            }
+                        }
+                        img {
+                            display: block;
+                            width: rem(25);
+                            height: rem(25);
+                        }
+                        .img1 {
+                            margin: 0 rem(10) 0 rem(50);
+                        }
+                        .img2 {
+                            margin: 0 rem(10) 0 rem(20);
+                        }
                     }
                     .center {
                         display: flex;
@@ -579,6 +481,28 @@ export default {
                     }
                 }
             }
+        }
+        .mokuai {
+            padding: rem(140) rem(32) rem(80);
+            .lar {
+                font-size: 30px;
+                color: #333333;
+                font-family: PingFangSC-Light;
+            }
+            .mid {
+                font-size: 14px;
+                color: #6c7074;
+                font-family: PingFangSC-Thin;
+                line-height: rem(90);
+            }
+            img {
+                width: 60%;
+                height: rem(376);
+                margin: rem(112) auto 0;
+            }
+        }
+        .bg {
+            background-color: #fafbfb;
         }
         .pro {
             position: relative;

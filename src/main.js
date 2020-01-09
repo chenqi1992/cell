@@ -2,12 +2,13 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from '@/router/index.js'
 import ElementUI from 'element-ui'
-import { Popup } from 'vant';
+import { Popup, Button } from "vant";
 import 'vant/lib/index.css';
 import i18n from '@/utils/i18n'
 // import 'lib-flexible'
 Vue.use(ElementUI)
 Vue.use(Popup)
+Vue.use(Button)
 /* IE下提示Promise未定义的解决方法 */
 if (!window.Promise) {
     window.Promise = Promise;
