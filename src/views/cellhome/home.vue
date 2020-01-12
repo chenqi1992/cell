@@ -13,6 +13,7 @@
                         <span @click="handleTeam">{{$t('blockchainTop.navm7')}}</span>
                         <!-- <span @click="handleTeam">{{$t('blockchainTop.navm8')}}</span> -->
                         <span @click="handlePledge">{{$t('blockchainTop.nav5')}}</span>
+                        <span @click="handleCellWallet">{{$t('blockchainTop.nav6')}}</span>
                     </div>
                    <el-dropdown>
                         <span class="el-dropdown-link">
@@ -26,9 +27,18 @@
                     </el-dropdown>
                 </div>
                 <div class="bg-info">
-                    <img class="bg-info-logo" src="../../assets/cellhome/logo.png" alt="">
+                    <span class="font1">CellWallet</span>
+                    <span class="font">{{$t('celldetailtop.title')}}</span>
+                    <span class="fontinfo">CellWallet 1.0 Ethereum</span>
+                    <!-- <div class="btn"> -->
+                    <el-row>
+                        <el-button type="primary"><img class="img1" src="../../assets/cellmhome1/wallet_icon_iphone.png" alt="">IOS</el-button>
+                        <el-button type="primary"><img class="img2" src="../../assets/cellmhome1/wallet_icon_android.png" alt="">Downdoad</el-button>
+                    </el-row>
+                    <!-- </div> -->
+                    <!-- <img class="bg-info-logo" src="../../assets/cellhome/logo.png" alt="">
                     <span class="font">{{$t('blockchainTop.title')}}</span>
-                    <span class="fontinfo">{{$t('blockchainTop.titleInfo')}}</span>
+                    <span class="fontinfo">{{$t('blockchainTop.titleInfo')}}</span> -->
                     <!-- <div class="center">
                         <div class="center1">
                             <img src="../../assets/cellhome/icon_wallet.png" alt="">
@@ -248,6 +258,9 @@ export default {
         handlePledge() {
             window.location.href = 'https://cellcoin.in/#/u/0x5Ab174f779Df6c23A4d3574E01C627b04f340aBb'
         },
+        handleCellWallet() {
+            this.$router.push({path: '/homedetail'})
+        },
         toggleLang(lang) {
             if(lang == 'zh_CN') {
                 localStorage.setItem('locale', 'zh_CN')
@@ -294,7 +307,7 @@ export default {
     .cell-home {
         .bg-content {
             height: calc(100vh);
-            background: url('../../assets/cellhome/pic_bg_banner.png') 0 0 no-repeat;
+            background: url('../../assets/cellmhome1/pic_bg_banner1.png') 0 0 no-repeat;
             background-size: 100% 100%;
             .bg-content-outer {
                 position: relative;
@@ -315,10 +328,9 @@ export default {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    // height: 50px;
                     margin: 0 auto;
                     z-index: 1992;
-                    background-color: #010d18;
+                    background-color: #0a213c;
                     .logo {
                         display: flex;
                         align-items: center;
@@ -356,8 +368,8 @@ export default {
                 }
                 .bg-info {
                     position: absolute;
-                    left: 25%;
-                    top: 180px;
+                    left: 10%;
+                    top: 240px;
                     width: 50%;
                     height: 110px;
                     z-index: 12;
@@ -368,16 +380,42 @@ export default {
                         width: 200px;
                         height: 150px;
                     }
+                    .font1 {
+                        font-size: 44px;
+                    }
                     .font {
                         display: block;
-                        font-size: 34px;
-                        text-align: center;
-                        padding: 80px 0 40px;
+                        font-size: 32px;
+                        font-family: PingFangSC-Ultralight;
+                        padding: 20px 0 10px;
                     }
                     .fontinfo {
-                        display: block;
+                        text-align: left;
+                        font-size: 14px;
+                        font-family: 'PingFangSC-Ultralight';
+                    }
+                    .btn {
+                        padding-top: 50px;
                         text-align: center;
-                        font-size: 16px;
+                        .van-button {
+                            width: 40%;
+                            margin: 0 8px;
+                            .van-button__text {
+                                display: flex;
+                                align-items: center;
+                            }
+                        }
+                        img {
+                            display: block;
+                            width: 25px;
+                            height: 25px;
+                        }
+                        .img1 {
+                            margin: 0 10px 0 50px;
+                        }
+                        .img2 {
+                            margin: 0 10px 0 20px;
+                        }
                     }
                     .center {
                         display: flex;
@@ -438,16 +476,6 @@ export default {
                     .font2 {
                         font-size: 16px;
                         margin-top: 50px;
-                    }
-                    .btn {
-                        width: 75px;
-                        height: 27px;
-                        line-height: 27px;
-                        margin-top: 30px;
-                        text-align: center;
-                        background-color: #1c8dea;
-                        border-radius: 4px;
-                        color: #ffffff;
                     }
                 }
                 .space {
@@ -697,7 +725,7 @@ export default {
                         top: 194px;
                         background: url('../../assets/cellhome/icon_jinrong_d.png') 0 0 no-repeat;
                         background-size: 100% 100%;
-                        // animation: 
+                        // animation:
                         //     animX 12s  cubic-bezier(0.36, 0, 0.64, 1) -1s infinite alternate,
                         //     animY 12s cubic-bezier(0.36, 0, 0.64, 1) 0s infinite alternate,
                         //     scale 4s cubic-bezier(0.36, 0, 0.64, 1) 0s infinite alternate;
@@ -711,7 +739,7 @@ export default {
                     //     100% {top: 300px;}
                     // }
                     // @keyframes scale {
- 
+
                     //     0% {
                     //         transform: scale(0.7)
                     //     }

@@ -2,7 +2,7 @@
     <div class="cell-mhome">
         <div class="bg-content" ref="top1">
             <div class="bg-content-outer">
-                <img class="bg" src="../../assets/cellmhome/icon_bg_cell2.png" alt="">
+                <img class="bg" src="../../assets/cellmhome1/wallet_img_1.png" alt="">
                 <div class="fix" :class="{'active': active}">
                     <div class="header">
                         <div class="logo">
@@ -33,23 +33,15 @@
                     </div>
                 </div>
                 <div class="bg-info">
-                    <img class="bg-info-logo" src="../../assets/cellhome/logo.png" alt="">
-                    <span class="font">{{$t('blockchainTop.title')}}</span>
-                    <span class="fontinfo">{{$t('blockchainTop.titleInfo')}}</span>
-                    <!-- <div class="center">
-                        <div class="center1">
-                            <img src="../../assets/cellmhome/icon_wallet.png" alt="">
-                            <span>{{$t('blockchainTop.type3')}}</span>
-                        </div>
-                        <div class="center1">
-                            <img src="../../assets/cellmhome/icon_exc.png" alt="">
-                            <span>{{$t('blockchainTop.type2')}}</span>
-                        </div>
-                        <div class="center1">
-                            <img src="../../assets/cellmhome/icon_gongshijizhi.png" alt="">
-                            <span>{{$t('blockchainTop.type1')}}</span>
-                        </div>
-                    </div> -->
+                    <span class="font1">CellWallet</span>
+                    <span class="font">{{$t('celldetailtop.title')}}</span>
+                    <span class="fontinfo">CellWallet 1.0 Ethereum</span>
+                    <div class="btn">
+                        <van-button type="info"><img class="img1" src="../../assets/cellmhome1/wallet_icon_iphone.png" alt="">IOS</van-button>
+                        <!-- <a href="market://details?id=com.meetings&target=market&from=met"> -->
+                            <van-button type="default"><img class="img2" src="../../assets/cellmhome1/wallet_icon_android.png" alt="">Android</van-button>
+                        <!-- </a> -->
+                    </div>
                 </div>
                 <div class="space">
                     <!-- <div class="stars">
@@ -385,7 +377,7 @@ export default {
                 .bg-info {
                     position: absolute;
                     left: 10%;
-                    top: 180px;
+                    top: 120px;
                     width: 80%;
                     height: 300px;
                     z-index: 11;
@@ -396,15 +388,43 @@ export default {
                         height: rem(200);
                         margin: 0 auto;
                     }
+                    .font1 {
+                        font-size: 44px;
+                        text-align: center;
+                    }
                     .font {
                         display: block;
                         font-size: 32px;
                         text-align: center;
-                        padding: 60px 0 10px;
+                        font-family: PingFangSC-Ultralight;
+                        padding: 20px 0 10px;
                     }
                     .fontinfo {
                         text-align: center;
                         font-size: rem(24);
+                    }
+                    .btn {
+                        padding-top: 50px;
+                        text-align: center;
+                        .van-button {
+                            width: 40%;
+                            margin: 0 8px;
+                            .van-button__text {
+                                display: flex;
+                                align-items: center;
+                            }
+                        }
+                        img {
+                            display: block;
+                            width: rem(25);
+                            height: rem(25);
+                        }
+                        .img1 {
+                            margin: 0 rem(10) 0 rem(50);
+                        }
+                        .img2 {
+                            margin: 0 rem(10) 0 rem(20);
+                        }
                     }
                     .center {
                         display: flex;

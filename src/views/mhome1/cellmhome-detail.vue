@@ -17,10 +17,6 @@
                         >
                         <div class="nav">
                             <span @click="handleIndex">{{$t('blockchainTop.nav1')}}</span>
-                            <!-- <span @click="handleTechnology">{{$t('blockchainTop.navm5')}}</span>
-                            <span @click="handleEcological">{{$t('blockchainTop.navm6')}}</span>
-                            <span @click="handleAbout">{{$t('blockchainTop.navm7')}}</span>
-                            <span @click="handleTeam">{{$t('blockchainPartners.title')}}</span> -->
                             <span @click="handlePledge">{{$t('blockchainTop.nav5')}}</span>
                             <span @click="toggleLang('zh_CN')" :disabled="$i18n.locale == 'zh_CN'">中文简体</span>
                             <span @click="toggleLang('zh_TW')" :disabled="$i18n.locale == 'zh_TW'">中文繁体</span>
@@ -34,8 +30,11 @@
                     <span class="font1">CellWallet</span>
                     <span class="font">{{$t('celldetailtop.title')}}</span>
                     <span class="fontinfo">CellWallet 1.0 Ethereum</span>
-                    <div class="btn">
+                    <div class="btn" v-if="isshow">
                         <van-button type="info"><img class="img1" src="../../assets/cellmhome1/wallet_icon_iphone.png" alt="">IOS</van-button>
+                    </div>
+                    <div class="btn" v-if="!isshow">
+                        <div class="google-play"><img src="../../assets/cellmhome1/icon_google play.png" alt=""></div>
                         <!-- <a href="market://details?id=com.meetings&target=market&from=met"> -->
                             <van-button type="default"><img class="img2" src="../../assets/cellmhome1/wallet_icon_android.png" alt="">Android</van-button>
                         <!-- </a> -->
@@ -67,6 +66,7 @@
 </template>
 
 <script>
+import { commongxw } from '@/utils/chengxw.js'
 export default {
     components: {
 
@@ -81,10 +81,16 @@ export default {
             show: false,
             keyanimate: false,
             teamView: false,
+            isshow: false
         }
     },
     created() {
-
+        let isAndroid = commongxw.checkTypeAppSystem();
+        if (isAndroid) {
+            this.isshow = false
+        } else {
+            this.isshow = true
+        }
     },
     mounted() {
         let lang = localStorage.getItem('locale')
@@ -119,9 +125,6 @@ export default {
             this.keyanimate = true
         },
         handleIndex() {
-            // document.body.scrollTop = 0
-            // document.documentElement.scrollTop = 0
-            // this.show = false
             this.$router.push({path: './mhome'})
         },
         handleProject() {
@@ -286,6 +289,8 @@ export default {
                         font-size: rem(24);
                     }
                     .btn {
+                        display: flex;
+                        justify-content: space-evenly;
                         padding-top: 50px;
                         text-align: center;
                         .van-button {
@@ -306,6 +311,19 @@ export default {
                         }
                         .img2 {
                             margin: 0 rem(10) 0 rem(20);
+                        }
+                        .google-play {
+                            display: flex;
+                            align-items: center;
+                            width: 40%;
+                            margin: 0 8px;
+                            background-color: #1c8dea;
+                            img {
+                                display: block;
+                                width: rem(180);
+                                height: rem(50);
+                                margin: 0 auto;
+                            }
                         }
                     }
                     .center {
