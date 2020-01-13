@@ -55,22 +55,22 @@
             <div class="mokuai">
                 <div class="lar">{{$t('mokuai1.title')}}</div>
                 <div class="mid">{{$t('mokuai1.content')}}</div>
-                <img src="../../assets/cellmhome1/wallet_icon_10.png" alt="">
+                <img src="../../assets/cellmhome1/wallet_icon_1.png" alt="">
             </div>
             <div class="mokuai">
                 <div class="lar">{{$t('mokuai2.title')}}</div>
                 <div class="mid">{{$t('mokuai2.content')}}</div>
-                <img src="../../assets/cellmhome1/wallet_icon_13.png" alt="">
+                <img src="../../assets/cellmhome1/wallet_icon_2.png" alt="">
             </div>
             <div class="mokuai">
                 <div class="lar">{{$t('mokuai3.title')}}</div>
                 <div class="mid">{{$t('mokuai3.content')}}</div>
-                <img src="../../assets/cellmhome1/wallet_icon_15.png" alt="">
+                <img src="../../assets/cellmhome1/wallet_icon_3.png" alt="">
             </div>
             <div class="mokuai">
                 <div class="lar">{{$t('mokuai4.title')}}</div>
                 <div class="mid">{{$t('mokuai4.content')}}</div>
-                <img src="../../assets/cellmhome1/wallet_icon_17.png" alt="">
+                <img src="../../assets/cellmhome1/wallet_icon_4.png" alt="">
             </div>
         </div>
         <div class="copyright">

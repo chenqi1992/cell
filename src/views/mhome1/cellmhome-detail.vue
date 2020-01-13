@@ -26,50 +26,37 @@
                         <img @click="handleMenu" src="../../assets/m/menu.png" alt="">
                     </div>
                 </div>
-                <div class="bg-info">
-                    <span class="font1">CellWallet</span>
-                    <span class="font">{{$t('celldetailtop.title')}}</span>
-                    <span class="fontinfo">CellWallet 1.0 Ethereum</span>
-                    <div class="btn" v-if="isshow">
-                        <van-button type="info"><img class="img1" src="../../assets/cellmhome1/wallet_icon_iphone.png" alt="">IOS</van-button>
-                    </div>
-                    <div class="btn" v-if="!isshow">
-                        <div class="google-play"><img src="../../assets/cellmhome1/icon_google play.png" alt=""></div>
-                        <!-- <a href="market://details?id=com.meetings&target=market&from=met"> -->
-                            <van-button type="default"><img class="img2" src="../../assets/cellmhome1/wallet_icon_android.png" alt="">Android</van-button>
-                        <!-- </a> -->
-                    </div>
-                </div>
+                <download></download>
             </div>
         </div>
         <div class="mokuai">
             <div class="lar">{{$t('mokuai1.title')}}</div>
             <div class="mid">{{$t('mokuai1.content')}}</div>
-            <img src="../../assets/cellmhome1/wallet_icon_10.png" alt="">
+            <img src="../../assets/cellmhome1/wallet_icon_1.png" alt="">
         </div>
         <div class="mokuai bg">
             <div class="lar">{{$t('mokuai2.title')}}</div>
             <div class="mid">{{$t('mokuai2.content')}}</div>
-            <img src="../../assets/cellmhome1/wallet_icon_13.png" alt="">
+            <img src="../../assets/cellmhome1/wallet_icon_2.png" alt="">
         </div>
         <div class="mokuai">
             <div class="lar">{{$t('mokuai3.title')}}</div>
             <div class="mid">{{$t('mokuai3.content')}}</div>
-            <img src="../../assets/cellmhome1/wallet_icon_15.png" alt="">
+            <img src="../../assets/cellmhome1/wallet_icon_3.png" alt="">
         </div>
         <div class="mokuai bg">
             <div class="lar">{{$t('mokuai4.title')}}</div>
             <div class="mid">{{$t('mokuai4.content')}}</div>
-            <img src="../../assets/cellmhome1/wallet_icon_17.png" alt="">
+            <img src="../../assets/cellmhome1/wallet_icon_4.png" alt="">
         </div>
     </div>
 </template>
 
 <script>
-import { commongxw } from '@/utils/chengxw.js'
+import download from '@/views/mhome1/components/download'
 export default {
     components: {
-
+        download
     },
     props: {
 
@@ -81,16 +68,9 @@ export default {
             show: false,
             keyanimate: false,
             teamView: false,
-            isshow: false
         }
     },
     created() {
-        let isAndroid = commongxw.checkTypeAppSystem();
-        if (isAndroid) {
-            this.isshow = false
-        } else {
-            this.isshow = true
-        }
     },
     mounted() {
         let lang = localStorage.getItem('locale')
@@ -111,11 +91,11 @@ export default {
     methods: {
         watchScroll() {
             let scrollTop = document.documentElement.scrollTop || document.body.scrollTop
-            if(scrollTop > 800) {
+            if(scrollTop > (this.$refs.top1.clientHeight - 50)) {
                 this.keyanimate = true
                 this.active = true
             }
-            scrollTop > 800 ? this.active = true : this.active = false
+            scrollTop > (this.$refs.top1.clientHeight - 50) ? this.active = true : this.active = false
             if(scrollTop > 2000) {
                 this.teamView = true
             }
@@ -287,6 +267,7 @@ export default {
                     .fontinfo {
                         text-align: center;
                         font-size: rem(24);
+                        font-family: PingFangSC-Ultralight;
                     }
                     .btn {
                         display: flex;
@@ -295,34 +276,38 @@ export default {
                         text-align: center;
                         .van-button {
                             width: 40%;
-                            margin: 0 8px;
                             .van-button__text {
                                 display: flex;
                                 align-items: center;
                             }
                         }
+                        .btn2 {
+                            width: 100%;
+                        }
                         img {
                             display: block;
-                            width: rem(25);
-                            height: rem(25);
+                            width: rem(40);
+                            height: rem(40);
                         }
                         .img1 {
-                            margin: 0 rem(10) 0 rem(50);
+                            margin: 0 rem(10) 0 rem(38);
                         }
                         .img2 {
-                            margin: 0 rem(10) 0 rem(20);
+                            margin: 0 rem(10) 0 0;
                         }
                         .google-play {
                             display: flex;
-                            align-items: center;
-                            width: 40%;
-                            margin: 0 8px;
+                            width: 100%;
+                            height: 100%;
+                            padding: 0 15px;
+                            box-sizing: border-box;
                             background-color: #1c8dea;
+                            border-radius: 2px;
                             img {
                                 display: block;
                                 width: rem(180);
-                                height: rem(50);
-                                margin: 0 auto;
+                                height: rem(54);
+                                margin: rem(10) auto 0;
                             }
                         }
                     }

@@ -32,25 +32,15 @@
                         <img @click="handleMenu" src="../../assets/m/menu.png" alt="">
                     </div>
                 </div>
-                <div class="bg-info">
-                    <span class="font1">CellWallet</span>
-                    <span class="font">{{$t('celldetailtop.title')}}</span>
-                    <span class="fontinfo">CellWallet 1.0 Ethereum</span>
-                    <div class="btn">
-                        <van-button type="info"><img class="img1" src="../../assets/cellmhome1/wallet_icon_iphone.png" alt="">IOS</van-button>
-                        <!-- <a href="market://details?id=com.meetings&target=market&from=met"> -->
-                            <van-button type="default"><img class="img2" src="../../assets/cellmhome1/wallet_icon_android.png" alt="">Android</van-button>
-                        <!-- </a> -->
-                    </div>
-                </div>
-                <div class="space">
+                <download></download>
+                <!-- <div class="space"> -->
                     <!-- <div class="stars">
                         <div class="star"></div>
                         <div class="star pink"></div>
                         <div class="star blue"></div>
                         <div class="star yellow"></div>
                     </div> -->
-                </div>
+                <!-- </div> -->
             </div>
         </div>
         <div class="pro" ref="top2">
@@ -183,9 +173,10 @@
 </template>
 
 <script>
+import download from '@/views/mhome1/components/download'
 export default {
     components: {
-
+        download
     },
     props: {
 
@@ -200,7 +191,6 @@ export default {
         }
     },
     created() {
-
     },
     mounted() {
         let lang = localStorage.getItem('locale')
@@ -402,28 +392,48 @@ export default {
                     .fontinfo {
                         text-align: center;
                         font-size: rem(24);
+                        font-family: PingFangSC-Ultralight;
                     }
                     .btn {
+                        display: flex;
+                        justify-content: space-evenly;
                         padding-top: 50px;
                         text-align: center;
                         .van-button {
                             width: 40%;
-                            margin: 0 8px;
                             .van-button__text {
                                 display: flex;
                                 align-items: center;
                             }
                         }
+                        .btn2 {
+                            width: 100%;
+                        }
                         img {
                             display: block;
-                            width: rem(25);
-                            height: rem(25);
+                            width: rem(40);
+                            height: rem(40);
                         }
                         .img1 {
-                            margin: 0 rem(10) 0 rem(50);
+                            margin: 0 rem(10) 0 rem(38);
                         }
                         .img2 {
-                            margin: 0 rem(10) 0 rem(20);
+                            margin: 0 rem(10) 0 0;
+                        }
+                        .google-play {
+                            display: flex;
+                            width: 100%;
+                            height: 100%;
+                            padding: 0 15px;
+                            box-sizing: border-box;
+                            background-color: #1c8dea;
+                            border-radius: 2px;
+                            img {
+                                display: block;
+                                width: rem(180);
+                                height: rem(54);
+                                margin: rem(10) auto 0;
+                            }
                         }
                     }
                     .center {

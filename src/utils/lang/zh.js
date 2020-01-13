@@ -109,7 +109,7 @@ export default {
     footer: "© 2019 CELL NETWORK FOUNDATION LTD.  All rights reserved",
 
     celldetailtop: {
-        title: "CellWallet 您的区块链世界入口"
+        title: "您的区块链世界入口"
     },
     mokuai1: {
         title: "去中心化钱包",
