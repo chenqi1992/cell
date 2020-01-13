@@ -43,8 +43,10 @@
                                 <img src="../../assets/cellmhome1/icon_google play_pc.png" alt="">
                             </div>
                             <el-button class="google-play-re" type="primary" v-show="showgoogle">
-                                <img class="img2" src="../../assets/cellmhome1/wallet_icon_android.png" alt="">
-                                <span>Downdoad</span>
+                                <a href="http://101.132.121.71:8000/android/last_package" style="color: #fff">
+                                    <img class="img2" src="../../assets/cellmhome1/wallet_icon_android.png" alt="">
+                                    <span>Downdoad</span>
+                                </a>
                             </el-button>
                         </div>
                     </el-row>
