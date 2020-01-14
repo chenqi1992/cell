@@ -27,28 +27,22 @@
                     <span class="font">{{$t('celldetailtop.title')}}</span>
                     <span class="fontinfo">CellWallet 1.0 Ethereum</span>
                     <el-row class="btn">
-                        <el-popover
-                            placement="bottom-end"
-                            popper-class="poper1"
-                            trigger="click">
-                            <img src="../../assets/cellmhome1/WX20200112-231526@2x.png" alt="">
-                            <span>扫描二维码下载</span>
-                            <el-button slot="reference" type="primary">
-                                <img class="img1" src="../../assets/cellmhome1/wallet_icon_iphone.png" alt="">
-                                <span>IOS</span>
-                            </el-button>
-                        </el-popover>
+                        <el-button type="primary" @click="iosShow">
+                            <img class="img1" src="../../assets/cellmhome1/iphone (1).svg" alt="">
+                            <span>IOS</span>
+                        </el-button>
                         <div class="google">
                             <div class="google-play" @click="googleShow">
                                 <img src="../../assets/cellmhome1/icon_google play_pc.png" alt="">
                             </div>
-                            <el-button class="google-play-re" type="primary" v-show="showgoogle">
-                                <a href="http://101.132.121.71:8000/android/last_package" style="color: #fff">
-                                    <img class="img2" src="../../assets/cellmhome1/wallet_icon_android.png" alt="">
-                                    <span>Downdoad</span>
-                                </a>
-                            </el-button>
                         </div>
+                        <el-popover
+                            placement="right-end"
+                            popper-class="poper1"
+                            trigger="click">
+                            <img slot="reference" src="../../assets/cellmhome1/icon_code.png" alt="" class="code-image">
+                            <img src="../../assets/cellmhome1/wx_detail.png" alt="" class="wx_detail">
+                        </el-popover>
                     </el-row>
                 </div>
             </div>
@@ -193,8 +187,11 @@ export default {
             this.lang = lang
         },
         googleShow() {
-            this.showgoogle == false ? this.showgoogle = true : this.showgoogle = false
-        }
+            window.open('https://play.google.com/store/apps/details?id=ning.cell&hl=zh-CN','_blank');
+        },
+        iosShow() {
+            window.open('https://apps.apple.com/us/app/cell-wallet/id1492856822','_blank');
+        },
     }
 }
 </script>
@@ -322,9 +319,6 @@ export default {
                         .img1 {
                             margin: 0 5px 0 23px;
                         }
-                        .google {
-                            position: relative;
-                        }
                         .google-play {
                             display: flex;
                             align-items: center;
@@ -340,10 +334,12 @@ export default {
                                 margin: 0 auto;
                             }
                         }
-                        .google-play-re {
-                            position: absolute;
-                            left: 0px;
-                            bottom: -60px;
+                        .code-image {
+                            display: block;
+                            width: 50px;
+                            height: 50px;
+                            margin-left: 5px;
+                            cursor: pointer;
                         }
                     }
                     .center {
@@ -451,14 +447,14 @@ export default {
                 }
                 .mid {
                     margin: 20px 0;
-                    font-size: 14px;
+                    font-size: 16px;
                     color: #6c7074;
                     font-family: PingFangSC-Light;
                 }
                 img {
                     display: block;
-                    width: 80%;
-                    height: 80%;
+                    width: 70%;
+                    height: 70%;
                     margin: 0 auto;
                 }
             }
@@ -504,6 +500,10 @@ export default {
         text-align: center;
         img {
             margin: 0 auto;
+        }
+        .wx_detail {
+            width: 140px;
+            height: 140px;
         }
         span {
             display: block;

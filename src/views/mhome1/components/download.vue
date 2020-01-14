@@ -1,11 +1,11 @@
 <template>
-    <div class="bg-info">
+    <div class="bg-info-download">
         <span class="font1">CellWallet</span>
         <span class="font">{{$t('celldetailtop.title')}}</span>
         <span class="fontinfo">CellWallet 1.0 Ethereum</span>
         <div class="btn" v-if="isshow">
             <a href="https://play.google.com/store/apps/details?id=ning.cell&hl=zh-CN" class="ios-play">
-                <van-button type="info"><img class="img1" src="../../../assets/cellmhome1/wallet_icon_iphone.png" alt="">IOS</van-button>
+                <van-button type="info"><img class="img1" src="../../../assets/cellmhome1/iphone (1).svg" alt="">IOS</van-button>
             </a>
         </div>
         <div class="btn" v-if="!isshow">
@@ -53,7 +53,8 @@ export default {
 </script>
 
 <style lang="scss">
-    .bg-info {
+    @import '@/common/scss/commonsize.scss';
+    .bg-info-download {
         position: absolute;
         left: 10%;
         top: 120px;
