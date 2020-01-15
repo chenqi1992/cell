@@ -35,14 +35,25 @@
                             <div class="google-play" @click="googleShow">
                                 <img src="../../assets/cellmhome1/icon_google play_pc.png" alt="">
                             </div>
+                            <el-button class="google-play-re" type="primary">
+                                <a href="http://101.132.121.71:8000/android/last_package" style="color: #fff">
+                                    <img class="img2" src="../../assets/cellmhome1/android.svg" alt="">
+                                    <span>Downdoad</span>
+                                </a>
+                            </el-button>
                         </div>
-                        <el-popover
+                        <!-- <el-popover
                             placement="right-end"
                             popper-class="poper1"
-                            trigger="click">
-                            <img slot="reference" src="../../assets/cellmhome1/icon_code.png" alt="" class="code-image">
-                            <img src="../../assets/cellmhome1/wx_detail.png" alt="" class="wx_detail">
-                        </el-popover>
+                            trigger="click"> -->
+                        <div class="code-pa">
+                            <img src="../../assets/cellmhome1/icon_code.png" alt="" class="code-image">
+                            <div class="wx-pa">
+                                <img src="../../assets/cellmhome1/wx_detail.png" alt="" class="wx_detail">
+                                <span>扫描二维码下载</span>
+                            </div>
+                        </div>
+                        <!-- </el-popover> -->
                     </el-row>
                 </div>
             </div>
@@ -309,15 +320,20 @@ export default {
                             span {
                                 display: flex;
                                 align-items: center;
+                                margin-top: 2px;
                             }
                         }
                         img {
                             float: left;
                             width: 18px;
                             height: 18px;
+                            margin: 0 2px;
                         }
                         .img1 {
                             margin: 0 5px 0 23px;
+                        }
+                        .google {
+                            position: relative;
                         }
                         .google-play {
                             display: flex;
@@ -334,12 +350,51 @@ export default {
                                 margin: 0 auto;
                             }
                         }
-                        .code-image {
-                            display: block;
+                        .google-play-re {
+                            position: absolute;
+                            left: 0px;
+                            bottom: -60px;
+                        }
+                        .code-pa {
+                            position: relative;
                             width: 50px;
                             height: 50px;
-                            margin-left: 5px;
                             cursor: pointer;
+                            .code-image {
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                display: block;
+                                width: 50px;
+                                height: 50px;
+                                margin-left: 5px;
+                                z-index: 9;
+                            }
+                            .code-image:hover + .wx-pa {
+                                display: block;
+                                z-index: 10;
+                            }
+                            .wx-pa {
+                                display: none;
+                                align-items: center;
+                                position: absolute;
+                                left: 5px;
+                                width: 180px;
+                                height: 200px;
+                                background-color: #ffffff;
+                                border-radius: 8px;
+                                .wx_detail {
+                                    width: 140px;
+                                    height: 140px;
+                                    margin: 20px 20px 10px 20px;
+                                }
+                                span {
+                                    display: block;
+                                    width: 100%;
+                                    text-align: center;
+                                    color: #000;
+                                }
+                            }
                         }
                     }
                     .center {
