@@ -158,10 +158,6 @@ export default {
                     height: 50px;
                     z-index: 9;
                 }
-                .code-image:hover + .wx-pa {
-                    display: block;
-                    z-index: 10;
-                }
                 .wx-pa {
                     display: none;
                     align-items: center;
@@ -171,6 +167,7 @@ export default {
                     height: 200px;
                     background-color: #ffffff;
                     border-radius: 8px;
+                    z-index: 10;
                     .wx_detail {
                         width: 140px;
                         height: 140px;
@@ -183,6 +180,10 @@ export default {
                         color: #000;
                     }
                 }
+            }
+            .code-pa:hover .wx-pa {
+                display: block;
+                z-index: 10;
             }
         }
         .font2 {
