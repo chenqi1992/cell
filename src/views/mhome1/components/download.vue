@@ -4,7 +4,7 @@
         <span class="font">{{$t('celldetailtop.title')}}</span>
         <span class="fontinfo">CellWallet 1.0 Ethereum</span>
         <div class="btn" v-if="isshow">
-            <a href="https://play.google.com/store/apps/details?id=ning.cell&hl=zh-CN" class="ios-play">
+            <a href="https://apps.apple.com/us/app/cell-wallet/id1492856822" class="ios-play">
                 <van-button type="info"><img class="img1" src="../../../assets/cellmhome1/iphone (1).svg" alt="">IOS</van-button>
             </a>
         </div>

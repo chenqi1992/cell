@@ -26,34 +26,7 @@
                         </el-dropdown-menu>
                     </el-dropdown>
                 </div>
-                <div class="bg-info">
-                    <span class="font1">CellWallet</span>
-                    <span class="font">{{$t('celldetailtop.title')}}</span>
-                    <span class="fontinfo">CellWallet 1.0 Ethereum</span>
-                    <!-- <div class="btn"> -->
-                    <el-row>
-                        <el-button type="primary"><img class="img1" src="../../assets/cellmhome1/wallet_icon_iphone.png" alt="">IOS</el-button>
-                        <el-button type="primary"><img class="img2" src="../../assets/cellmhome1/wallet_icon_android.png" alt="">Downdoad</el-button>
-                    </el-row>
-                    <!-- </div> -->
-                    <!-- <img class="bg-info-logo" src="../../assets/cellhome/logo.png" alt="">
-                    <span class="font">{{$t('blockchainTop.title')}}</span>
-                    <span class="fontinfo">{{$t('blockchainTop.titleInfo')}}</span> -->
-                    <!-- <div class="center">
-                        <div class="center1">
-                            <img src="../../assets/cellhome/icon_wallet.png" alt="">
-                            <span>{{$t('blockchainTop.type3')}}</span>
-                        </div>
-                        <div class="center1">
-                            <img src="../../assets/cellhome/icon_exc.png" alt="">
-                            <span>{{$t('blockchainTop.type2')}}</span>
-                        </div>
-                        <div class="center1">
-                            <img src="../../assets/cellhome/icon_staking.png" alt="">
-                            <span>{{$t('blockchainTop.type1')}}</span>
-                        </div>
-                    </div> -->
-                </div>
+                <downloadPc></downloadPc>
                 <div class="space">
                     <!-- <div class="stars">
                         <div class="star"></div>
@@ -194,9 +167,10 @@
 </template>
 
 <script>
+import downloadPc from '@/views/mhome1/components/downloadPc'
 export default {
     components: {
-
+        downloadPc
     },
     props: {
 
@@ -364,118 +338,6 @@ export default {
                     }
                     .el-icon-arrow-down {
                         color: #ffffff;
-                    }
-                }
-                .bg-info {
-                    position: absolute;
-                    left: 10%;
-                    top: 240px;
-                    width: 50%;
-                    height: 110px;
-                    z-index: 12;
-                    color: #ffffff;
-                    .bg-info-logo {
-                        display: block;
-                        margin: 0 auto;
-                        width: 200px;
-                        height: 150px;
-                    }
-                    .font1 {
-                        font-size: 44px;
-                    }
-                    .font {
-                        display: block;
-                        font-size: 32px;
-                        font-family: PingFangSC-Ultralight;
-                        padding: 20px 0 10px;
-                    }
-                    .fontinfo {
-                        text-align: left;
-                        font-size: 14px;
-                        font-family: 'PingFangSC-Ultralight';
-                    }
-                    .btn {
-                        padding-top: 50px;
-                        text-align: center;
-                        .van-button {
-                            width: 40%;
-                            margin: 0 8px;
-                            .van-button__text {
-                                display: flex;
-                                align-items: center;
-                            }
-                        }
-                        img {
-                            display: block;
-                            width: 25px;
-                            height: 25px;
-                        }
-                        .img1 {
-                            margin: 0 10px 0 50px;
-                        }
-                        .img2 {
-                            margin: 0 10px 0 20px;
-                        }
-                    }
-                    .center {
-                        display: flex;
-                        .center1 {
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            font-size: 16px;
-                            height: 74px;
-                            line-height: 74px;
-                            text-align: center;
-                            background-size: 100% 100%;
-                            img {
-                                display: block;
-                                margin-right: 8px;
-                            }
-                        }
-                        .center1:nth-child(1) {
-                            width: 231px;
-                            background: url('../../assets/cellhome/icon_home_dia3.png') 0 0 no-repeat;
-                            background-size: 100% 100%;
-                            img {
-                                width: 20px;
-                                height: 22px;
-                            }
-                        }
-                        .center1:nth-child(2) {
-                            width: 283px;
-                            background: url('../../assets/cellhome/icon_home_dia1.png') 0 0 no-repeat;
-                            background-size: 100% 100%;
-                            img {
-                                width: 25px;
-                                height: 21px;
-                            }
-                        }
-                        .center1:nth-child(3) {
-                            width: 231px;
-                            background: url('../../assets/cellhome/icon_home_dia3.png') 0 0 no-repeat;
-                            background-size: 100% 100%;
-                            img {
-                                width: 25px;
-                                height: 22px;
-                            }
-                        }
-                        .center1:nth-child(1):hover, .center1:nth-child(3):hover {
-                            width: 231px;
-                            background: url('../../assets/cellhome/icon_home_dia2.png') 0 0 no-repeat;
-                            background-size: 100% 100%;
-                            cursor: pointer;
-                        }
-                        .center1:nth-child(2):hover {
-                            width: 283px;
-                            background: url('../../assets/cellhome/icon_home_dia4.png') 0 0 no-repeat;
-                            background-size: 100% 100%;
-                            cursor: pointer;
-                        }
-                    }
-                    .font2 {
-                        font-size: 16px;
-                        margin-top: 50px;
                     }
                 }
                 .space {

@@ -22,40 +22,7 @@
                         </el-dropdown-menu>
                     </el-dropdown>
                 </div>
-                <div class="bg-info">
-                    <span class="font1">CellWallet</span>
-                    <span class="font">{{$t('celldetailtop.title')}}</span>
-                    <span class="fontinfo">CellWallet 1.0 Ethereum</span>
-                    <el-row class="btn">
-                        <el-button type="primary" @click="iosShow">
-                            <img class="img1" src="../../assets/cellmhome1/iphone (1).svg" alt="">
-                            <span>IOS</span>
-                        </el-button>
-                        <div class="google">
-                            <div class="google-play" @click="googleShow">
-                                <img src="../../assets/cellmhome1/icon_google play_pc.png" alt="">
-                            </div>
-                            <el-button class="google-play-re" type="primary">
-                                <a href="http://101.132.121.71:8000/android/last_package" style="color: #fff">
-                                    <img class="img2" src="../../assets/cellmhome1/android.svg" alt="">
-                                    <span>Downdoad</span>
-                                </a>
-                            </el-button>
-                        </div>
-                        <!-- <el-popover
-                            placement="right-end"
-                            popper-class="poper1"
-                            trigger="click"> -->
-                        <div class="code-pa">
-                            <img src="../../assets/cellmhome1/icon_code.png" alt="" class="code-image">
-                            <div class="wx-pa">
-                                <img src="../../assets/cellmhome1/wx_detail.png" alt="" class="wx_detail">
-                                <span>扫描二维码下载</span>
-                            </div>
-                        </div>
-                        <!-- </el-popover> -->
-                    </el-row>
-                </div>
+                <downloadPc></downloadPc>
             </div>
         </div>
         <div class="bg-Dapps">
@@ -113,9 +80,10 @@
 </template>
 
 <script>
+import downloadPc from '@/views/mhome1/components/downloadPc'
 export default {
     components: {
-
+        downloadPc
     },
     props: {
 
@@ -197,12 +165,6 @@ export default {
             }
             this.lang = lang
         },
-        googleShow() {
-            window.open('https://play.google.com/store/apps/details?id=ning.cell&hl=zh-CN','_blank');
-        },
-        iosShow() {
-            window.open('https://apps.apple.com/us/app/cell-wallet/id1492856822','_blank');
-        },
     }
 }
 </script>
@@ -281,183 +243,7 @@ export default {
                         color: #ffffff;
                     }
                 }
-                .bg-info {
-                    position: absolute;
-                    left: 10%;
-                    top: 240px;
-                    width: 50%;
-                    height: 110px;
-                    z-index: 12;
-                    color: #ffffff;
-                    .bg-info-logo {
-                        display: block;
-                        margin: 0 auto;
-                        width: 200px;
-                        height: 150px;
-                    }
-                    .font1 {
-                        font-size: 44px;
-                    }
-                    .font {
-                        display: block;
-                        font-size: 32px;
-                        font-family: PingFangSC-Ultralight;
-                        padding: 20px 0 10px;
-                    }
-                    .fontinfo {
-                        text-align: left;
-                        font-size: 14px;
-                        font-family: 'PingFangSC-Ultralight';
-                    }
-                    .btn {
-                        display: flex;
-                        align-items: center;
-                        padding-top: 50px;
-                        .el-button {
-                            width: 130px;
-                            height: 50px;
-                            margin: 0 5px;
-                            span {
-                                display: flex;
-                                align-items: center;
-                                margin-top: 2px;
-                            }
-                        }
-                        img {
-                            float: left;
-                            width: 18px;
-                            height: 18px;
-                            margin: 0 2px;
-                        }
-                        .img1 {
-                            margin: 0 5px 0 23px;
-                        }
-                        .google {
-                            position: relative;
-                        }
-                        .google-play {
-                            display: flex;
-                            align-items: center;
-                            width: 130px;
-                            height: 50px;
-                            margin: 0 5px;
-                            background-color: #ffffff;
-                            border-radius: 4px;
-                            cursor: pointer;
-                            img {
-                                width: 90px;
-                                height: 26px;
-                                margin: 0 auto;
-                            }
-                        }
-                        .google-play-re {
-                            position: absolute;
-                            left: 0px;
-                            bottom: -60px;
-                        }
-                        .code-pa {
-                            position: relative;
-                            width: 50px;
-                            height: 50px;
-                            cursor: pointer;
-                            .code-image {
-                                position: absolute;
-                                left: 0;
-                                top: 0;
-                                display: block;
-                                width: 50px;
-                                height: 50px;
-                                margin-left: 5px;
-                                z-index: 9;
-                            }
-                            .code-image:hover + .wx-pa {
-                                display: block;
-                                z-index: 10;
-                            }
-                            .wx-pa {
-                                display: none;
-                                align-items: center;
-                                position: absolute;
-                                left: 5px;
-                                width: 180px;
-                                height: 200px;
-                                background-color: #ffffff;
-                                border-radius: 8px;
-                                .wx_detail {
-                                    width: 140px;
-                                    height: 140px;
-                                    margin: 20px 20px 10px 20px;
-                                }
-                                span {
-                                    display: block;
-                                    width: 100%;
-                                    text-align: center;
-                                    color: #000;
-                                }
-                            }
-                        }
-                    }
-                    .center {
-                        display: flex;
-                        .center1 {
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            font-size: 16px;
-                            height: 74px;
-                            line-height: 74px;
-                            text-align: center;
-                            background-size: 100% 100%;
-                            img {
-                                display: block;
-                                margin-right: 8px;
-                            }
-                        }
-                        .center1:nth-child(1) {
-                            width: 231px;
-                            background: url('../../assets/cellhome/icon_home_dia3.png') 0 0 no-repeat;
-                            background-size: 100% 100%;
-                            img {
-                                width: 20px;
-                                height: 22px;
-                            }
-                        }
-                        .center1:nth-child(2) {
-                            width: 283px;
-                            background: url('../../assets/cellhome/icon_home_dia1.png') 0 0 no-repeat;
-                            background-size: 100% 100%;
-                            img {
-                                width: 25px;
-                                height: 21px;
-                            }
-                        }
-                        .center1:nth-child(3) {
-                            width: 231px;
-                            background: url('../../assets/cellhome/icon_home_dia3.png') 0 0 no-repeat;
-                            background-size: 100% 100%;
-                            img {
-                                width: 25px;
-                                height: 22px;
-                            }
-                        }
-                        .center1:nth-child(1):hover, .center1:nth-child(3):hover {
-                            width: 231px;
-                            background: url('../../assets/cellhome/icon_home_dia2.png') 0 0 no-repeat;
-                            background-size: 100% 100%;
-                            cursor: pointer;
-                        }
-                        .center1:nth-child(2):hover {
-                            width: 283px;
-                            background: url('../../assets/cellhome/icon_home_dia4.png') 0 0 no-repeat;
-                            background-size: 100% 100%;
-                            cursor: pointer;
-                        }
-                    }
-                    .font2 {
-                        font-size: 16px;
-                        margin-top: 50px;
-                    }
-                }
+
                 .crater1 {
                     width: 20px;
                     height: 20px;
