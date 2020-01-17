@@ -95,7 +95,7 @@ export default {
                 this.keyanimate = true
                 this.active = true
             }
-            scrollTop > (this.$refs.top1.clientHeight - 50) ? this.active = true : this.active = false
+            scrollTop > 100 ? this.active = true : this.active = false
             if(scrollTop > 2000) {
                 this.teamView = true
             }
