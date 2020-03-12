@@ -13,7 +13,7 @@
                     <img src="../../../assets/cellmhome1/icon_google play_pc.png" alt="">
                 </div>
                 <el-button class="google-play-re" type="primary">
-                    <a href="http://101.132.121.71:8000/android/last_package" style="color: #fff">
+                    <a href="https://api.cellnetwork.io/android/last_package" style="color: #fff">
                         <img class="img2" src="../../../assets/cellmhome1/android.svg" alt="">
                         <span>Downdoad</span>
                     </a>

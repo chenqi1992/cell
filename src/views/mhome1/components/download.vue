@@ -12,7 +12,7 @@
             <a href="https://play.google.com/store/apps/details?id=ning.cell&hl=zh-CN">
                 <div class="google-play"><img src="../../../assets/cellmhome1/icon_google play.png" alt=""></div>
             </a>
-            <a href="http://101.132.121.71:8000/android/last_package">
+            <a href="https://api.cellnetwork.io/android/last_package">
                 <van-button type="default" class="btn2">
                     <img class="img2" src="../../../assets/cellmhome1/wallet_icon_android.png" alt="">Download
                 </van-button>
