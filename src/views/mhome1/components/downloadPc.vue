@@ -111,6 +111,7 @@ export default {
                 float: left;
                 width: 18px;
                 height: 18px;
+                margin-right: 5px;
             }
             .img1 {
                 margin: 0 5px 0 23px;
@@ -130,7 +131,7 @@ export default {
                 cursor: pointer;
                 img {
                     width: 90px;
-                    height: 26px;
+                    height: 32px;
                     margin: 0 auto;
                 }
             }

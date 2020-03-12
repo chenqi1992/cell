@@ -40,7 +40,7 @@ export default {
         if (isAndroid) {
             this.isshow = false
         } else {
-            this.isshow = true
+            this.isshow = false
         }
     },
     mounted() {
@@ -125,7 +125,7 @@ export default {
                     display: block;
                     width: rem(180);
                     height: rem(54);
-                    margin: rem(10) auto 0;
+                    margin: rem(18) auto 0;
                 }
             }
         }
