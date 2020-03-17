@@ -255,7 +255,7 @@ export default {
             this.show = false
         },
         handlePledge() {
-            window.location.href = 'https://cellcoin.in/#/u/0x5Ab174f779Df6c23A4d3574E01C627b04f340aBb'
+            window.location.href = 'https://cellcoin.in'
         },
         handleCellWallet() {
             this.$router.push({path: './mhomedetail'})

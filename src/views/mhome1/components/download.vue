@@ -40,7 +40,7 @@ export default {
         if (isAndroid) {
             this.isshow = false
         } else {
-            this.isshow = false
+            this.isshow = true
         }
     },
     mounted() {
